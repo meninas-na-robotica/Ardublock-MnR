@@ -1,0 +1,9 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_code_esp8266" id="AF%[a;+c$4bt8M%yR*pE" x="100" y="230">
+    <field name="PIN1">9</field>
+    <field name="PIN2">10</field>
+    <field name="SPEED1">9600</field>
+    <field name="SPEED2">115200</field>
+  </block>
+</xml>

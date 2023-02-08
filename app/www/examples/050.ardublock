@@ -1,0 +1,89 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="dURFbmzR_.$V.6V%dXrA" x="134" y="89">
+    <statement name="MyLoop">
+      <block type="controls_if" id="egz9T{YA`~z;[HV9}o~K">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="S4%xzLbs2}w{j9Q_U$a=" inline="false">
+            <field name="OP">or</field>
+            <value name="A">
+              <shadow type="math_number" id=")b^rY/^F@[y555@2YZm3">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="A2XJcE;(Ch%JtgLmMlnk">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <shadow type="math_number" id="THWqTD3t_7x,[k.Jc]L[">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="digital_readbiR" id="ae/!PBSmF$sc(FecY/u-">
+                    <field name="NUMBER">1</field>
+                    <value name="PIN">
+                      <shadow type="math_number" id="RnU^na9[a#Fj?}zqpvej">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="WLiiZtvp6]@KyK),U8vL">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="dIi;$l?%zHAl~7]SC;iC">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="G1gyLd#O6N4`q~*Z=uIz">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <shadow type="math_number" id="THWqTD3t_7x,[k.Jc]L[">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="digital_readbiR" id="Xp/SZ*4l{pf}-QZO0{WA">
+                    <field name="NUMBER">1</field>
+                    <value name="PIN">
+                      <shadow type="math_number" id="nw0Q{0VIcH)y5g+R19s$">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="z$b/_%emGaDFv8K`Mcz3">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="inout_digital_writeD" id="KU`y7NLPM|8uoi~qT.A$">
+            <field name="OUTPUT_VALUE">1</field>
+            <field name="STAT">1</field>
+            <value name="PIN">
+              <shadow type="math_number" id="q$!B`*-y)I6dUN+,6V2_">
+                <field name="NUM">13</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="inout_digital_writeD" id="W:781w!!wrRH1[2wu7_r">
+            <field name="OUTPUT_VALUE">1</field>
+            <field name="STAT">0</field>
+            <value name="PIN">
+              <shadow type="math_number" id="N=sXV)]#CDuSmo04`Z*(">
+                <field name="NUM">13</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

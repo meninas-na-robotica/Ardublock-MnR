@@ -1,0 +1,135 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="wfx+R{z.M}b%E1EDDqFs" x="73" y="36">
+    <statement name="MySetup">
+      <block type="lcdi2c_setuprus" id="Cvd`eTk_?CES7h|06(.!">
+        <field name="NAME">0x27</field>
+        <value name="COLUMNS">
+          <shadow type="math_number" id="^n}LJJ8L(/*^gzhUS8y4">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="ROWS">
+          <shadow type="math_number" id=":ODOaLV%?jdk,H.sxEpa">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="hardware_monitor_serial_init" id="n{Mk3SJPEa4MY$e7T/vh">
+        <next>
+          <block type="lcdi2c_setcursor" id="1]PMF18Ky*QAG9!U95x6">
+            <value name="column">
+              <shadow type="math_number" id="8*wC`Nn%CiJDIji^-W7+">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="row">
+              <shadow type="math_number" id="=~3^Az)ACf*yfy=jEEL#">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="texttoprint">
+              <shadow type="text" id="kHe^7X6wn`iSn,TgG%*o">
+                <field name="TEXT"></field>
+              </shadow>
+              <block type="text_join" id="Z@cVj7`F_6qAr7IaykzP">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="text" id=";@}0n40|Gz:t)P99NjT[">
+                    <field name="TEXT">CPU temp - </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="hardware_monitor_serial_read" id="Vf%]_m^m@(-+=S?o@8^H">
+                    <field name="id">0</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="text" id="nill8X@I^rU)ZC.UH4O.">
+                    <field name="TEXT"> C</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="lcdi2c_setcursor" id="qW@/ylRNPMd9}Z,IfPVc">
+                <value name="column">
+                  <shadow type="math_number" id="4q{t2^qNx9;({?A@~d-*">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="row">
+                  <shadow type="math_number" id="Td,H?)RPS6:z1F^L2H9.">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <value name="texttoprint">
+                  <shadow type="text" id="kHe^7X6wn`iSn,TgG%*o">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="text_join" id=":yG;MwXA{^UANPpsFf{s">
+                    <mutation items="3"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id=":,jX/sjzzr+XT`l()M0/">
+                        <field name="TEXT">CPU load - </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="hardware_monitor_serial_read" id="y`/~,H1RD#7=dXuV^g/;">
+                        <field name="id">4</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text" id="eE1SjJ?__g!936S-3z0T">
+                        <field name="TEXT"> %</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lcdi2c_setcursor" id="8T-_D1C8[;YT|s6#pIZY">
+                    <value name="column">
+                      <shadow type="math_number" id="9Y)Wb]W*WG)I[XZc$n*?">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="row">
+                      <shadow type="math_number" id="|VDsN[)HH4Q5b3H|9D/!">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                    <value name="texttoprint">
+                      <shadow type="text" id="kHe^7X6wn`iSn,TgG%*o">
+                        <field name="TEXT"></field>
+                      </shadow>
+                      <block type="text_join" id="T~og,Fr5(!H[xmxzU(s@">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="qSu+Ud^=EoL=@0qcO.ln">
+                            <field name="TEXT">RAM use - </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="hardware_monitor_serial_read" id="m;qSC1Nb5S_,$^+UMv?E">
+                            <field name="id">6</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="0;,^WyYu~[)U#jv;MI6(">
+                            <field name="TEXT"> %</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

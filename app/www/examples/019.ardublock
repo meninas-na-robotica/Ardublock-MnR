@@ -1,0 +1,73 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="jcrI/R*$D7Lp:=;?lV+N" x="131" y="139">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="9JfUEn2N]+Rx?KznBSr{">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="C(TPJXO*x?w6=uFR5VX-">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="sd_init" id="[Vp7YWbY,V_}:S,DM)A|">
+            <value name="PIN_CS">
+              <shadow type="math_number" id="5FU_N@|72Q4M^$BTZV+s">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="2eMNtF%,=MmlkR9f]y7l">
+        <field name="VAR">R</field>
+        <value name="VALUE">
+          <block type="inout_analog_read" id="wd)#RIQi4Xfl8JA1`4qD">
+            <field name="broche">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="sd_printfile" id="s8dF/]X[cY*aUA9ILjd$" inline="false">
+            <field name="LOGIC">TRUE</field>
+            <value name="texttoprint">
+              <shadow type="text" id="yVF_sJ,2qO#~UvBkU-:`">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+              <block type="text_join" id="G]4qmk*_d4i]#~=On;3T">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id=",m-mK9AZ-Nf;aOdB-1QQ">
+                    <field name="TEXT">A0 - </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="VE~9#^.gC-cmU@9ao5~g">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="filename">
+              <shadow type="text" id="`%=w#MuhK@M@p}b~@|5b">
+                <field name="TEXT">Name.txt</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="T!d%ivO?B_=]0}$43,TJ">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="[(p^lsDXNgp/qkWv7!S}">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

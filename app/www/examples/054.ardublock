@@ -1,0 +1,77 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="{hbbJ?Yn0H49PIri7ba?" x="226" y="158">
+    <statement name="MyLoop">
+      <block type="stepservo_continuos_move_ru" id="`SSA,X[/qIGm7M$3XJeJ">
+        <value name="PIN">
+          <shadow type="math_number" id="09c_1A*8KzFV-Mh[-:NW">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="SpeedServo">
+          <shadow type="math_number" id=",l#v.fR^ihtIys.[|P,F">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="base_delay" id="tP-R4[~WCJpFP;LR3fnR">
+            <field name="unite">m</field>
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="g$(Y:WHUh_Xo^q+h@k7x">
+                <field name="NUM">1000</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="stepservo_continuos_move_ru" id="Z/p%3}K}L2*ViU.tpo-z">
+                <value name="PIN">
+                  <shadow type="math_number" id="#(=l}d]1Eky9YC7b-xjr">
+                    <field name="NUM">4</field>
+                  </shadow>
+                </value>
+                <value name="SpeedServo">
+                  <shadow type="math_number" id="@7P:bpb!S:vZ;[k1$0p4">
+                    <field name="NUM">180</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="h`YCJDua,aYjcVI,-6AE">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="RC_jRlImNy)|4R$?RwW`">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="stepservo_continuos_move_ru" id="R$d:.}0,l])ZB).9+mUS">
+                        <value name="PIN">
+                          <shadow type="math_number" id="s)R%O{4YCgI4cZUvB!-Z">
+                            <field name="NUM">4</field>
+                          </shadow>
+                        </value>
+                        <value name="SpeedServo">
+                          <shadow type="math_number" id=":De##1`@7|FOEb.QYNr4">
+                            <field name="NUM">90</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="VC/ltu,4LnExKd9CG.]y">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="akZx1j:L7@~i$Z{.ZTn,">
+                                <field name="NUM">1000</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

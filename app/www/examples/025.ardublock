@@ -1,0 +1,109 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="G_n}b1DUgM9{$/WBP(S9" x="76" y="177">
+    <statement name="MySetup">
+      <block type="minilcdi2c_setup" id="-]qmtvQ@|0V.Ejuw(qgO">
+        <next>
+          <block type="variables_set_init" id="Co!PBrYok=VYjdkH/4[)">
+            <field name="VAR">T</field>
+            <field name="VARIABLE_SETTYPE_TYPE">DECIMAL</field>
+            <value name="VALUE">
+              <block type="math_number" id="m,Yhp{*Fn_d7qrjC+T:a">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_init" id="X/}90,IH_P(3UUG1!3lb">
+                <field name="pin">0</field>
+                <field name="SPEED">9600</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="Init_Temp_ds18b20" id="7*@1KaIUqj[wNz_IphSm">
+        <value name="PIN">
+          <shadow type="math_number" id="mpjOr(eVd0`$.JOOGQck">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="PINR">
+          <shadow type="math_number" id="QnN!T|k[+)3y!nCf![Qp">
+            <field name="NUM">R</field>
+          </shadow>
+          <block type="variables_get" id="h)*ZOJ?(r_g2*rFJ[am^">
+            <field name="VAR">T</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_write_ln" id="o%@W/R/FItXJjLBrS,(+">
+            <value name="CONTENT">
+              <shadow type="text" id="{gV9ado$r1Xhs#VKu~sM">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+              <block type="variables_get" id="Us;;2cASBwV[9cTXlh76">
+                <field name="VAR">T</field>
+              </block>
+            </value>
+            <next>
+              <block type="minilcdi2c_setcursor" id="uR_ifC-kdFu|*iYMINZ=">
+                <field name="dp">12x16</field>
+                <value name="print_x">
+                  <shadow type="math_number" id="i-U}+u3JU.B^bJChQI8B">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="print_y">
+                  <shadow type="math_number" id="nJGR6;ep2N9(Ph^[(3ZR">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="texttoprint">
+                  <shadow type="text" id="4^mfIdyc-236$SHHsRM8">
+                    <field name="TEXT">            </field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="minilcdi2c_setcursorR" id="ii8LYXUU70InhgAke)gU">
+                    <field name="dp">12x16</field>
+                    <field name="tipe">float-2</field>
+                    <value name="print_x">
+                      <shadow type="math_number" id="9s=}RaJw]0dA)$%hQk8e">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="print_y">
+                      <shadow type="math_number" id="Z_OH91VCNgPN-zXsvzA@">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="print_R">
+                      <shadow type="math_number" id="7+H{/4w.?5xv.r#EaD(.">
+                        <field name="NUM">123</field>
+                      </shadow>
+                      <block type="variables_get" id="CCa^}3Xgw^-4!x1miy-f">
+                        <field name="VAR">T</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="Lr6xytW%6gEpAM+4$TfC">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="gu1Su+{rfRF#{hI=HKno">
+                            <field name="NUM">200</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,161 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="f|i%e@P,WV{rld#?$3T?" x="117" y="71">
+    <statement name="MyLoop">
+      <block type="motor_autoR" id="$G6xFtT`J`:TOR!^KS/3">
+        <field name="MOTOR">1</field>
+        <field name="MOTOR_DIR">1</field>
+        <value name="PIN_RM1">
+          <shadow type="math_number" id="131qnM!b3KMt-wDQxO$F">
+            <field name="NUM">12</field>
+          </shadow>
+        </value>
+        <value name="PIN_RM2">
+          <shadow type="math_number" id="WazM.6J;qlbO8d|:AMlq">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="CONTENT">
+          <shadow type="math_number" id="TF,2*pQbH:b./jvRs!0e">
+            <field name="NUM">150</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="motor_autoR" id="f(rK*vfD(hXqx#--[6=k">
+            <field name="MOTOR">0</field>
+            <field name="MOTOR_DIR">1</field>
+            <value name="PIN_RM1">
+              <shadow type="math_number" id="!=ju%a4$-Be~Gvl#L,o*">
+                <field name="NUM">13</field>
+              </shadow>
+            </value>
+            <value name="PIN_RM2">
+              <shadow type="math_number" id="JZLi:e-eg;]l%k?v|Y*K">
+                <field name="NUM">11</field>
+              </shadow>
+            </value>
+            <value name="CONTENT">
+              <shadow type="math_number" id="dozAwa|[/#F~H,/c=M6$">
+                <field name="NUM">150</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="7P(Taetq*+HqTlqT=%#7">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="T_F~2p8K?Aw?QDe5o_il">
+                    <field name="NUM">3000</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="motor_autoR" id="asx!p8SrJoQaNmCAGD8)">
+                    <field name="MOTOR">1</field>
+                    <field name="MOTOR_DIR">0</field>
+                    <value name="PIN_RM1">
+                      <shadow type="math_number" id="m8DII%GT[S8=`8[WZ1f,">
+                        <field name="NUM">12</field>
+                      </shadow>
+                    </value>
+                    <value name="PIN_RM2">
+                      <shadow type="math_number" id="z$GGlH%n}+6pV`8MG{%i">
+                        <field name="NUM">10</field>
+                      </shadow>
+                    </value>
+                    <value name="CONTENT">
+                      <shadow type="math_number" id="FWtF$)=u~XMSv)T2$fQl">
+                        <field name="NUM">255</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="motor_autoR" id="vmta8+zlXtXJBdt*[uv)">
+                        <field name="MOTOR">0</field>
+                        <field name="MOTOR_DIR">0</field>
+                        <value name="PIN_RM1">
+                          <shadow type="math_number" id="#N.g.#k[F_A)aT7J4R?^">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                        <value name="PIN_RM2">
+                          <shadow type="math_number" id="_G(29iB{vn~=eB@:E8B5">
+                            <field name="NUM">11</field>
+                          </shadow>
+                        </value>
+                        <value name="CONTENT">
+                          <shadow type="math_number" id="|raxaH|Q~K;#HO#rP2BI">
+                            <field name="NUM">255</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="22dR@3UMteEYdjxF9RL!">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="*l@y@OXXzPyEu~Y/|QYc">
+                                <field name="NUM">3000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="motor_autoR" id="f+Zg{|?(U.accM8QNuu+">
+                                <field name="MOTOR">1</field>
+                                <field name="MOTOR_DIR">0</field>
+                                <value name="PIN_RM1">
+                                  <shadow type="math_number" id="qhd:Ppeyq[B3}UFQY+zT">
+                                    <field name="NUM">12</field>
+                                  </shadow>
+                                </value>
+                                <value name="PIN_RM2">
+                                  <shadow type="math_number" id="6/C($da}m#RjI*~^oluJ">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                                <value name="CONTENT">
+                                  <shadow type="math_number" id="yJ^!#LUuY86ClC~WL8y~">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="motor_autoR" id="-d5WqCQubttloP:6=k#v">
+                                    <field name="MOTOR">0</field>
+                                    <field name="MOTOR_DIR">0</field>
+                                    <value name="PIN_RM1">
+                                      <shadow type="math_number" id=";vaM4igF=/mH[;cdEsI?">
+                                        <field name="NUM">13</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="PIN_RM2">
+                                      <shadow type="math_number" id="sonrQGezi(2W`+kSH^xq">
+                                        <field name="NUM">11</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="CONTENT">
+                                      <shadow type="math_number" id="Smb7.[o*Bt[O|p;F/bzN">
+                                        <field name="NUM">0</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="base_delay" id=".^3vpqU*}(W3N#mo7*np">
+                                        <field name="unite">m</field>
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="PJ_uM,8!?x3@;i[OyMk?">
+                                            <field name="NUM">3000</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

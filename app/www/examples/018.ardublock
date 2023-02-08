@@ -1,0 +1,101 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="2nIGu,0M8c@3Td1*+APn" x="97" y="106">
+    <statement name="MySetup">
+      <block type="serial_init" id="E4~+y:jK[EaNrgCW8R27">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set_init" id="Zn.,%`Fu0Z/1gZe[vCU?">
+            <field name="VAR">R</field>
+            <field name="VARIABLE_SETTYPE_TYPE">TEXT</field>
+            <value name="VALUE">
+              <block type="text" id="mk+O1w4![r?AuzXz9(BM">
+                <field name="TEXT">ArduBlock</field>
+              </block>
+            </value>
+            <next>
+              <block type="eeprom_write_byte_R" id="47:^RTmZyH}c;IVVrrVU">
+                <value name="adr">
+                  <shadow type="math_number" id="UGui^UR+FV=SqWc)RnEe">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+                <value name="val">
+                  <shadow type="math_number" id="zoOa(|x`HB~h8CGK?QBq">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="uP$9a=iXziwcN-yVYm;m">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="eeprom_write_byte" id="4P%CvM39PrUWp))Ks,${" disabled="true">
+                    <value name="adr">
+                      <shadow type="math_number" id=".^lZ3!WgqjOrzp?N+3_*">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="val">
+                      <shadow type="math_number" id="FN{y#!,+}CIvK6%=Wbwb">
+                        <field name="NUM">255</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="eeprom_read_byte_R" id="xs9r,*7)-mQ8}IkB4~~~">
+        <value name="adr">
+          <shadow type="math_number" id="nGgkWY3^zj-%Rd33N*EI">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="val">
+          <shadow type="math_number" id="^C-QG#2Sx^;@XC:mX#iU">
+            <field name="NUM">R</field>
+          </shadow>
+          <block type="variables_get" id="`Y+D$}1M(_UC-SS/Y{$1">
+            <field name="VAR">R</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_write_ln" id="!|?^1_-]@]Vvn#6c%P.Z">
+            <value name="CONTENT">
+              <shadow type="text" id="(qi+}/YTp1wc-q|Y5]3_">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+              <block type="text_join" id="yrd.z1R*dMmTe=ABtZ*J">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="eeprom_read_byte" id="IzXPOWa+-%dlfGHh~ww)">
+                    <value name="ADDRESS">
+                      <shadow type="math_number" id="johs}{iuNMf=[iWS;_TS">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="v/3Xa}~^KKv`_i1r=f]S">
+                    <field name="TEXT"> - </field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="variables_get" id="w3|-xqn2Mu)o3DcRi`~B">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

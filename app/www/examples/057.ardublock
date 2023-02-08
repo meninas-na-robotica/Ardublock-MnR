@@ -1,0 +1,455 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="rZHeR?PxE=](nMh903?{" x="130" y="101">
+    <statement name="MySetup">
+      <block type="lcdi2c_setuprus" id="LS)ABC~ll2!wZh/Agp$~">
+        <field name="NAME">0x27</field>
+        <value name="COLUMNS">
+          <shadow type="math_number" id="h.nc9/$v8Wr|-3~0nv@:">
+            <field name="NUM">16</field>
+          </shadow>
+        </value>
+        <value name="ROWS">
+          <shadow type="math_number" id="d.gVltyR,YXj{.lovHNF">
+            <field name="NUM">2</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="lcdi2c_setcursor_draw_pl" id="^lf!UvMr9hKz|NBvf8t}">
+        <field name="TEXT">01</field>
+        <value name="print_x">
+          <shadow type="math_number" id="b1sjK63U}T_jiInbvor{">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="print_y">
+          <shadow type="math_number" id="`)?XMQHl`VB{d=k;`M[v">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="lcdi2c_setcursor_draw_pl" id=":(P=pCBw@b/C~28d.ZnN">
+            <field name="TEXT">02</field>
+            <value name="print_x">
+              <shadow type="math_number" id="Jnvhgc7aqSf?,kgRZwMG">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="print_y">
+              <shadow type="math_number" id="ExkLbY@-zFo3yEEpEho{">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="lcdi2c_setcursor_draw_pl" id="/3%jA+0]OV-*Ung_mnC~">
+                <field name="TEXT">03</field>
+                <value name="print_x">
+                  <shadow type="math_number" id="2U4GeGjr@Pi*;|Y+L`wI">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+                <value name="print_y">
+                  <shadow type="math_number" id="X-Q`j874*u@regy:Mid!">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="eXXR6^v|cs,Waj~EA7[w">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="S-;ycU5/ITUp[@%l75|;">
+                        <field name="NUM">500</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="lcdi2c_setcursor_draw_pl" id="a|M%wV48k[}(wEU_G-AV">
+                        <field name="TEXT">01</field>
+                        <value name="print_x">
+                          <shadow type="math_number" id="$zv$r)vWFH!3(~Q7OPYa">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                        <value name="print_y">
+                          <shadow type="math_number" id="bp81z!P,qt}~,q#8`tTL">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="lcdi2c_setcursor_draw_pl" id="M20F9A1C}69h0xhC_]Lq">
+                            <field name="TEXT">02</field>
+                            <value name="print_x">
+                              <shadow type="math_number" id="y8Kmhh^SmJ]AVxL7oEku">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                            <value name="print_y">
+                              <shadow type="math_number" id="Lc=qpG1!wBaJozPg_K|2">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="lcdi2c_setcursor_draw_pl" id="Xh`jlZ245eDUz41HI?P(">
+                                <field name="TEXT">05</field>
+                                <value name="print_x">
+                                  <shadow type="math_number" id="M%k~y?By81Vu}h@{ZHve">
+                                    <field name="NUM">2</field>
+                                  </shadow>
+                                </value>
+                                <value name="print_y">
+                                  <shadow type="math_number" id="@%!@iD#MW##$B16QYlYJ">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_delay" id="HA9|7yD51{0)c=`hdYqH">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="l3XG-45!h9V:-^):F-%m">
+                                        <field name="NUM">500</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="lcdi2c_setcursor_draw_pl" id="FbUg/eH=HPnD,EG+y)HG">
+                                        <field name="TEXT">01</field>
+                                        <value name="print_x">
+                                          <shadow type="math_number" id="LOawh)2c7J`)}7-YBzsa">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="print_y">
+                                          <shadow type="math_number" id="n//^lMbHv7mcr:vTUPZ6">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="lcdi2c_setcursor_draw_pl" id="$0*8z,hM+$:pR*)c-i.h">
+                                            <field name="TEXT">05</field>
+                                            <value name="print_x">
+                                              <shadow type="math_number" id="8jws*h8r:tqrVT])+Vv7">
+                                                <field name="NUM">1</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="print_y">
+                                              <shadow type="math_number" id="wGjr~_sS=84Lc8_jixJ1">
+                                                <field name="NUM">0</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="lcdi2c_setcursor_draw_pl" id="!9TQD|L|Z)A3R=yuT=MQ">
+                                                <field name="TEXT">05</field>
+                                                <value name="print_x">
+                                                  <shadow type="math_number" id="[8I{jw3EA-d+R,OXQ~$-">
+                                                    <field name="NUM">2</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="print_y">
+                                                  <shadow type="math_number" id="*8z0xl1j~$Bkjqo%]k6V">
+                                                    <field name="NUM">0</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="2sKID9.wqxQFg]1RdoYe">
+                                                    <field name="unite">m</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="zO_Y02utOh9c,}Ymve(.">
+                                                        <field name="NUM">500</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <next>
+                                                      <block type="lcdi2c_setcursor_draw_pl" id="HRwK{/a{qu?+LHf!e{9`">
+                                                        <field name="TEXT">04</field>
+                                                        <value name="print_x">
+                                                          <shadow type="math_number" id="pf[*!gF-]xRn|i!)qd)T">
+                                                            <field name="NUM">0</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <value name="print_y">
+                                                          <shadow type="math_number" id="a:VVZG4,L9GM3;M{hGF;">
+                                                            <field name="NUM">0</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="lcdi2c_setcursor_draw_pl" id="PWn%e^FP%e`3E1N`,5c%">
+                                                            <field name="TEXT">05</field>
+                                                            <value name="print_x">
+                                                              <shadow type="math_number" id="I]/=qZjhFn2a30hV`p}D">
+                                                                <field name="NUM">1</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <value name="print_y">
+                                                              <shadow type="math_number" id="L*^q28+dJ,2M]nzQF|!M">
+                                                                <field name="NUM">0</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <next>
+                                                              <block type="lcdi2c_setcursor_draw_pl" id=").3Km:lz7Zy3k:4UKcy]">
+                                                                <field name="TEXT">05</field>
+                                                                <value name="print_x">
+                                                                  <shadow type="math_number" id="rk80NHKtuDw7M:ccVWG?">
+                                                                    <field name="NUM">2</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <value name="print_y">
+                                                                  <shadow type="math_number" id="#ZA$cC^oV]imw^7]kKU~">
+                                                                    <field name="NUM">0</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="base_delay" id="]LE~c|UHfal|`Z0lHLEZ">
+                                                                    <field name="unite">m</field>
+                                                                    <value name="DELAY_TIME">
+                                                                      <shadow type="math_number" id="$1)wx9fI4N7#72^(36+1">
+                                                                        <field name="NUM">500</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="lcdi2c_setcursor_draw" id="-D@F36pp@ohV)x1,Yvu4" x="672" y="199">
+    <field name="TEXT">01</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">TRUE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">TRUE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">TRUE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+  </block>
+  <block type="lcdi2c_setcursor_draw" id="fls/LI(bF`nV%sfjUjz:" x="835" y="198">
+    <field name="TEXT">02</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix1e0">TRUE</field>
+    <field name="Pix1e1">TRUE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">TRUE</field>
+    <field name="Pix2e0">FALSE</field>
+    <field name="Pix2e1">FALSE</field>
+    <field name="Pix2e2">FALSE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix3e0">FALSE</field>
+    <field name="Pix3e1">FALSE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix4e0">FALSE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">FALSE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix6e0">TRUE</field>
+    <field name="Pix6e1">TRUE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix7e0">TRUE</field>
+    <field name="Pix7e1">TRUE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+  </block>
+  <block type="lcdi2c_setcursor_draw" id="lu*RYWiz_@l7G)_@TM^+" x="1002" y="198">
+    <field name="TEXT">03</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix1e0">TRUE</field>
+    <field name="Pix1e1">TRUE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">TRUE</field>
+    <field name="Pix2e0">FALSE</field>
+    <field name="Pix2e1">FALSE</field>
+    <field name="Pix2e2">FALSE</field>
+    <field name="Pix2e3">TRUE</field>
+    <field name="Pix2e4">TRUE</field>
+    <field name="Pix3e0">FALSE</field>
+    <field name="Pix3e1">FALSE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">TRUE</field>
+    <field name="Pix3e4">TRUE</field>
+    <field name="Pix4e0">FALSE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">TRUE</field>
+    <field name="Pix4e4">TRUE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">FALSE</field>
+    <field name="Pix5e3">TRUE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix6e0">TRUE</field>
+    <field name="Pix6e1">TRUE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix7e0">TRUE</field>
+    <field name="Pix7e1">TRUE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+  </block>
+  <block type="lcdi2c_setcursor_draw" id="cXb{nVJ5@lptpnG)UCny" x="670" y="446">
+    <field name="TEXT">04</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">TRUE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">TRUE</field>
+    <field name="Pix2e4">TRUE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">TRUE</field>
+    <field name="Pix3e3">TRUE</field>
+    <field name="Pix3e4">TRUE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">TRUE</field>
+    <field name="Pix4e3">TRUE</field>
+    <field name="Pix4e4">TRUE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">TRUE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+  </block>
+  <block type="lcdi2c_setcursor_draw" id=")*pN,;;+nilOE8V*(vWv" x="840" y="448">
+    <field name="TEXT">05</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix1e0">TRUE</field>
+    <field name="Pix1e1">TRUE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">TRUE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">TRUE</field>
+    <field name="Pix2e4">TRUE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">TRUE</field>
+    <field name="Pix3e3">TRUE</field>
+    <field name="Pix3e4">TRUE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">TRUE</field>
+    <field name="Pix4e3">TRUE</field>
+    <field name="Pix4e4">TRUE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">TRUE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix6e0">TRUE</field>
+    <field name="Pix6e1">TRUE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix7e0">TRUE</field>
+    <field name="Pix7e1">TRUE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+  </block>
+</xml>

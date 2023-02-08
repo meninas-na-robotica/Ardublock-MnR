@@ -1,0 +1,323 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="BzmW1P9)~Wkj)Rph:R/~" x="70" y="49">
+    <statement name="MySetup">
+      <block type="serial_init" id=",EQtaAu@R=5xDU!p7[,?">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="sd_init" id="_EfqFuJbqZbU8ZC+,Ldw">
+            <value name="PIN_CS">
+              <shadow type="math_number" id="[t)BsVnA^o~a){#tmOs|">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="controls_if" id="K$37@_5sh)[95$cF;RP8">
+        <value name="IF0">
+          <block type="logic_compare_log" id="lFId2._.w]7a}?:p1v^)">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="TDQY3gJ,%FMUCJs(RYi~">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="digital_readbiR" id="=fB`2$V`[qk8YYo3Bqan">
+                <field name="NUMBER">1</field>
+                <value name="PIN">
+                  <shadow type="math_number" id="Sr#54*$-R~kjabB02jJP">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="-%~?qSWmS-a!cNkfadzr">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="sd_printfile" id="p]L05aCKL*HuwC_q^A-f">
+            <field name="LOGIC">TRUE</field>
+            <value name="texttoprint">
+              <shadow type="text" id="OmM*dJTL40n!MD8A~iPH">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+            </value>
+            <value name="filename">
+              <shadow type="text" id="4uO}?RLZ:g{Z?*LG:jk8">
+                <field name="TEXT">NAME.TXT</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="}0~k||ED^+~j9~/rK,ea">
+                <value name="CONTENT">
+                  <shadow type="text" id=".S*X6siN;?[p-MZb_ZsM">
+                    <field name="TEXT">Запись в файл NAME.TXT</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="WZ2_r4TvK6jTE.6-Wu{0">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="Oa-+#p5,XvK4$Z}=jH/j">
+                        <field name="NUM">500</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="base_code_reset" id="S2hHBH.a|0+lL.lZ{P(."></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="o]:CT-ZtMHUQpoAzs;As">
+            <value name="IF0">
+              <block type="logic_compare_log" id="~!/By3H8dW-PysqJv)JD">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <shadow type="math_number" id="TDQY3gJ,%FMUCJs(RYi~">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="digital_readbiR" id="EEEvz/UO4(jupO~z7rUs">
+                    <field name="NUMBER">1</field>
+                    <value name="PIN">
+                      <shadow type="math_number" id="j^?Lseko8diLR8l%2]#u">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="C+iw!eJu[[Sd~0:G^x.!">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="serial_write_ln" id="vkaH1y.^sg[p-EeSfeLK">
+                <value name="CONTENT">
+                  <shadow type="text" id="3g$W)$I7[$nRl77B(XUW">
+                    <field name="TEXT">Чтение файла NAME.TXT</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_write_ln" id="qP:5VrzZhp/sIZZ@:r35">
+                    <value name="CONTENT">
+                      <shadow type="text" id=".S*X6siN;?[p-MZb_ZsM">
+                        <field name="TEXT">ArduBlock</field>
+                      </shadow>
+                      <block type="sd_printfile1" id="!5DwcH|D+TO3-5eM)Zj2">
+                        <value name="filename">
+                          <shadow type="text" id="d0DcsEpvl8$=C--1*@s|">
+                            <field name="TEXT">NAME.TXT</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="})7=IkY,ez{Q)Z)lx#SU">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="8D*j8NUe/G__0q(6`Yz?">
+                            <field name="NUM">500</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_code_reset" id="0d9?lDRx@|HI--V0NeU["></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="g22`d}ZCAW.7JYrt0#$u">
+                <value name="IF0">
+                  <block type="logic_compare_log" id="lgUs9WqUZ-ewA`R+ly^*">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <shadow type="math_number" id="TDQY3gJ,%FMUCJs(RYi~">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="digital_readbiR" id="1!5RCYzJY|a_Q^hlB%tz">
+                        <field name="NUMBER">1</field>
+                        <value name="PIN">
+                          <shadow type="math_number" id="Ldn[coiad4/W?ZZ(]tVC">
+                            <field name="NUM">4</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="ulO-rVgk`vW_`$HU@E9Q">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="serial_write_ln" id="QhyCU^?smMYtJe2q6$D4">
+                    <value name="CONTENT">
+                      <shadow type="text" id="[tDeVV33z@U7Y*WkJq2D">
+                        <field name="TEXT">Удалить файл NAME.TXT</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="sd_printfile2" id="HMDX-=m9htiFA0-^RQ?M">
+                        <value name="filename">
+                          <shadow type="text" id="h3m,-F^lD4p*8aE|6E`C">
+                            <field name="TEXT">NAME.TXT</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="()b{`$SD{JuV!1%L.v#D">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="KuUi?{*7asiU9N}/9?p)">
+                                <field name="NUM">500</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="base_code_reset" id="XphH+6h+]6#Z|5jMDY^2"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="?qR1y{::QC(E/~~~9)!c">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="iu+Q#/Q}#k9/RMK~58hr">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="TDQY3gJ,%FMUCJs(RYi~">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="digital_readbiR" id="Ztg[n$NX3r%pU.|jq=r/">
+                            <field name="NUMBER">1</field>
+                            <value name="PIN">
+                              <shadow type="math_number" id="QP1@7`Rjyo.f[%WdC@Sh">
+                                <field name="NUM">5</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="(YyM6242g|$ICQ-::nKf">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="serial_write_ln" id="mhFB[1DN9ccOc?q/wN{k">
+                        <value name="CONTENT">
+                          <shadow type="text" id="KWZ_#^p?i9aEjE8+pl$6">
+                            <field name="TEXT">Создать папку NAME</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="sd_printfile3" id="ztRh(R,*Fj$v|?:kVL5L">
+                            <value name="filename">
+                              <shadow type="text" id="Koq{B_`3J~fZ[}Q~qNjB">
+                                <field name="TEXT">NAME</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="base_delay" id="mwFVi%4G1Fa5jMGUNP2E">
+                                <field name="unite">m</field>
+                                <value name="DELAY_TIME">
+                                  <shadow type="math_number" id="RUnYcd$SkUMd@=hYa1zC">
+                                    <field name="NUM">500</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_code_reset" id="Pq)Pgs%Tb@|m~%|YP*eJ"></block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="Ds%u9?lXHC9EKQSpOYDS">
+                        <value name="IF0">
+                          <block type="logic_compare_log" id="(6rT4p~~onu-CMz~,lV{">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <shadow type="math_number" id="TDQY3gJ,%FMUCJs(RYi~">
+                                <field name="NUM">R</field>
+                              </shadow>
+                              <block type="digital_readbiR" id="]kl*4WwKTPz:UJ0*iTF,">
+                                <field name="NUMBER">1</field>
+                                <value name="PIN">
+                                  <shadow type="math_number" id="sSdI,xg-nncwQsZ)vA+/">
+                                    <field name="NUM">6</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="F~nV!T9ulQxv7d#fN_9M">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="serial_write_ln" id="w13F]8B@rvoixkDQ%KFa">
+                            <value name="CONTENT">
+                              <shadow type="text" id="(eY(i;VsLxF%+r(]:5+i">
+                                <field name="TEXT">Удалить папку NAME</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="sd_printfile4" id="Vr^sElPuL)xDEZu8;=ue">
+                                <value name="filename">
+                                  <shadow type="text" id="(QpUg8Al3NkkChs%3MX-">
+                                    <field name="TEXT">NAME</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_delay" id="LQv)~Wg-+bU6$CS^$VYV">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="Sx_0kM]Ib4wMzxN(DN,V">
+                                        <field name="NUM">500</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="base_code_reset" id="H[G$tUOZ0sSD6:yr(aew"></block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

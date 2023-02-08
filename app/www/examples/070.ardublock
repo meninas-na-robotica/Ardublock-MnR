@@ -1,0 +1,86 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="gl;I7Ey-~:aaPhr=w8eR" x="48" y="101">
+    <statement name="MySetup">
+      <block type="serial_init" id="i7pG?!^foield(INu+o3">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="soft_init_ttl" id=":+E*9|mav;8=xiC=,3{d">
+            <field name="PIN1">2</field>
+            <field name="PIN2">3</field>
+            <field name="SPEED">115200</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="base_define_ttl_uart_top" id="1])uo=C!d;osR:{HK{Ez">
+        <next>
+          <block type="base_define_ttl_uart" id="q/Y)=h/~aNe9YTnV@_VT">
+            <field name="TEXT">41</field>
+            <statement name="DO">
+              <block type="serial_write_ln" id="^:l[?2IKWdB8ZQ3w%f`f">
+                <value name="CONTENT">
+                  <shadow type="text" id="?bUy_uOIvIP$E%UtIM:7">
+                    <field name="TEXT">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="base_define_ttl_uart" id="qL|I,#fqRb~nncMnF(5%">
+                <field name="TEXT">33</field>
+                <statement name="DO">
+                  <block type="serial_write_ln" id="TPEh+hgfZ9N.}mSmEtYe">
+                    <value name="CONTENT">
+                      <shadow type="text" id="s^XPbbXACuJNGk~B~;rc">
+                        <field name="TEXT">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_writeD" id="3go%7OjJ+(kDNg_1!{j*">
+                        <field name="OUTPUT_VALUE">1</field>
+                        <field name="STAT">1</field>
+                        <value name="PIN">
+                          <shadow type="math_number" id="]%Q^/MV%Nq1#jX5q,g2p">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="base_define_ttl_uart" id=":g(1IS|yoPgcg0}hD7(:">
+                    <field name="TEXT">64</field>
+                    <statement name="DO">
+                      <block type="serial_write_ln" id="jx9IJI!I@+V-~#lAlG/a">
+                        <value name="CONTENT">
+                          <shadow type="text" id="_$V|J]}.}SaufNpTpBH1">
+                            <field name="TEXT">2</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="inout_digital_writeD" id="u=+lqaovAPUhjkYo~u)`">
+                            <field name="OUTPUT_VALUE">1</field>
+                            <field name="STAT">0</field>
+                            <value name="PIN">
+                              <shadow type="math_number" id="UPA$_8A?:HNkJ|7^pd|6">
+                                <field name="NUM">13</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

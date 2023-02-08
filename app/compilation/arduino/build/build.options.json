@@ -1,0 +1,10 @@
+{
+  "builtInLibrariesFolders": "C:\\Users\\ASUS\\Desktop\\ArduBlock 2.0\\app\\compilation\\arduino\\libraries",
+  "customBuildProperties": "",
+  "fqbn": "arduino:avr:uno",
+  "hardwareFolders": "C:\\Users\\ASUS\\Desktop\\ArduBlock 2.0\\app\\compilation\\arduino",
+  "otherLibrariesFolders": "",
+  "runtime.ide.version": "10600",
+  "sketchLocation": "C:\\Users\\ASUS\\Desktop\\ArduBlock 2.0\\app\\compilation\\arduino\\ino\\sketch.ino",
+  "toolsFolders": "C:\\Users\\ASUS\\Desktop\\ArduBlock 2.0\\app\\compilation\\arduino\\tools-builder,C:\\Users\\ASUS\\Desktop\\ArduBlock 2.0\\app\\compilation\\arduino\\tools\\avr"
+}

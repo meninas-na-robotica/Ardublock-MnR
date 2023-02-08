@@ -1,0 +1,220 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="u$vn[@)qaRCEeH-Z[|g8" x="71" y="37">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="[I{:/.qj4lx@Q,nHchx7">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="@,2qUCo::wH(VHhj?3I`">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="base_define_for" id="PW^HVm*Hm)G(WjX{{7#k">
+        <value name="variable">
+          <shadow type="math_number" id="}fyU}RUmqEX60c3Vi}^2">
+            <field name="NUM">6</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="LedStrip_WS2812B_init" id="]|(NL)Pu.G?.h`QgmN-_">
+            <field name="RGBCOLOR">#ff0000</field>
+            <value name="PINR">
+              <shadow type="math_number" id=";a^bk(cf],|ge_4!#NP.">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <value name="PIN">
+              <shadow type="math_number" id="kh9DDCecrXYVH0:dJIst">
+                <field name="NUM">2</field>
+              </shadow>
+            </value>
+            <value name="LEDI">
+              <shadow type="math_number" id="QVtnJU;|:6vZw%sf~@WP">
+                <field name="NUM">255</field>
+              </shadow>
+            </value>
+            <value name="Pixel_number">
+              <shadow type="math_number" id="U1oK[?.2bCN8^tiKubM1">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="variables_get" id="wwC3V,ZwWH3OOk{0g;X!">
+                <field name="VAR">R</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="kx=:.GcV-Q$}lGqbF,G)">
+                <field name="VAR">R</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="}xo?V`,tnIMw!*3:O82y">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number" id="8S$j-`+/??;pRGLq=ky=">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="variables_get" id="NeB;j9@_`g4G.^p3n/I*">
+                        <field name="VAR">R</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id=":4.iWQ41p4`Z[fVngVJu">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id=".B84D0m{F6pZ=M}PigbC">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="fL^9_HBe5B`oE{uJ=5`P">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <shadow type="math_number" id="i#dO%N-Mn?D%s{d#4c.5">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="variables_get" id="/{EEA%{p3wf]%_v_T83x">
+                            <field name="VAR">R</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="JJqj6cb;/5V1^c|EkdJ/">
+                            <field name="NUM">5</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="3ah9kkWsNB(ne7cm8pqo">
+                        <field name="VAR">R</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="~aI|jVT(K3}Kcnc[fxs%">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="base_delay" id="f%|ddu`CIM`bC@zy?Cj6">
+            <field name="unite">m</field>
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="5,o8{+%ouZ#{V#X;Jie;">
+                <field name="NUM">1000</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_define_for" id="QeI#eoq`_MXk;vNU]oer">
+                <value name="variable">
+                  <shadow type="math_number" id="1SkD2Y8b74UA4em:o+tJ">
+                    <field name="NUM">6</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="LedStrip_WS2812B_init" id="RSt)d?TXX|TqS)Khc4Qs">
+                    <field name="RGBCOLOR">#000000</field>
+                    <value name="PINR">
+                      <shadow type="math_number" id="$[,2-sJB-K-nxy;!U,Xp">
+                        <field name="NUM">5</field>
+                      </shadow>
+                    </value>
+                    <value name="PIN">
+                      <shadow type="math_number" id="2/N+zAr+`Z8F]3Ib)Obc">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                    <value name="LEDI">
+                      <shadow type="math_number" id="__q#Nv~|Y+__Jg_L54mQ">
+                        <field name="NUM">255</field>
+                      </shadow>
+                    </value>
+                    <value name="Pixel_number">
+                      <shadow type="math_number" id="U1oK[?.2bCN8^tiKubM1">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="variables_get" id="*1HdT(/5D}`:;Q7pG9_^">
+                        <field name="VAR">R</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="}Z_m]YTXX0#vjmpL|b~~">
+                        <field name="VAR">R</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="?3uy3fG4Js+$wx|U-bMZ">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <shadow type="math_number" id="8S$j-`+/??;pRGLq=ky=">
+                                <field name="NUM">R</field>
+                              </shadow>
+                              <block type="variables_get" id="q+@N`J5hP%6OOPt8cxPE">
+                                <field name="VAR">R</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="A?b?S0^$d16`:=$r~`]d">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_if" id=";.~#X`:1lq788j-P~]Z_">
+                            <value name="IF0">
+                              <block type="logic_compare_log" id="dEBVQgmli]Y-%#I#6%je">
+                                <field name="OP">GT</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="i#dO%N-Mn?D%s{d#4c.5">
+                                    <field name="NUM">R</field>
+                                  </shadow>
+                                  <block type="variables_get" id="yY[;j/hg/Y%z%d:DIzZk">
+                                    <field name="VAR">R</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="@6G4B`[Veul{2g_Nj=lA">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="variables_set" id="7OAR{Tm%a0%/(p|CS^WM">
+                                <field name="VAR">R</field>
+                                <value name="VALUE">
+                                  <block type="math_number" id="=|9dFPfPI;@;cvPEVcO6">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="base_delay" id="lmZ,e%56pA1ngIU$L*|x">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id=".p2xVbuy9;HSMQZ;#Uzk">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

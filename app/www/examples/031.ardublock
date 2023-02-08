@@ -1,0 +1,126 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="WJ=mW;63_Y7$|?dgZv7:" x="105" y="116">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="He;~EYjfP`zM7aP8X.1;">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">TEXT</field>
+        <value name="VALUE">
+          <block type="text" id="0HgoRjDn7?qLHp:sBBJz">
+            <field name="TEXT"> </field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_init" id="o5vbUc@QiXdf?3UH[##2">
+            <field name="pin">0</field>
+            <field name="SPEED">9600</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="rfid_init" id="VMAfuxW,B04%^$Du-si@">
+        <value name="PIN_SDA">
+          <shadow type="math_number" id="Y(RH;49]2sS.Cgc8r!zr">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="PIN_RST">
+          <shadow type="math_number" id="g5%{~:v+|F!6IM5aC;t@">
+            <field name="NUM">9</field>
+          </shadow>
+        </value>
+        <value name="PIN_KOD">
+          <shadow type="math_number" id="wG~Akk(QRH7o{UKP3})9">
+            <field name="NUM">R</field>
+          </shadow>
+          <block type="variables_get" id="]Ip^tc0_|Mq|~U:4kyuv">
+            <field name="VAR">R</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_write_ln" id=";fs=STF:0O/To@,r_o!R">
+            <value name="CONTENT">
+              <shadow type="text" id="PB@(/$ve8%bAb.hZ4:J-">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+              <block type="variables_get" id="WexJs9Dx%P3zevVTevKS">
+                <field name="VAR">R</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id=";g/,+NXK?Bw=t6:CA+*=">
+                <value name="IF0">
+                  <block type="logic_compare_log" id="%#*7uKejG,|#:KnZN_J.">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <shadow type="math_number" id="p{^=aE}kf}*4RCzzj{Xi">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="variables_get" id="A/r+/p+MEOxbE.M+UtAW">
+                        <field name="VAR">R</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="G-2|=[|p0wdy2(9nPPow">
+                        <field name="NUM">10</field>
+                      </shadow>
+                      <block type="text" id="`8;5bFPPrCL@8x}Kuypy">
+                        <field name="TEXT"> b0 43 8e 1a</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="inout_digital_writeD" id="wun4G*/oaQ+Fn-xN*nnl">
+                    <field name="OUTPUT_VALUE">1</field>
+                    <field name="STAT">1</field>
+                    <value name="PIN">
+                      <shadow type="math_number" id="AHu@a)D3!G]*Ulk/FwQG">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="ZZ=a_Oa0[0zT,{X9nH`Z">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="RsGmtl9MLye,S(:]Rvu[">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="inout_digital_writeD" id="bqM?}i~nfq(UE4Tp^J70">
+                            <field name="OUTPUT_VALUE">1</field>
+                            <field name="STAT">0</field>
+                            <value name="PIN">
+                              <shadow type="math_number" id="td!kgO5fX?_ySK}9s,B+">
+                                <field name="NUM">2</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="base_delay" id="X(h6mxYTJkR)!u~!Ped/">
+                                <field name="unite">m</field>
+                                <value name="DELAY_TIME">
+                                  <shadow type="math_number" id="mp(}tc[GPV[QLMi4-]Jb">
+                                    <field name="NUM">300</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_code_reset" id="$jljurD[Ki5Xa%p[[o^v"></block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

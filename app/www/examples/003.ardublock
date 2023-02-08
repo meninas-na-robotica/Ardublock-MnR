@@ -1,0 +1,96 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="bEjv({c?.dS@$c{UmOz|" x="52" y="72">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="?`wf8og@^ETb|E6]MV:1">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="TJ_B2@m}eQs==28{O-n;">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_init" id=":zLQWH9dtc%/`UfqQSy~">
+            <field name="pin">0</field>
+            <field name="SPEED">9600</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="1QT8tfi9}PpBh:t9J,dB">
+        <field name="VAR">R</field>
+        <value name="VALUE">
+          <block type="inout_analog_readR" id="(_:spGO]/`.2ccxDqjMb">
+            <field name="NUMBER">1</field>
+            <field name="broche">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="r]a?.XY~vLMbu97d,B+d">
+            <field name="VAR">R</field>
+            <value name="VALUE">
+              <block type="math_random_int_map" id="R88d4AP}){v9:_JK!hu,">
+                <value name="Mi1">
+                  <shadow type="math_number" id="6#2h)5R9YGS_NsjXbTAZ">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="=Ng`!y:Q=uqbVssxpRVd">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <value name="Mi2">
+                  <shadow type="math_number" id="3lPX=p178(!{A33Q2e3A">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="Mi3">
+                  <shadow type="math_number" id="@rRN.;DSNdM_l^S#V__5">
+                    <field name="NUM">1023</field>
+                  </shadow>
+                </value>
+                <value name="Mi4">
+                  <shadow type="math_number" id="@Zi,d8wH9(5%2w+EwChl">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="Mi5">
+                  <shadow type="math_number" id="IdsW${O{[PDl[JRH214C">
+                    <field name="NUM">255</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="inout_analog_writeD" id="=_^PMp0pV5%Y=R9*,/d[">
+                <field name="OUTPUT_VALUE">1</field>
+                <field name="broche">3</field>
+                <value name="NUM">
+                  <shadow type="math_number" id="m3]?v3QaWJUpoyjuv]hd">
+                    <field name="NUM">255</field>
+                  </shadow>
+                  <block type="variables_get" id="TZZ6+*XL$C580Do7/0oK">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_write_ln" id="3eq[~Pzm-c/J~97Be4G`">
+                    <value name="CONTENT">
+                      <shadow type="text" id="qfm3QaWC~=+0b#?xD$_o">
+                        <field name="TEXT">ArduBlock</field>
+                      </shadow>
+                      <block type="variables_get" id="x34g*GzpZ(jZ_Q],:ZvR">
+                        <field name="VAR">R</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

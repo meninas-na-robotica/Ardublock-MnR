@@ -1,0 +1,77 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="gl;I7Ey-~:aaPhr=w8eR" x="126" y="86">
+    <statement name="MySetup">
+      <block type="soft_init_ttl" id=":+E*9|mav;8=xiC=,3{d">
+        <field name="PIN1">2</field>
+        <field name="PIN2">3</field>
+        <field name="SPEED">115200</field>
+        <next>
+          <block type="variables_set_init" id="_*rK/54r:X1d%(bi|p^?">
+            <field name="VAR">x</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="b1v?*SBas``U=MJ2VQGN">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="M.{=oSn,S-(25E0_1piZ">
+        <field name="VAR">x</field>
+        <value name="VALUE">
+          <block type="math_random_int_map" id="mTVhuq?y1#Y|}H]D:w0h" inline="false">
+            <value name="Mi1">
+              <shadow type="math_number" id=";y{cwWzg|L^L6H6Ppt2m">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="inout_analog_readR" id=")WOGau~-288FFg6yh$cC">
+                <field name="NUMBER">1</field>
+                <field name="broche">A0</field>
+              </block>
+            </value>
+            <value name="Mi2">
+              <shadow type="math_number" id="!V3k/2a.-xgZ|/9T~`|J">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="Mi3">
+              <shadow type="math_number" id="xsu%Jy/P}Icc81VdUf%K">
+                <field name="NUM">1023</field>
+              </shadow>
+            </value>
+            <value name="Mi4">
+              <shadow type="math_number" id="lmL]E3T=p1]aL|Gy-iEQ">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="Mi5">
+              <shadow type="math_number" id="?@xF2?_Q,kr7oS8/v2v?">
+                <field name="NUM">255</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="soft_write_ttl_uart" id="V}e_`9M4BM!-!qpC.]3%">
+            <field name="TEXT1">5</field>
+            <field name="TEXT2">0</field>
+            <field name="TEXT3">0</field>
+            <field name="TEXT4">0</field>
+            <value name="CONTENT">
+              <shadow type="math_number" id=";N,.z.)4$BxVO?FFU:3@">
+                <field name="NUM">255</field>
+              </shadow>
+              <block type="variables_get" id="BWt_.,%9[|P6lKl.n6Mg">
+                <field name="VAR">x</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

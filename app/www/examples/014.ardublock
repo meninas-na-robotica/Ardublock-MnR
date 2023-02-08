@@ -1,0 +1,67 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="NO.#@`Rx{[(Pl-O?vowt" x="280" y="65">
+    <statement name="MySetup">
+      <block type="serial_init" id="?Cl+w]zw;zls!gKYLb8q">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="inout_digital_writeD" id="iaB3d,r02D#FREk(~q3-">
+        <field name="OUTPUT_VALUE">1</field>
+        <field name="STAT">1</field>
+        <value name="PIN">
+          <shadow type="math_number" id="%C.T](Vt(fwyd%ZElX6S">
+            <field name="NUM">13</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="base_delay" id="Ak]JavU|1TYb{ggvo0LO">
+            <field name="unite">m</field>
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="XIm=Vt|mz@hEL|qu.*|_">
+                <field name="NUM">1000</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_writeD" id="j-`/sn-O@9}!$#u#86b-">
+                <field name="OUTPUT_VALUE">1</field>
+                <field name="STAT">0</field>
+                <value name="PIN">
+                  <shadow type="math_number" id="P4Q}P3eW@vE(i#.-VrkX">
+                    <field name="NUM">13</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="?JYSR_2O}IIXf+lL?2P.">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="s5j6a6dAOltowOEP;3.c">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="interrupts_attach_yield" id="EgB`#ai_N#!%ERQDU^~X" x="279" y="369">
+    <statement name="CONTENT">
+      <block type="serial_write_ln" id="(}}4#ZHE|1+3nVEN_BN-">
+        <value name="CONTENT">
+          <shadow type="text" id="d0F./{E$-F$`g!tDn)Bh">
+            <field name="TEXT">ArduBlock</field>
+          </shadow>
+          <block type="inout_analog_read" id="YYy%E9B4oxEuwr,!DSXh">
+            <field name="broche">A0</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

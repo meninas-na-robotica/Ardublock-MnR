@@ -1,0 +1,187 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="Qhm)I=%3EOIkp0wZ*{jo" x="106" y="31">
+    <statement name="MySetup">
+      <block type="serial_init" id="fUF8|Xr?T%~UWV$X{8;o">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="bluetooth_soft_init" id="=9[4;6wwXjLhC$LP)3,7">
+            <field name="PIN1">9</field>
+            <field name="PIN2">10</field>
+            <field name="SPEED">9600</field>
+            <next>
+              <block type="variables_set_init" id="xCdus(qp0Nyvsh!g?!wv">
+                <field name="VAR">R</field>
+                <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+                <value name="VALUE">
+                  <block type="math_number" id="O=;k!X1PT2{OMnYM-CBq">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="controls_if" id="2@!ZRh9s|VSSj$/GvX*}">
+        <value name="IF0">
+          <block type="logic_compare_log" id="QS@U-Jg$VAz];03R9Cw.">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="}}7s+~9a$P:/wob;YKL*">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="bluetooth_soft_available" id=":`Yk9fZMhSwt#4}|~VGh"></block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="^qUfc`{.^kmYGAy^Zi|7">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="`a@y.9`K;lm{a%c|aq}u">
+            <field name="VAR">R</field>
+            <value name="VALUE">
+              <block type="bluetooth_soft_read" id="M}r/Cn?nXq@oTt3;D8A["></block>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="v8TUyE|l%#ceC%x4L)6A">
+                <value name="CONTENT">
+                  <shadow type="text" id="BUFzGs)W4^#4L:*;(y70">
+                    <field name="TEXT">ArduBlock</field>
+                  </shadow>
+                  <block type="variables_get" id="sLRj6qTUAzMMz0{RA-vy">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="?czC3}?Y%4C97V9^02m.">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="SG=f=tB^iY#4K5h0`dkK">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="}}7s+~9a$P:/wob;YKL*">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="variables_get" id="e$aT=7Evk0q@hT(EAFyp">
+                            <field name="VAR">R</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="6;`LwuzKqWL!$E:`2+G!">
+                            <field name="NUM">49</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="inout_digital_write" id="|i{W-c0]Diq8S0~Yc@*U">
+                        <value name="PIN">
+                          <shadow type="math_number" id="9{hSh/-F91U-A.hs0T?s">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                        <value name="STAT">
+                          <shadow type="math_number" id="UlY?VHo@nq,+1oE}%,:]">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="j/q8%[me7yr9;%]c5wpa">
+                        <value name="IF0">
+                          <block type="logic_compare_log" id="F[!iZ!ADlalYs%=^gktY">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <shadow type="math_number" id="}}7s+~9a$P:/wob;YKL*">
+                                <field name="NUM">R</field>
+                              </shadow>
+                              <block type="variables_get" id="G3:bZq2T$G]8PeHBK?i]">
+                                <field name="VAR">R</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="~RR*:kii-1Au^?Mw*._m">
+                                <field name="NUM">50</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="inout_digital_write" id="wJY5p;`se~vk7_-NMB2X">
+                            <value name="PIN">
+                              <shadow type="math_number" id="c|8Hh||GrppJg-nP%I/$">
+                                <field name="NUM">13</field>
+                              </shadow>
+                            </value>
+                            <value name="STAT">
+                              <shadow type="math_number" id="fjb*M{d~=aBDm1X]mlO,">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="PQaw+wkw[RZjzvdxo[AZ">
+            <value name="IF0">
+              <block type="logic_compare_log" id="dsE1~U#L-@EgNolM[{~+">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <shadow type="math_number" id=",b269NZ)RjqROu9kRS:g">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="digital_readbiR" id="H:ZZj;67YPC5^j/7/cmi">
+                    <field name="NUMBER">1</field>
+                    <value name="PIN">
+                      <shadow type="math_number" id="4/{Bd?X3fhvtM9b0ARS2">
+                        <field name="NUM">2</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="6A/k7s$V#-TOT)?v=DRH">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="bluetooth_soft_write" id="0c,BNa@0W!U#n=hb#,gW">
+                <value name="CONTENT">
+                  <shadow type="math_number" id="/F1/GyVP[vg*cb/=#ZTj">
+                    <field name="NUM">123</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="T7m0ggq[c].mQ1Os4QTK">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="wHp**hR|}^*P:@@?kxnT">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

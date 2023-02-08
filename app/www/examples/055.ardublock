@@ -1,0 +1,174 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id=".tx/g1:CTF5xapTdct(3" x="79" y="146">
+    <statement name="MySetup">
+      <block type="Init_MAX7219_7digit" id="TB30oy{*|tH*G_+ToM$b">
+        <value name="PIN_DAT">
+          <shadow type="math_number" id="kCcM5}F*sOK2ZdcyNttH">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="PIN_CS">
+          <shadow type="math_number" id="xo`cbi-8n*ES*H8{ICmK">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="PIN_CLK">
+          <shadow type="math_number" id="TJ3ajW%O5-emfO^1oS;j">
+            <field name="NUM">6</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="variables_set_init" id="k2|0:!{:`.7Te[djC@6y">
+            <field name="VAR">X</field>
+            <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="f/?/:z]0M%.*_kU63]Yw">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="$wpX6r~sEBXKrNW0v#g}">
+        <field name="VAR">X</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="UD7BZHt|VcbF($4J{qBf">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <shadow type="math_number" id="DnEAw_hmqm2(;|X(wwbR">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="variables_get" id="*{aJeJd_)s2/S0_Fd+bI">
+                <field name="VAR">X</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="c-.0)Usdc*_!~8*tLREV">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="MAX7219_7digit_char_bm" id="^BW4Sw~ikWw?i%v6s#K7">
+            <field name="dp">1</field>
+            <value name="SSS">
+              <shadow type="math_number" id="^A}H[k^J`N{W9d2];8{}">
+                <field name="NUM">12345678</field>
+              </shadow>
+              <block type="variables_get" id="f0?lrWp.C9FdSK8oD!E*">
+                <field name="VAR">X</field>
+              </block>
+            </value>
+            <next>
+              <block type="base_delay" id="1(p:c=n9@,uLhatWcDR*">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="sU{MU/raX@60dW9:*Y4N">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="MAX7219_7digit_char_none" id="_Cq2QHiLFdrlE(r6Dk(1">
+                    <next>
+                      <block type="MAX7219_7digit_char_bm" id="/|zaCi(p5r2sHm2w$(3,">
+                        <field name="dp">4</field>
+                        <value name="SSS">
+                          <shadow type="math_number" id=",nMo$v:?M=PCKYn:Fa]m">
+                            <field name="NUM">12345678</field>
+                          </shadow>
+                          <block type="variables_get" id="hv[lcwq08Yo-LMN*$qNz">
+                            <field name="VAR">X</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="MAX7219_7digit_char_bm" id="%uN`3UxFb27w1gZC05]+">
+                            <field name="dp">5</field>
+                            <value name="SSS">
+                              <shadow type="math_number" id=",nMo$v:?M=PCKYn:Fa]m">
+                                <field name="NUM">12345678</field>
+                              </shadow>
+                              <block type="variables_get" id="r54*]~zKlC3P+8LG,cAS">
+                                <field name="VAR">X</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="MAX7219_7digit_char_bm" id=";:ek~9qMAV|-cFDDtsD1">
+                                <field name="dp">6</field>
+                                <value name="SSS">
+                                  <shadow type="math_number" id=",nMo$v:?M=PCKYn:Fa]m">
+                                    <field name="NUM">12345678</field>
+                                  </shadow>
+                                  <block type="variables_get" id="~[ioG;0Kslj%0AB_?6ov">
+                                    <field name="VAR">X</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="base_delay" id="n|~FCp-!rTZP@:~`_~/Y">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="y~HB:DTj,Q4dRmt.tS$p">
+                                        <field name="NUM">1000</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="MAX7219_7digit_char_none" id="fJ4tJXW(Tgh9(FHTS8dE">
+                                        <next>
+                                          <block type="MAX7219_7digit_char_bm" id="$$IH]d-!S6!9qs%lTMb}">
+                                            <field name="dp">8</field>
+                                            <value name="SSS">
+                                              <shadow type="math_number" id=",nMo$v:?M=PCKYn:Fa]m">
+                                                <field name="NUM">12345678</field>
+                                              </shadow>
+                                              <block type="variables_get" id="dhbxuo/Z[~0c~+[?Y^m0">
+                                                <field name="VAR">X</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="MAX7219_7digit_char_bm" id="Tr~-9C~B`#)@BxlF02_k">
+                                                <field name="dp">9</field>
+                                                <value name="SSS">
+                                                  <shadow type="math_number" id=",nMo$v:?M=PCKYn:Fa]m">
+                                                    <field name="NUM">12345678</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="qG/1%en?aFTIwPoXO@sQ">
+                                                    <field name="VAR">X</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="WrC(a[rJb]3fGcs*aC@D">
+                                                    <field name="unite">m</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="maKwuqHfP9BNq@BwC`{I">
+                                                        <field name="NUM">1000</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

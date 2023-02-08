@@ -1,0 +1,79 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="N()+5;Gyj5:w$eB0Nyb5" x="120" y="104">
+    <statement name="MySetup">
+      <block type="serial_init" id="8fPu}FkjVEv*!2ktzJ-6">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="controls_if" id="S+g`F|ZQPv,EGxp@n=2@">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare_log" id="CDQMY4YHFY*t7rUMjtL3">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="uq)Q2%^)%RD)+~etZ3xo">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="digital_readbiR" id="3A5LJI+=PCY)nw%~D([y">
+                <field name="NUMBER">1</field>
+                <value name="PIN">
+                  <shadow type="math_number" id="{mlDtcDNLb.d:?8:@J-g">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="/=l[y5:UX+0F[6jlw4t:">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="inout_digital_writeD" id="V(*D(1H]YKdV5U7o2d07">
+            <field name="OUTPUT_VALUE">1</field>
+            <field name="STAT">1</field>
+            <value name="PIN">
+              <shadow type="math_number" id="x[opvxnNhG)^01XSHJ2O">
+                <field name="NUM">13</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="Mut901G]hIVkt{Erv=@e">
+                <value name="CONTENT">
+                  <shadow type="text" id="!Da1=bID=3uAdg:A56MV">
+                    <field name="TEXT">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="inout_digital_writeD" id="]2J!WKbhpo,F4#[g$wIa">
+            <field name="OUTPUT_VALUE">1</field>
+            <field name="STAT">0</field>
+            <value name="PIN">
+              <shadow type="math_number" id="6fGB8mJGD(;R#PL*qLiK">
+                <field name="NUM">13</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="v]?PO@*~3b-juou?35Ud">
+                <value name="CONTENT">
+                  <shadow type="text" id="DukN6E(066?1:Obi5cf;">
+                    <field name="TEXT">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

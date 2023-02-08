@@ -1,0 +1,606 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="$M%ECIMN5]EI)JT|%QUD" x="127" y="98">
+    <statement name="MySetup">
+      <block type="minilcdi2c_setup" id="EzYjAv2Jgx[n|dQcRC2|"></block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="minilcdi2c_setcursor_draw_pl" id="xZ:Z6q1P]`*qfD--G|Vm">
+        <field name="TEXT">0</field>
+        <value name="print_x">
+          <shadow type="math_number" id="Q1F}eJnoF~y.#|)6O1NQ">
+            <field name="NUM">16</field>
+          </shadow>
+        </value>
+        <value name="print_y">
+          <shadow type="math_number" id="gEH*_WPU*uZ6#pD?j%8J">
+            <field name="NUM">3</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="minilcdi2c_setcursor_draw_pl" id="=Jn(Qb_^R9O3[PR9(?nF">
+            <field name="TEXT">0</field>
+            <value name="print_x">
+              <shadow type="math_number" id="EG0!/`N!,)Zu4s7-Pov+">
+                <field name="NUM">40</field>
+              </shadow>
+            </value>
+            <value name="print_y">
+              <shadow type="math_number" id="361Gr?JLX.g0pkxmqP|a">
+                <field name="NUM">3</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="3Ui$Wd1Sx$_#eE[2d#OA">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="JJRiW@k/:M`KQH)TXse:">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="minilcdi2c_setcursor_draw_pl" id="FL$N|;/2W!_C.@tipry_">
+                    <field name="TEXT">1</field>
+                    <value name="print_x">
+                      <shadow type="math_number" id="~d)(L2O6@ZTQ.yam+_T*">
+                        <field name="NUM">16</field>
+                      </shadow>
+                    </value>
+                    <value name="print_y">
+                      <shadow type="math_number" id="Wd/Q~{SX[jlkVGYgsN?U">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="minilcdi2c_setcursor_draw_pl" id="dSP/,ck6:ANiyLTJHKYY">
+                        <field name="TEXT">1</field>
+                        <value name="print_x">
+                          <shadow type="math_number" id="A4itvu:{q[e:!1}PCeum">
+                            <field name="NUM">40</field>
+                          </shadow>
+                        </value>
+                        <value name="print_y">
+                          <shadow type="math_number" id="rAX~87@``UH^lnM=Y(Q$">
+                            <field name="NUM">3</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="wgt%_1$d/VnT0?jP})Lu">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="JXZPg{%@R3GAvz4BXb$:">
+                                <field name="NUM">1000</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="minilcdi2c_setcursor_draw" id="8e-fD.C}KxqL1imfV{ko" collapsed="true" x="732" y="240">
+    <field name="TEXT">0</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">FALSE</field>
+    <field name="Pix0e3">FALSE</field>
+    <field name="Pix0e4">FALSE</field>
+    <field name="Pix0e5">FALSE</field>
+    <field name="Pix0e6">FALSE</field>
+    <field name="Pix0e7">FALSE</field>
+    <field name="Pix0e8">FALSE</field>
+    <field name="Pix0e9">FALSE</field>
+    <field name="Pix0e10">FALSE</field>
+    <field name="Pix0e11">FALSE</field>
+    <field name="Pix0e12">FALSE</field>
+    <field name="Pix0e13">FALSE</field>
+    <field name="Pix0e14">TRUE</field>
+    <field name="Pix0e15">TRUE</field>
+    <field name="Pix1e0">TRUE</field>
+    <field name="Pix1e1">TRUE</field>
+    <field name="Pix1e2">FALSE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">FALSE</field>
+    <field name="Pix1e8">FALSE</field>
+    <field name="Pix1e9">FALSE</field>
+    <field name="Pix1e10">FALSE</field>
+    <field name="Pix1e11">FALSE</field>
+    <field name="Pix1e12">FALSE</field>
+    <field name="Pix1e13">FALSE</field>
+    <field name="Pix1e14">TRUE</field>
+    <field name="Pix1e15">TRUE</field>
+    <field name="Pix2e0">FALSE</field>
+    <field name="Pix2e1">FALSE</field>
+    <field name="Pix2e2">FALSE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">FALSE</field>
+    <field name="Pix2e8">FALSE</field>
+    <field name="Pix2e9">FALSE</field>
+    <field name="Pix2e10">FALSE</field>
+    <field name="Pix2e11">FALSE</field>
+    <field name="Pix2e12">FALSE</field>
+    <field name="Pix2e13">FALSE</field>
+    <field name="Pix2e14">FALSE</field>
+    <field name="Pix2e15">FALSE</field>
+    <field name="Pix3e0">FALSE</field>
+    <field name="Pix3e1">FALSE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">FALSE</field>
+    <field name="Pix3e7">FALSE</field>
+    <field name="Pix3e8">FALSE</field>
+    <field name="Pix3e9">FALSE</field>
+    <field name="Pix3e10">FALSE</field>
+    <field name="Pix3e11">FALSE</field>
+    <field name="Pix3e12">FALSE</field>
+    <field name="Pix3e13">FALSE</field>
+    <field name="Pix3e14">FALSE</field>
+    <field name="Pix3e15">FALSE</field>
+    <field name="Pix4e0">FALSE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">FALSE</field>
+    <field name="Pix4e6">FALSE</field>
+    <field name="Pix4e7">FALSE</field>
+    <field name="Pix4e8">FALSE</field>
+    <field name="Pix4e9">FALSE</field>
+    <field name="Pix4e10">FALSE</field>
+    <field name="Pix4e11">FALSE</field>
+    <field name="Pix4e12">FALSE</field>
+    <field name="Pix4e13">FALSE</field>
+    <field name="Pix4e14">FALSE</field>
+    <field name="Pix4e15">FALSE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">FALSE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix5e5">FALSE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">FALSE</field>
+    <field name="Pix5e8">FALSE</field>
+    <field name="Pix5e9">FALSE</field>
+    <field name="Pix5e10">FALSE</field>
+    <field name="Pix5e11">FALSE</field>
+    <field name="Pix5e12">FALSE</field>
+    <field name="Pix5e13">FALSE</field>
+    <field name="Pix5e14">FALSE</field>
+    <field name="Pix5e15">FALSE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">FALSE</field>
+    <field name="Pix6e3">FALSE</field>
+    <field name="Pix6e4">FALSE</field>
+    <field name="Pix6e5">FALSE</field>
+    <field name="Pix6e6">FALSE</field>
+    <field name="Pix6e7">FALSE</field>
+    <field name="Pix6e8">FALSE</field>
+    <field name="Pix6e9">FALSE</field>
+    <field name="Pix6e10">FALSE</field>
+    <field name="Pix6e11">FALSE</field>
+    <field name="Pix6e12">FALSE</field>
+    <field name="Pix6e13">FALSE</field>
+    <field name="Pix6e14">FALSE</field>
+    <field name="Pix6e15">FALSE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">FALSE</field>
+    <field name="Pix7e3">FALSE</field>
+    <field name="Pix7e4">FALSE</field>
+    <field name="Pix7e5">FALSE</field>
+    <field name="Pix7e6">FALSE</field>
+    <field name="Pix7e7">FALSE</field>
+    <field name="Pix7e8">FALSE</field>
+    <field name="Pix7e9">FALSE</field>
+    <field name="Pix7e10">FALSE</field>
+    <field name="Pix7e11">FALSE</field>
+    <field name="Pix7e12">FALSE</field>
+    <field name="Pix7e13">FALSE</field>
+    <field name="Pix7e14">FALSE</field>
+    <field name="Pix7e15">FALSE</field>
+    <field name="Pix8e0">FALSE</field>
+    <field name="Pix8e1">FALSE</field>
+    <field name="Pix8e2">FALSE</field>
+    <field name="Pix8e3">FALSE</field>
+    <field name="Pix8e4">FALSE</field>
+    <field name="Pix8e5">FALSE</field>
+    <field name="Pix8e6">FALSE</field>
+    <field name="Pix8e7">FALSE</field>
+    <field name="Pix8e8">FALSE</field>
+    <field name="Pix8e9">FALSE</field>
+    <field name="Pix8e10">FALSE</field>
+    <field name="Pix8e11">FALSE</field>
+    <field name="Pix8e12">FALSE</field>
+    <field name="Pix8e13">FALSE</field>
+    <field name="Pix8e14">FALSE</field>
+    <field name="Pix8e15">FALSE</field>
+    <field name="Pix9e0">FALSE</field>
+    <field name="Pix9e1">FALSE</field>
+    <field name="Pix9e2">FALSE</field>
+    <field name="Pix9e3">FALSE</field>
+    <field name="Pix9e4">FALSE</field>
+    <field name="Pix9e5">FALSE</field>
+    <field name="Pix9e6">FALSE</field>
+    <field name="Pix9e7">FALSE</field>
+    <field name="Pix9e8">FALSE</field>
+    <field name="Pix9e9">FALSE</field>
+    <field name="Pix9e10">FALSE</field>
+    <field name="Pix9e11">FALSE</field>
+    <field name="Pix9e12">FALSE</field>
+    <field name="Pix9e13">FALSE</field>
+    <field name="Pix9e14">FALSE</field>
+    <field name="Pix9e15">FALSE</field>
+    <field name="Pix10e0">FALSE</field>
+    <field name="Pix10e1">FALSE</field>
+    <field name="Pix10e2">FALSE</field>
+    <field name="Pix10e3">FALSE</field>
+    <field name="Pix10e4">FALSE</field>
+    <field name="Pix10e5">FALSE</field>
+    <field name="Pix10e6">FALSE</field>
+    <field name="Pix10e7">FALSE</field>
+    <field name="Pix10e8">FALSE</field>
+    <field name="Pix10e9">FALSE</field>
+    <field name="Pix10e10">FALSE</field>
+    <field name="Pix10e11">FALSE</field>
+    <field name="Pix10e12">FALSE</field>
+    <field name="Pix10e13">FALSE</field>
+    <field name="Pix10e14">FALSE</field>
+    <field name="Pix10e15">FALSE</field>
+    <field name="Pix11e0">FALSE</field>
+    <field name="Pix11e1">FALSE</field>
+    <field name="Pix11e2">FALSE</field>
+    <field name="Pix11e3">FALSE</field>
+    <field name="Pix11e4">FALSE</field>
+    <field name="Pix11e5">FALSE</field>
+    <field name="Pix11e6">FALSE</field>
+    <field name="Pix11e7">FALSE</field>
+    <field name="Pix11e8">FALSE</field>
+    <field name="Pix11e9">FALSE</field>
+    <field name="Pix11e10">FALSE</field>
+    <field name="Pix11e11">FALSE</field>
+    <field name="Pix11e12">FALSE</field>
+    <field name="Pix11e13">FALSE</field>
+    <field name="Pix11e14">FALSE</field>
+    <field name="Pix11e15">FALSE</field>
+    <field name="Pix12e0">FALSE</field>
+    <field name="Pix12e1">FALSE</field>
+    <field name="Pix12e2">FALSE</field>
+    <field name="Pix12e3">FALSE</field>
+    <field name="Pix12e4">FALSE</field>
+    <field name="Pix12e5">FALSE</field>
+    <field name="Pix12e6">FALSE</field>
+    <field name="Pix12e7">FALSE</field>
+    <field name="Pix12e8">FALSE</field>
+    <field name="Pix12e9">FALSE</field>
+    <field name="Pix12e10">FALSE</field>
+    <field name="Pix12e11">FALSE</field>
+    <field name="Pix12e12">FALSE</field>
+    <field name="Pix12e13">FALSE</field>
+    <field name="Pix12e14">FALSE</field>
+    <field name="Pix12e15">FALSE</field>
+    <field name="Pix13e0">FALSE</field>
+    <field name="Pix13e1">FALSE</field>
+    <field name="Pix13e2">FALSE</field>
+    <field name="Pix13e3">FALSE</field>
+    <field name="Pix13e4">FALSE</field>
+    <field name="Pix13e5">FALSE</field>
+    <field name="Pix13e6">FALSE</field>
+    <field name="Pix13e7">FALSE</field>
+    <field name="Pix13e8">FALSE</field>
+    <field name="Pix13e9">FALSE</field>
+    <field name="Pix13e10">FALSE</field>
+    <field name="Pix13e11">FALSE</field>
+    <field name="Pix13e12">FALSE</field>
+    <field name="Pix13e13">FALSE</field>
+    <field name="Pix13e14">FALSE</field>
+    <field name="Pix13e15">FALSE</field>
+    <field name="Pix14e0">TRUE</field>
+    <field name="Pix14e1">TRUE</field>
+    <field name="Pix14e2">FALSE</field>
+    <field name="Pix14e3">FALSE</field>
+    <field name="Pix14e4">FALSE</field>
+    <field name="Pix14e5">FALSE</field>
+    <field name="Pix14e6">FALSE</field>
+    <field name="Pix14e7">FALSE</field>
+    <field name="Pix14e8">FALSE</field>
+    <field name="Pix14e9">FALSE</field>
+    <field name="Pix14e10">FALSE</field>
+    <field name="Pix14e11">FALSE</field>
+    <field name="Pix14e12">FALSE</field>
+    <field name="Pix14e13">FALSE</field>
+    <field name="Pix14e14">TRUE</field>
+    <field name="Pix14e15">TRUE</field>
+    <field name="Pix15e0">TRUE</field>
+    <field name="Pix15e1">TRUE</field>
+    <field name="Pix15e2">FALSE</field>
+    <field name="Pix15e3">FALSE</field>
+    <field name="Pix15e4">FALSE</field>
+    <field name="Pix15e5">FALSE</field>
+    <field name="Pix15e6">FALSE</field>
+    <field name="Pix15e7">FALSE</field>
+    <field name="Pix15e8">FALSE</field>
+    <field name="Pix15e9">FALSE</field>
+    <field name="Pix15e10">FALSE</field>
+    <field name="Pix15e11">FALSE</field>
+    <field name="Pix15e12">FALSE</field>
+    <field name="Pix15e13">FALSE</field>
+    <field name="Pix15e14">TRUE</field>
+    <field name="Pix15e15">TRUE</field>
+  </block>
+  <block type="minilcdi2c_setcursor_draw" id="FV41~Y=xUJsnL5o%U`Dz" x="732" y="286">
+    <field name="TEXT">1</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">FALSE</field>
+    <field name="Pix0e3">FALSE</field>
+    <field name="Pix0e4">FALSE</field>
+    <field name="Pix0e5">FALSE</field>
+    <field name="Pix0e6">FALSE</field>
+    <field name="Pix0e7">FALSE</field>
+    <field name="Pix0e8">FALSE</field>
+    <field name="Pix0e9">FALSE</field>
+    <field name="Pix0e10">FALSE</field>
+    <field name="Pix0e11">FALSE</field>
+    <field name="Pix0e12">FALSE</field>
+    <field name="Pix0e13">FALSE</field>
+    <field name="Pix0e14">FALSE</field>
+    <field name="Pix0e15">FALSE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">FALSE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">FALSE</field>
+    <field name="Pix1e8">FALSE</field>
+    <field name="Pix1e9">FALSE</field>
+    <field name="Pix1e10">FALSE</field>
+    <field name="Pix1e11">FALSE</field>
+    <field name="Pix1e12">FALSE</field>
+    <field name="Pix1e13">FALSE</field>
+    <field name="Pix1e14">FALSE</field>
+    <field name="Pix1e15">FALSE</field>
+    <field name="Pix2e0">FALSE</field>
+    <field name="Pix2e1">FALSE</field>
+    <field name="Pix2e2">FALSE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">FALSE</field>
+    <field name="Pix2e8">FALSE</field>
+    <field name="Pix2e9">FALSE</field>
+    <field name="Pix2e10">FALSE</field>
+    <field name="Pix2e11">FALSE</field>
+    <field name="Pix2e12">FALSE</field>
+    <field name="Pix2e13">FALSE</field>
+    <field name="Pix2e14">FALSE</field>
+    <field name="Pix2e15">FALSE</field>
+    <field name="Pix3e0">FALSE</field>
+    <field name="Pix3e1">FALSE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">FALSE</field>
+    <field name="Pix3e7">FALSE</field>
+    <field name="Pix3e8">FALSE</field>
+    <field name="Pix3e9">FALSE</field>
+    <field name="Pix3e10">FALSE</field>
+    <field name="Pix3e11">FALSE</field>
+    <field name="Pix3e12">FALSE</field>
+    <field name="Pix3e13">FALSE</field>
+    <field name="Pix3e14">FALSE</field>
+    <field name="Pix3e15">FALSE</field>
+    <field name="Pix4e0">FALSE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">FALSE</field>
+    <field name="Pix4e6">FALSE</field>
+    <field name="Pix4e7">TRUE</field>
+    <field name="Pix4e8">TRUE</field>
+    <field name="Pix4e9">FALSE</field>
+    <field name="Pix4e10">FALSE</field>
+    <field name="Pix4e11">FALSE</field>
+    <field name="Pix4e12">FALSE</field>
+    <field name="Pix4e13">FALSE</field>
+    <field name="Pix4e14">FALSE</field>
+    <field name="Pix4e15">FALSE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">FALSE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix5e5">FALSE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">TRUE</field>
+    <field name="Pix5e8">TRUE</field>
+    <field name="Pix5e9">FALSE</field>
+    <field name="Pix5e10">FALSE</field>
+    <field name="Pix5e11">FALSE</field>
+    <field name="Pix5e12">FALSE</field>
+    <field name="Pix5e13">FALSE</field>
+    <field name="Pix5e14">FALSE</field>
+    <field name="Pix5e15">FALSE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">FALSE</field>
+    <field name="Pix6e3">FALSE</field>
+    <field name="Pix6e4">FALSE</field>
+    <field name="Pix6e5">TRUE</field>
+    <field name="Pix6e6">TRUE</field>
+    <field name="Pix6e7">TRUE</field>
+    <field name="Pix6e8">TRUE</field>
+    <field name="Pix6e9">TRUE</field>
+    <field name="Pix6e10">TRUE</field>
+    <field name="Pix6e11">FALSE</field>
+    <field name="Pix6e12">FALSE</field>
+    <field name="Pix6e13">FALSE</field>
+    <field name="Pix6e14">FALSE</field>
+    <field name="Pix6e15">FALSE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">FALSE</field>
+    <field name="Pix7e3">FALSE</field>
+    <field name="Pix7e4">FALSE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+    <field name="Pix7e8">TRUE</field>
+    <field name="Pix7e9">TRUE</field>
+    <field name="Pix7e10">TRUE</field>
+    <field name="Pix7e11">FALSE</field>
+    <field name="Pix7e12">FALSE</field>
+    <field name="Pix7e13">FALSE</field>
+    <field name="Pix7e14">FALSE</field>
+    <field name="Pix7e15">FALSE</field>
+    <field name="Pix8e0">FALSE</field>
+    <field name="Pix8e1">FALSE</field>
+    <field name="Pix8e2">FALSE</field>
+    <field name="Pix8e3">FALSE</field>
+    <field name="Pix8e4">FALSE</field>
+    <field name="Pix8e5">FALSE</field>
+    <field name="Pix8e6">FALSE</field>
+    <field name="Pix8e7">TRUE</field>
+    <field name="Pix8e8">TRUE</field>
+    <field name="Pix8e9">FALSE</field>
+    <field name="Pix8e10">FALSE</field>
+    <field name="Pix8e11">FALSE</field>
+    <field name="Pix8e12">FALSE</field>
+    <field name="Pix8e13">FALSE</field>
+    <field name="Pix8e14">FALSE</field>
+    <field name="Pix8e15">FALSE</field>
+    <field name="Pix9e0">FALSE</field>
+    <field name="Pix9e1">FALSE</field>
+    <field name="Pix9e2">FALSE</field>
+    <field name="Pix9e3">FALSE</field>
+    <field name="Pix9e4">FALSE</field>
+    <field name="Pix9e5">FALSE</field>
+    <field name="Pix9e6">FALSE</field>
+    <field name="Pix9e7">TRUE</field>
+    <field name="Pix9e8">TRUE</field>
+    <field name="Pix9e9">FALSE</field>
+    <field name="Pix9e10">FALSE</field>
+    <field name="Pix9e11">FALSE</field>
+    <field name="Pix9e12">FALSE</field>
+    <field name="Pix9e13">FALSE</field>
+    <field name="Pix9e14">FALSE</field>
+    <field name="Pix9e15">FALSE</field>
+    <field name="Pix10e0">FALSE</field>
+    <field name="Pix10e1">FALSE</field>
+    <field name="Pix10e2">FALSE</field>
+    <field name="Pix10e3">FALSE</field>
+    <field name="Pix10e4">FALSE</field>
+    <field name="Pix10e5">FALSE</field>
+    <field name="Pix10e6">FALSE</field>
+    <field name="Pix10e7">FALSE</field>
+    <field name="Pix10e8">FALSE</field>
+    <field name="Pix10e9">FALSE</field>
+    <field name="Pix10e10">FALSE</field>
+    <field name="Pix10e11">FALSE</field>
+    <field name="Pix10e12">FALSE</field>
+    <field name="Pix10e13">FALSE</field>
+    <field name="Pix10e14">FALSE</field>
+    <field name="Pix10e15">FALSE</field>
+    <field name="Pix11e0">FALSE</field>
+    <field name="Pix11e1">FALSE</field>
+    <field name="Pix11e2">FALSE</field>
+    <field name="Pix11e3">FALSE</field>
+    <field name="Pix11e4">FALSE</field>
+    <field name="Pix11e5">FALSE</field>
+    <field name="Pix11e6">FALSE</field>
+    <field name="Pix11e7">FALSE</field>
+    <field name="Pix11e8">FALSE</field>
+    <field name="Pix11e9">FALSE</field>
+    <field name="Pix11e10">FALSE</field>
+    <field name="Pix11e11">FALSE</field>
+    <field name="Pix11e12">FALSE</field>
+    <field name="Pix11e13">FALSE</field>
+    <field name="Pix11e14">FALSE</field>
+    <field name="Pix11e15">FALSE</field>
+    <field name="Pix12e0">FALSE</field>
+    <field name="Pix12e1">FALSE</field>
+    <field name="Pix12e2">FALSE</field>
+    <field name="Pix12e3">FALSE</field>
+    <field name="Pix12e4">FALSE</field>
+    <field name="Pix12e5">FALSE</field>
+    <field name="Pix12e6">FALSE</field>
+    <field name="Pix12e7">FALSE</field>
+    <field name="Pix12e8">FALSE</field>
+    <field name="Pix12e9">FALSE</field>
+    <field name="Pix12e10">FALSE</field>
+    <field name="Pix12e11">FALSE</field>
+    <field name="Pix12e12">FALSE</field>
+    <field name="Pix12e13">FALSE</field>
+    <field name="Pix12e14">FALSE</field>
+    <field name="Pix12e15">FALSE</field>
+    <field name="Pix13e0">FALSE</field>
+    <field name="Pix13e1">FALSE</field>
+    <field name="Pix13e2">FALSE</field>
+    <field name="Pix13e3">FALSE</field>
+    <field name="Pix13e4">FALSE</field>
+    <field name="Pix13e5">FALSE</field>
+    <field name="Pix13e6">FALSE</field>
+    <field name="Pix13e7">FALSE</field>
+    <field name="Pix13e8">FALSE</field>
+    <field name="Pix13e9">FALSE</field>
+    <field name="Pix13e10">FALSE</field>
+    <field name="Pix13e11">FALSE</field>
+    <field name="Pix13e12">FALSE</field>
+    <field name="Pix13e13">FALSE</field>
+    <field name="Pix13e14">FALSE</field>
+    <field name="Pix13e15">FALSE</field>
+    <field name="Pix14e0">FALSE</field>
+    <field name="Pix14e1">FALSE</field>
+    <field name="Pix14e2">FALSE</field>
+    <field name="Pix14e3">FALSE</field>
+    <field name="Pix14e4">FALSE</field>
+    <field name="Pix14e5">FALSE</field>
+    <field name="Pix14e6">FALSE</field>
+    <field name="Pix14e7">FALSE</field>
+    <field name="Pix14e8">FALSE</field>
+    <field name="Pix14e9">FALSE</field>
+    <field name="Pix14e10">FALSE</field>
+    <field name="Pix14e11">FALSE</field>
+    <field name="Pix14e12">FALSE</field>
+    <field name="Pix14e13">FALSE</field>
+    <field name="Pix14e14">FALSE</field>
+    <field name="Pix14e15">FALSE</field>
+    <field name="Pix15e0">FALSE</field>
+    <field name="Pix15e1">FALSE</field>
+    <field name="Pix15e2">FALSE</field>
+    <field name="Pix15e3">FALSE</field>
+    <field name="Pix15e4">FALSE</field>
+    <field name="Pix15e5">FALSE</field>
+    <field name="Pix15e6">FALSE</field>
+    <field name="Pix15e7">FALSE</field>
+    <field name="Pix15e8">FALSE</field>
+    <field name="Pix15e9">FALSE</field>
+    <field name="Pix15e10">FALSE</field>
+    <field name="Pix15e11">FALSE</field>
+    <field name="Pix15e12">FALSE</field>
+    <field name="Pix15e13">FALSE</field>
+    <field name="Pix15e14">FALSE</field>
+    <field name="Pix15e15">FALSE</field>
+  </block>
+</xml>

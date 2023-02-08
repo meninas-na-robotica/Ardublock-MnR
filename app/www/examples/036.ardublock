@@ -1,0 +1,51 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="eXor]7@dbP.$Az@1#5(W" x="172" y="152">
+    <statement name="MyLoop">
+      <block type="controls_if" id="X=Nk}fuMW!GRVPjI,DO5">
+        <value name="IF0">
+          <block type="logic_compare_log" id="+XfA}*2*VfuwaG{0.Q;p">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="I6S]J9I$0/K*:qa[g4xT">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="digital_readbiR" id="|Q95mm.`;Q#=-vEg4ea{">
+                <field name="NUMBER">1</field>
+                <value name="PIN">
+                  <shadow type="math_number" id=";KLTBjM3iMW}N*/}dJ=2">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="Sr9+m8=Ios~HSUZ8]HA:">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="RadioTEA5767_init" id="o.(F1r,`1c~]d4BeTdYQ">
+            <value name="NUM">
+              <shadow type="math_number" id="97:`2b@,6V0--cKvS*Xu">
+                <field name="NUM">106</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="C1c/0M]Z%1cxPhr/=@3=">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="T{/~5!ITI5|MEVJYM0j`">
+                    <field name="NUM">200</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

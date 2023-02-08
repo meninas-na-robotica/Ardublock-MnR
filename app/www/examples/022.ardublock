@@ -1,0 +1,75 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="mHE!rBI$-yssA9iJFtz{" x="129" y="188">
+    <statement name="MySetup">
+      <block type="motor_auto_stepper" id="qV~:S8$l9YS/GM%,)a+i">
+        <field name="STEEPER_NUMBER">1</field>
+        <value name="STEP_RPM">
+          <shadow type="math_number" id="nor,(9K/`A-#Wd?H9=*e">
+            <field name="NUM">48</field>
+          </shadow>
+        </value>
+        <value name="PIN_STEEPER1">
+          <shadow type="math_number" id="|G^[Dh@Q)iKXlKa)M`$/">
+            <field name="NUM">2</field>
+          </shadow>
+        </value>
+        <value name="PIN_STEEPER2">
+          <shadow type="math_number" id="d{NY(8$d5=5J]GT3N?6k">
+            <field name="NUM">3</field>
+          </shadow>
+        </value>
+        <value name="PIN_STEEPER3">
+          <shadow type="math_number" id="TYeJ{{cEmNY*?]27=%1o">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="PIN_STEEPER4">
+          <shadow type="math_number" id="PKCf238GvnG|RqYE+iSG">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="motor_auto_stepper_box" id="Zn!,E!dK-3iY%PgHcA!u">
+        <field name="STEEPER_NUMBER">1</field>
+        <value name="STEPPER_STEP_h">
+          <shadow type="math_number" id=",q`XW$hIe{3i;4X80=4X">
+            <field name="NUM">650</field>
+          </shadow>
+        </value>
+        <value name="STEPPER_STEP_j">
+          <shadow type="math_number" id="}p`R,qvwrpMNoKjq2NB-">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="motor_auto_stepper_box" id="Xw`Iverb930%Km6.n`F{">
+            <field name="STEEPER_NUMBER">1</field>
+            <value name="STEPPER_STEP_h">
+              <shadow type="math_number" id="jEb1_yX4;}!w}K,yLFP3">
+                <field name="NUM">650</field>
+              </shadow>
+            </value>
+            <value name="STEPPER_STEP_j">
+              <shadow type="math_number" id="=cC1,SNt^hvanVm1BeC(">
+                <field name="NUM">-500</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="|L;EEB;x=)/Q/X6G}GC$">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id=")cHW*[nI]cQWaVR:DFQ,">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

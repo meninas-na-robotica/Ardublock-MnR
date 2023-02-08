@@ -1,0 +1,130 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="2a}#G8ytf6UHB)FgxM#/" x="69" y="46">
+    <statement name="MySetup">
+      <block type="serial_init" id="[+xJ8KM@j46{YK!?b5I_">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="Init_RTC_ds3231" id="X57ng^!(,pp$+,6+p]6m">
+            <next>
+              <block type="DateTime_RTC_ds3231" id="QB:{jnD@EUxy|Q;yR(eH" disabled="true">
+                <value name="DS3231_DAY">
+                  <shadow type="math_number" id="aNz.y-t}];tf)k;tUR__">
+                    <field name="NUM">19</field>
+                  </shadow>
+                </value>
+                <value name="DS3231_MONTH">
+                  <shadow type="math_number" id="=tZuq.aKEp^b?2cit~nV">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+                <value name="DS3231_YEAR">
+                  <shadow type="math_number" id="y3Y?kSjm3jZ3VqVrVcNv">
+                    <field name="NUM">21</field>
+                  </shadow>
+                </value>
+                <value name="DS3231_HOUR">
+                  <shadow type="math_number" id="|3$JP(FS!:(Al;9M2-(}">
+                    <field name="NUM">23</field>
+                  </shadow>
+                </value>
+                <value name="DS3231_MINUTE">
+                  <shadow type="math_number" id="H#)Aq9I%N[F%Zdwl4^Wb">
+                    <field name="NUM">30</field>
+                  </shadow>
+                </value>
+                <value name="DS3231_SECOND">
+                  <shadow type="math_number" id="`Aa:IPtz#*|ko?k,sKoY">
+                    <field name="NUM">15</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="order_read_rtc_ds3231" id="HcpL6*Ym8E:(R0*[GR##">
+        <next>
+          <block type="serial_write_ln" id="ox3N(,gv1;V8hR7}{|0d">
+            <value name="CONTENT">
+              <shadow type="text" id="YvV~Kjr%:x4j0$MJ`!0u">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+              <block type="text_join" id="qrye|KgRG~B,}Dla72sS">
+                <mutation items="11"></mutation>
+                <value name="ADD0">
+                  <block type="values_ds3231" id="}4)9KfK1T[!/jEK7YA7*">
+                    <field name="OUTPUT_VALUE">0</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="(auN,5VklS(Hjy~-$4R)">
+                    <field name="TEXT"> - </field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="values_ds3231" id="x0[28ah5hsxrmp#Q%JHB">
+                    <field name="OUTPUT_VALUE">1</field>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="text" id="~8s$P|.Huj~8-=D{lpg5">
+                    <field name="TEXT"> - </field>
+                  </block>
+                </value>
+                <value name="ADD4">
+                  <block type="values_ds3231" id="%@w[X4-D8A,;%aVf]W!n">
+                    <field name="OUTPUT_VALUE">2</field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="text" id="W=n})bwAwMrJC!Rr7Y/e">
+                    <field name="TEXT"> - </field>
+                  </block>
+                </value>
+                <value name="ADD6">
+                  <block type="values_ds3231" id="xL=%h9h-tVDpsRXFrUW%">
+                    <field name="OUTPUT_VALUE">3</field>
+                  </block>
+                </value>
+                <value name="ADD7">
+                  <block type="text" id="]sD048/:n1!G1aGR=aUV">
+                    <field name="TEXT"> : </field>
+                  </block>
+                </value>
+                <value name="ADD8">
+                  <block type="values_ds3231" id="|{KIuJ}q8*c@g,$_ySvf">
+                    <field name="OUTPUT_VALUE">4</field>
+                  </block>
+                </value>
+                <value name="ADD9">
+                  <block type="text" id="_#92X;h.^xrpz$8OB+~C">
+                    <field name="TEXT"> : </field>
+                  </block>
+                </value>
+                <value name="ADD10">
+                  <block type="values_ds3231" id="v=w!ak8=bf5=GcDir+H[">
+                    <field name="OUTPUT_VALUE">5</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="base_delay" id="/PWgOHJNc,A$C3W1bTFs">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="Y5FVD%H,vEL^A`R3Ub7(">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

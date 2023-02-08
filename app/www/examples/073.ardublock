@@ -1,0 +1,196 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="oR#h-IlsS.JLuA2=iXe#" x="26" y="62">
+    <statement name="MySetup">
+      <block type="Init_MAX7219_ledmatrix4x" id="(r=9bsmavI};BH#rg.7G">
+        <field name="dp">3</field>
+        <field name="dp2">2</field>
+        <value name="PIN_DAT">
+          <shadow type="math_number" id="ca~fW:f-1hU$%!,XMz*f">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="PIN_CS">
+          <shadow type="math_number" id="@#dP;32s;*$ifg,yGRlw">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="PIN_CLK">
+          <shadow type="math_number" id="0(B%nw.}J|uUTgQ$aAC6">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="variables_set_init" id="sS{Jpy!6ZlVc{vj}(Ge=">
+            <field name="VAR">w</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="YzcVFsR%S1y|$/)fh~%;">
+                <field name="NUM">23</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="base_delay" id="*?Vq{K{K~3$u9SkSbddp">
+        <field name="unite">m</field>
+        <value name="DELAY_TIME">
+          <shadow type="math_number" id="?gW1:_`Es*M58WP/T]Uv">
+            <field name="NUM">5000</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="Init_MAX7219_ledmatrix4x_text" id="3=|l.`=-$m[%bE8M#gP;">
+            <field name="size">0</field>
+            <value name="texttoprint">
+              <shadow type="text" id="3o0?()3EWVrULxLJ6^[I">
+                <field name="TEXT">ArduBlock - Программа блочного кодирования для платформ Arduino!</field>
+              </shadow>
+            </value>
+            <value name="Y_Nokia">
+              <shadow type="math_number" id="U%XFy%{S}PdLJnWfyq#t">
+                <field name="NUM">20</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="Init_MAX7219_ledmatrix4x_text" id="CX1+{a~G0/MNC^uSGjv#">
+                <field name="size">1</field>
+                <value name="texttoprint">
+                  <shadow type="text" id="6}2+{ShJ(o.+5Xo5DFHU">
+                    <field name="TEXT">Ardu</field>
+                  </shadow>
+                </value>
+                <value name="Y_Nokia">
+                  <shadow type="math_number" id="q+dt^J9U?RHIX(dYiqyx">
+                    <field name="NUM">400</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="Init_MAX7219_ledmatrix4x_text" id="b=2,-`HPeVh[Y*e][b+0">
+                    <field name="size">1</field>
+                    <value name="texttoprint">
+                      <shadow type="text" id="`sI)9^yZ9{a-Un?]alJ=">
+                        <field name="TEXT">Block</field>
+                      </shadow>
+                    </value>
+                    <value name="Y_Nokia">
+                      <shadow type="math_number" id="1u`:9.7;K}6nR@Ty]t{[">
+                        <field name="NUM">400</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="base_define_for" id="_|Aj`19$3)NN5/k#^*|E">
+                        <value name="variable">
+                          <shadow type="math_number" id="WmTzZVSb|P*#9FZloVe)">
+                            <field name="NUM">10</field>
+                          </shadow>
+                        </value>
+                        <statement name="DO">
+                          <block type="base_form_RR" id="dxN[na-:0M{YEml@^;_R">
+                            <field name="SPEED">++</field>
+                            <value name="texttoprint">
+                              <shadow type="math_number" id="[s[V6,b5oYyJe]v|ozN=">
+                                <field name="NUM">R</field>
+                              </shadow>
+                              <block type="variables_get" id="BEKS}4{?:GlzY3;?3x{Y">
+                                <field name="VAR">w</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="Init_MAX7219_ledmatrix4x_text" id="EZU{hG:I)@YlET`fqp*H">
+                                <field name="size">1</field>
+                                <value name="texttoprint">
+                                  <shadow type="text" id="e%kouOJIC9N4cFd.*XUa">
+                                    <field name="TEXT">Block</field>
+                                  </shadow>
+                                  <block type="text_join" id="U!)SjYnoNVb/(aHgYLfG">
+                                    <mutation items="3"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="`x/{[,JgYU.-Li7d_(t-">
+                                        <field name="TEXT">12</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="text" id="O?HPv*L,6|j^9#}KpfP]">
+                                        <field name="TEXT">:</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD2">
+                                      <block type="math_single_int_text" id="Lcdhh[aG]mivZy)Q]*;o">
+                                        <field name="dim">String</field>
+                                        <value name="PIN">
+                                          <shadow type="math_number" id="U8;2(({%5gtG-wlBY:Ag">
+                                            <field name="NUM">R</field>
+                                          </shadow>
+                                          <block type="variables_get" id="qs/6m8#=[7nwczY[9y=i">
+                                            <field name="VAR">w</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="Y_Nokia">
+                                  <shadow type="math_number" id="*f-)(g#`ovT(6V,uy4K[">
+                                    <field name="NUM">500</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="Init_MAX7219_ledmatrix4x_text" id="Iw(eN0ldR,esm(8+}84n">
+                                    <field name="size">1</field>
+                                    <value name="texttoprint">
+                                      <shadow type="text" id="e%kouOJIC9N4cFd.*XUa">
+                                        <field name="TEXT">Block</field>
+                                      </shadow>
+                                      <block type="text_join" id="]$O,x#/lOgd2:W^bM%xQ">
+                                        <mutation items="3"></mutation>
+                                        <value name="ADD0">
+                                          <block type="text" id="T{$(KRcYAT~n0:f=Z~q1">
+                                            <field name="TEXT">12</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="text" id="p1QFli:zM@uV_lC|^fWQ">
+                                            <field name="TEXT"> </field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD2">
+                                          <block type="math_single_int_text" id="c^*px`^~euVf,}GA8B;G">
+                                            <field name="dim">String</field>
+                                            <value name="PIN">
+                                              <shadow type="math_number" id="U8;2(({%5gtG-wlBY:Ag">
+                                                <field name="NUM">R</field>
+                                              </shadow>
+                                              <block type="variables_get" id="7+Fc.qzypP0Zf`_4xs]r">
+                                                <field name="VAR">w</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="Y_Nokia">
+                                      <shadow type="math_number" id="_~aJzqRlo#L|uZv^KbJ,">
+                                        <field name="NUM">500</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

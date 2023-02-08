@@ -1,0 +1,123 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id=",$k1Z*LuZ$HS.6/LiL;y" x="159" y="96">
+    <statement name="MySetup">
+      <block type="serial_init" id="0n1fGIrTmZFrGQWS!9Q^">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="creer_tableau" id="Szem~R%/Q!fQ5_gF$,]e">
+            <mutation dim="3"></mutation>
+            <field name="VAR">R</field>
+            <field name="type">LARGE_NUMBER</field>
+            <field name="dim">3</field>
+            <value name="D0">
+              <block type="math_number" id="pDO$J$ouN(pM_T8Hn*d#">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="D1">
+              <block type="math_number" id="F?B,b-rxxqR9?nZ[Y73{">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+            <value name="D2">
+              <block type="math_number" id="HHf3tWaz[U4Wbk4%/0-T">
+                <field name="NUM">30</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="fixer_tableau" id="yS{hlRZ53x%,--j`pMXm">
+        <mutation dim="null"></mutation>
+        <field name="VAR">R</field>
+        <field name="Number">1</field>
+        <value name="value">
+          <shadow type="math_number" id="JbIaVKH*Kj3,vg0%sE*A">
+            <field name="NUM">11</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="fixer_tableau" id="rat}WesB94E{Cp9`Oa{T">
+            <mutation dim="null"></mutation>
+            <field name="VAR">R</field>
+            <field name="Number">2</field>
+            <value name="value">
+              <shadow type="math_number" id="l7M3K?[.`qhrUg]6:G{C">
+                <field name="NUM">22</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="fixer_tableau" id="fY^K5_X@L%M#jX`U1dp*">
+                <mutation dim="null"></mutation>
+                <field name="VAR">R</field>
+                <field name="Number">3</field>
+                <value name="value">
+                  <shadow type="math_number" id="Vi,pxuh]I48?^G)pPyI_">
+                    <field name="NUM">33</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="serial_write_ln" id="*9J04wxmChVmJb7Ju++l">
+                    <value name="CONTENT">
+                      <shadow type="text" id="gT`HDRbQgmV~UU,9(7!j">
+                        <field name="TEXT">ArduBlock</field>
+                      </shadow>
+                      <block type="text_join" id="E+HvN)AOn{Z@W){;po{:">
+                        <mutation items="5"></mutation>
+                        <value name="ADD0">
+                          <block type="array_getIndex" id="het6SmuRfpHz@;G;{(RD">
+                            <mutation dim="null"></mutation>
+                            <field name="VAR">R</field>
+                            <field name="Number">1</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="*krq)7:Ej,Bpm!S.8XQV">
+                            <field name="TEXT"> - </field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="array_getIndex" id="0O^d$OT{nRALOrWap0So">
+                            <mutation dim="null"></mutation>
+                            <field name="VAR">R</field>
+                            <field name="Number">2</field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="text" id="m=nq*[at60ui~)DAxOaJ">
+                            <field name="TEXT"> - </field>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="array_getIndex" id="SJK;?uFuTSay3akwnur]">
+                            <mutation dim="null"></mutation>
+                            <field name="VAR">R</field>
+                            <field name="Number">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="Z^~.8{p4wgIZ`)_NT|v]">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="M0p]5T1i/VB.SI@a9L%H">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

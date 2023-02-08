@@ -1,0 +1,106 @@
+C:\ArduBlock 2.0\app\www\toolbox\toolbox_arduino_all.xml
+
+<parametre id="defaultCategories">1,2,3,4,</parametre>                                           // Отображение пунктов в меню 
+
+<category name="CAT_TEXT" colour="#5BA58C"></category>                                           // Пункт в меню         
+<block type="testBlock"></block>                                                                 // Блок
+
+<value name="variable"><shadow type="math_number"><field name="NUM">10</field></shadow></value>            // начальное значение в блоке если есть переменная
+<value name="texttoprint"><shadow type="text"> <field name="TEXT">ArduBlock</field> </shadow></value>      // начальное значение если в блоке есть текст
+
+................................................................................................................................................................................................
+
+C:\ArduBlock 2.0\app\www\lang\Arduino_ru.js
+
+Blockly.Msg.CAT_TFTDISPLAYU = "TFT Дисплей";                                                      // слово на русском
+
+................................................................................................................................................................................................
+
+C:\ArduBlock 2.0\app\www\lang\Arduino_en.js
+ 
+Blockly.Msg.CAT_TFTDISPLAYU = "TFT Display";                                                      // слово на англ       
+
+................................................................................................................................................................................................
+
+C:\ArduBlock 2.0\app\www\blocs&generateurs\arduino_blocs.js
+
+
+
+Blockly.Blocks["minilcdi2c_setcursor"] = {
+  init: function() {
+    this.setColour("#6D917F");                                                                  //Цвет блока
+	
+	this.appendDummyInput()                                                                     //Текст в блоке
+        .appendField(Blockly.Msg.miniLCD_I2C_print_x);
+		
+	this.appendValueInput("print_x", "Number")                                                   //Переменная математики
+        .setCheck("Number");
+	
+	this.appendDummyInput()                                                                      //Выбор	
+        .appendField(Blockly.Msg.miniLCD_I2C_print_F)
+		.appendField(new Blockly.FieldDropdown([['6x8', '6x8'],['12x16', '12x16']]), "dp");	       
+
+	this.appendValueInput("texttoprint")                                                         //Текст переменная
+        .setCheck(null)
+		.appendField(Blockly.Msg.miniLCD_I2C_print_T);
+		
+	 this.appendDummyInput()                                                                     //галка
+        .appendField(new Blockly.FieldCheckbox("TRUE"), "check");
+		
+//  верх низ  
+    this.setInputsInline(false);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+	
+//	вставка
+	this.setInputsInline(false);
+    this.setOutput(true);
+	
+//	простой
+	this.setInputsInline(false);	
+	
+//	верх
+    this.setInputsInline(false);
+    this.setPreviousStatement(true);	
+
+//	низ
+    this.setInputsInline(false);
+    this.setNextStatement(true);	
+	
+    this.setTooltip('');
+	this.setHelpUrl('');
+  }
+};
+
+
+................................................................................................................................................................................................
+
+C:\ArduBlock 2.0\app\www\blocs&generateurs\arduino_generateurs_cpp.js
+
+
+
+Blockly.Arduino['lcdi2c_setuprus'] = function(block) {
+
+ var value_check = block.getFieldValue('check') == 'TRUE';                                                      // Галка
+var texttoprint = Blockly.Arduino.valueToCode(block, 'texttoprint', Blockly.Arduino.ORDER_ATOMIC);              // Текст переменная
+var point = this.getFieldValue('dp');                                                          // Выбор
+var print_y = Blockly.Arduino.valueToCode(block, 'print_y', Blockly.Arduino.ORDER_ATOMIC);     // Переменная математики
+
+'+text_name+'
+
+Blockly.Arduino.definitions_['define'] = '           \n';
+
+Blockly.Arduino.setups_['setup']='                 \n';
+
+var code = '                 \n';
+
+return code;
+};
+
+
+
+
+
+
+
+

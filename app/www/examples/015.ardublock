@@ -1,0 +1,134 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="T-Q69CL5^Y}0h[Dy]d%I" x="188" y="105">
+    <statement name="MySetup">
+      <block type="serial_init" id=")P6a^r*sVS6TwE/G:KS2">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set_init" id="fo3G.4wU1(*aMU|TBZXt">
+            <field name="VAR">R</field>
+            <field name="VARIABLE_SETTYPE_TYPE">CHARACTER</field>
+            <value name="VALUE">
+              <block type="text_char" id="[]^+-oWlbyVJx1js}p=H">
+                <field name="TEXT"> </field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="controls_if" id="2#P/v~_u9c{Z**IS:I].">
+        <value name="IF0">
+          <block type="logic_compare_log" id="e)pTl)?fCw.8anTm-@~$">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="]t[hhHV~uh/z5fbZ(SC7">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="serial_available" id="nplc{izmqFdI]TeqG9Gn"></block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="akw1Kkm5h]*-3t;ID$p(">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="%$YSV!|93W%)Di87hd$L">
+            <field name="VAR">R</field>
+            <value name="VALUE">
+              <block type="serial_read" id="6EWvbA9kC8j%3,6YXbFM"></block>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="{i%37bGFBVf1F*E?y7MM">
+                <value name="CONTENT">
+                  <shadow type="text" id="J/^xsFunOl5pQ{%t+Wj^">
+                    <field name="TEXT">ArduBlock</field>
+                  </shadow>
+                  <block type="variables_get" id="(F1GXgdNIr33MT,s(Je2">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="iDTe)F:g$fo`WoO9c8?)">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="Rg`1UNC|f]5C{pM66mMS">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="^R0Xl3dhrVbxs]uB^nA;">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="variables_get" id="0|h,UtdcE4}Xem(ap{Xm">
+                            <field name="VAR">R</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id=":[d|dEk;b$6ZM4Fd*~d$">
+                            <field name="NUM">49</field>
+                          </shadow>
+                          <block type="text_char" id="A%b~{N-$Z:u|WmP70)Pv">
+                            <field name="TEXT">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="inout_digital_writeD" id="L!iH2Zg3%=Ys4.+GZNI-">
+                        <field name="OUTPUT_VALUE">1</field>
+                        <field name="STAT">1</field>
+                        <value name="PIN">
+                          <shadow type="math_number" id="iCpD$oGw|%lomwiMrDB9">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="1Q2lROspKXBkOEEj|U.?">
+                        <value name="IF0">
+                          <block type="logic_compare_log" id="~zjT,qCb8]ph3YSkFa.?">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <shadow type="math_number" id="^R0Xl3dhrVbxs]uB^nA;">
+                                <field name="NUM">R</field>
+                              </shadow>
+                              <block type="variables_get" id="RbmfR1ocqrg}P||y4eW/">
+                                <field name="VAR">R</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="gH@QY.2w),{Io~=}-2IP">
+                                <field name="NUM">50</field>
+                              </shadow>
+                              <block type="text_char" id="9EuT#X$Y7JS+s:T7*o0S">
+                                <field name="TEXT">2</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="inout_digital_writeD" id="k3M*fBKjSOV1=+3aL79O">
+                            <field name="OUTPUT_VALUE">1</field>
+                            <field name="STAT">0</field>
+                            <value name="PIN">
+                              <shadow type="math_number" id="83.9vW.fx46WwGRNd/cg">
+                                <field name="NUM">13</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

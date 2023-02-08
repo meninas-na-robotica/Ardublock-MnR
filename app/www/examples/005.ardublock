@@ -1,0 +1,101 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="X^vyk,7R`)Gl%h*Tb]r*" x="120" y="116">
+    <statement name="MyLoop">
+      <block type="controls_if" id="Q`PKHL?fdaG%$r*Zyo*9">
+        <value name="IF0">
+          <block type="logic_compare_log" id=":JTA:B/kZWOY,K3UIj3D">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="XBqF?,0R=619IDmb/oR7">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="digital_readbiR" id="2G`y9i-v^!ln0{BLvnWF">
+                <field name="NUMBER">1</field>
+                <value name="PIN">
+                  <shadow type="math_number" id="nYHmv=A(WrWD#EK=o{s|">
+                    <field name="NUM">12</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="esO!j:5`itr{h}LxxWIs">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="actuator_tonedure" id="H)jwK9EXln^:-By|J#W(">
+            <value name="PIN">
+              <shadow type="math_number" id="DtqZq^2(RstGD;e#PhT4">
+                <field name="NUM">3</field>
+              </shadow>
+            </value>
+            <value name="NUM">
+              <shadow type="math_number" id=":hy-qO1wM!4f=|~z4BG;">
+                <field name="NUM">1200</field>
+              </shadow>
+              <block type="frequency" id="mS:ao:B{hHiUt1nN]pXf">
+                <field name="NOTE">C</field>
+                <field name="OCTAVE">4</field>
+              </block>
+            </value>
+            <value name="DUR">
+              <shadow type="math_number" id="|d0kaj.fZmV?2t8Z7Rw{">
+                <field name="NUM">300</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="actuator_tonedure" id="7aL+e3gS=a=-ad!9OTsw">
+                <value name="PIN">
+                  <shadow type="math_number" id="INM~964yqhr4Fv;ri37]">
+                    <field name="NUM">3</field>
+                  </shadow>
+                </value>
+                <value name="NUM">
+                  <shadow type="math_number" id=":hy-qO1wM!4f=|~z4BG;">
+                    <field name="NUM">1200</field>
+                  </shadow>
+                  <block type="frequency" id="^!3{4nTZ|/v+!WxpCY8X">
+                    <field name="NOTE">D</field>
+                    <field name="OCTAVE">4</field>
+                  </block>
+                </value>
+                <value name="DUR">
+                  <shadow type="math_number" id=",feQ7/8S-!g:],/J^j@M">
+                    <field name="NUM">300</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="actuator_tonedure" id=":;ARj[AGU!XK3OBJjH_|">
+                    <value name="PIN">
+                      <shadow type="math_number" id="iAmjYW#EXKT4.;bst.fP">
+                        <field name="NUM">3</field>
+                      </shadow>
+                    </value>
+                    <value name="NUM">
+                      <shadow type="math_number" id=":hy-qO1wM!4f=|~z4BG;">
+                        <field name="NUM">1200</field>
+                      </shadow>
+                      <block type="frequency" id="ow.w%N}}gd*8*gx#Mx`Z">
+                        <field name="NOTE">E</field>
+                        <field name="OCTAVE">4</field>
+                      </block>
+                    </value>
+                    <value name="DUR">
+                      <shadow type="math_number" id="vgf13/.?e(cl/)j!oz+.">
+                        <field name="NUM">300</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

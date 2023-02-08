@@ -1,0 +1,184 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="p.%h$(i(};_fY`Up{Ddr" x="126" y="64">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="lW2}Oi4V_7X|:=D1QcX?">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="96B[v]!|q{F`IQns%^N9">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_init" id="IQ-]4bTn{A^IMblVJ10E">
+            <field name="pin">0</field>
+            <field name="SPEED">9600</field>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="ds1990_Write" id="}WFl;9R1IwmUe%7?CzQo" disabled="true">
+        <field name="RE_NUMBER">2</field>
+        <value name="Writecounter">
+          <shadow type="math_number" id="G$X`7KL-!xebGtT-l?FY">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="Writecounter1">
+          <shadow type="math_number" id="=XzxeT`MrB2)4gGflSJ7">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="Writecounter2">
+          <shadow type="math_number" id="2MgsWK!,rP0(}_o8a,0;">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="Writecounter3">
+          <shadow type="math_number" id="6{,_MqK/(8xFP.U|q-VX">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="Writecounter4">
+          <shadow type="math_number" id="e-*|~(5~P1Y8G#iG@$V9">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="Writecounter5">
+          <shadow type="math_number" id="^O15.ag}{Jp!+:8I%v9_">
+            <field name="NUM">6</field>
+          </shadow>
+        </value>
+        <value name="Writecounter6">
+          <shadow type="math_number" id="C3!J,y5h|_%$.-eljH|#">
+            <field name="NUM">7</field>
+          </shadow>
+        </value>
+        <value name="Writecounter7">
+          <shadow type="math_number" id="rzAd{LG54|4bP~n#Ab2C">
+            <field name="NUM">8</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="ds1990_Read" id="X.)nFmO{=!t:(?CLf:d1">
+            <field name="NUMBER">2</field>
+            <value name="Writecounter">
+              <shadow type="math_number" id="+d{;ZF9RlS-RLyD-IGUz">
+                <field name="NUM">R1</field>
+              </shadow>
+              <block type="variables_get" id="z-ZlY}*tzTe]!|*JnomQ">
+                <field name="VAR">R</field>
+              </block>
+            </value>
+            <value name="Writecounter1">
+              <shadow type="math_number" id="{4Z^A^.F3@if(*npHdNx">
+                <field name="NUM">R2</field>
+              </shadow>
+            </value>
+            <value name="Writecounter2">
+              <shadow type="math_number" id="dz%SKX3Vt-=@=EE@JOUn">
+                <field name="NUM">R3</field>
+              </shadow>
+            </value>
+            <value name="Writecounter3">
+              <shadow type="math_number" id="SYdGA4/aT8^vIJgM;@_S">
+                <field name="NUM">R4</field>
+              </shadow>
+            </value>
+            <value name="Writecounter4">
+              <shadow type="math_number" id="Y!;Qs_htu=gw_x}]~-Xv">
+                <field name="NUM">R5</field>
+              </shadow>
+            </value>
+            <value name="Writecounter5">
+              <shadow type="math_number" id="|5T`_@HsS6aTZ8V*2xik">
+                <field name="NUM">R6</field>
+              </shadow>
+            </value>
+            <value name="Writecounter6">
+              <shadow type="math_number" id="b*FXt2c~fHv{YL~hfv4v">
+                <field name="NUM">R7</field>
+              </shadow>
+            </value>
+            <value name="Writecounter7">
+              <shadow type="math_number" id=")5A+XeiT/ZqcYL`zh2m!">
+                <field name="NUM">R8</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="bk0qz:MK31o0BIo6iYh*">
+                <value name="CONTENT">
+                  <shadow type="text" id="|52KyC9x0H.*9Eot1?9p">
+                    <field name="TEXT">ArduBlock</field>
+                  </shadow>
+                  <block type="variables_get" id="k?VQXWo?@l`DE2!yA}0c">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="D/F7NL#d/+k^gvuHToJb">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id=".RBy]3XHy=@S.Z%ti}68">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="}l`jG7k4B2F-qJlLi^|L">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="variables_get" id="1R6#oU=i#^yVvE~vu^#O">
+                            <field name="VAR">R</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="|?5p4@O0g8q,YS@7c?S#">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="inout_digital_writeD" id="qQag6YkqvYM7JnX+=bbR">
+                        <field name="OUTPUT_VALUE">1</field>
+                        <field name="STAT">1</field>
+                        <value name="PIN">
+                          <shadow type="math_number" id="7=zv*$1^oOX1tree~?t1">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="TGkxnq}T]o%w3m0,6e_I">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="HFI(*ax]F5O7T-{?,Z`t">
+                                <field name="NUM">2000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="inout_digital_writeD" id=")O!!rD5J!Kz5XUk(VwNU">
+                                <field name="OUTPUT_VALUE">1</field>
+                                <field name="STAT">0</field>
+                                <value name="PIN">
+                                  <shadow type="math_number" id="@qo|/i[g%t*.}AEVY3O7">
+                                    <field name="NUM">13</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_code_reset" id="W(wsI8K*l7ux!@P2/%YR"></block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

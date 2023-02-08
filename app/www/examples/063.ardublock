@@ -1,0 +1,656 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="br)oPbqdXHulC]EJIch8" x="57" y="65">
+    <statement name="MySetup">
+      <block type="lcd_128x64px_spi_top" id="K4o0r+P;={F9Q0;aWDRE">
+        <field name="dp2">U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE|U8G_I2C_OPT_DEV_0)</field>
+        <field name="dp">0</field>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="lcd_128x64px_spi_b" id="MwEE|2Z78;jV{VBo5~7d">
+        <statement name="CONTENT">
+          <block type="lcd_128x64px_spi_draw_pl" id="gF+AMtjvIb8!30Cf9{jr">
+            <field name="TEXT">01</field>
+            <value name="print_x">
+              <shadow type="math_number" id="6;L7IbSPvMOro+4hUbzB">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <value name="print_y">
+              <shadow type="math_number" id="KgQLBID(/wPWo:=1ip4J">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="lcd_128x64px_spi_draw_pl" id="ya)vu(L*;hdOzjOLW*7q">
+                <field name="TEXT">02</field>
+                <value name="print_x">
+                  <shadow type="math_number" id="e|Wl*{^H=eP@M?b`=of#">
+                    <field name="NUM">18</field>
+                  </shadow>
+                </value>
+                <value name="print_y">
+                  <shadow type="math_number" id="z^YfDK*lS]`^hg}FKd!3">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="base_delay" id="`r9XPPY{3%1_/vxxB|T%">
+            <field name="unite">m</field>
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="2-%m|a`|=kR=Yod3nt*p">
+                <field name="NUM">1000</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="lcd_128x64px_spi_b" id="#q!l:ELy6{`[E|9O]%7)">
+                <statement name="CONTENT">
+                  <block type="lcd_128x64px_spi_draw_pl" id="aQAdIH:++,Y4/Rc0E*(|">
+                    <field name="TEXT">03</field>
+                    <value name="print_x">
+                      <shadow type="math_number" id="*CJ0$s(+R/29^c$aOYJA">
+                        <field name="NUM">10</field>
+                      </shadow>
+                    </value>
+                    <value name="print_y">
+                      <shadow type="math_number" id="rBlJf2{PYhT6E5mDjZh~">
+                        <field name="NUM">10</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="lcd_128x64px_spi_draw_pl" id="CvYc|~}7LahUrKdh}5pa">
+                        <field name="TEXT">04</field>
+                        <value name="print_x">
+                          <shadow type="math_number" id="AhJ0AMbzoF}~deZ)?WhN">
+                            <field name="NUM">18</field>
+                          </shadow>
+                        </value>
+                        <value name="print_y">
+                          <shadow type="math_number" id="f9Iu_z3RBq9H:M^b2-H*">
+                            <field name="NUM">10</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="base_delay" id="[.AzxSDCULg*HEBQIH;G">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="B%YJ;K.@wio-J-=4wprH">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="lcd_128x64px_spi_b" id=":7K}-pFOPxx$`u9^o{2B">
+                        <statement name="CONTENT">
+                          <block type="lcd_128x64px_spi_draw_pl" id="d:.Fw/g@mKDpx}U2UBsf">
+                            <field name="TEXT">05</field>
+                            <value name="print_x">
+                              <shadow type="math_number" id="co3pA:wYqwF]aPB}N4iZ">
+                                <field name="NUM">10</field>
+                              </shadow>
+                            </value>
+                            <value name="print_y">
+                              <shadow type="math_number" id="HknziRNCNXGc4VP[XkWj">
+                                <field name="NUM">10</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="lcd_128x64px_spi_draw_pl" id="7U?76l%+cHhqf!U=vx?Z">
+                                <field name="TEXT">06</field>
+                                <value name="print_x">
+                                  <shadow type="math_number" id="#l8oVv*oC|b/q`Z^ZFuG">
+                                    <field name="NUM">18</field>
+                                  </shadow>
+                                </value>
+                                <value name="print_y">
+                                  <shadow type="math_number" id="[97:QQAyt0($)elEs5FD">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="base_delay" id="=M56Yq(P^l(Qh~wwRri;">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="2*G)2V*Q/U1Y4NiW9)eh">
+                                <field name="NUM">1000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="lcd_128x64px_spi_b" id="f.#KmVDLyZtRpgXduAmN">
+                                <statement name="CONTENT">
+                                  <block type="lcd_128x64px_spi_draw_pl" id="s6=LOd$M/lRdF9=hkC1r">
+                                    <field name="TEXT">07</field>
+                                    <value name="print_x">
+                                      <shadow type="math_number" id="po(*;E_)w?oz@?%nmnMQ">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="print_y">
+                                      <shadow type="math_number" id="uuOfZ#j|I0Sj^Wi^nNK1">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="lcd_128x64px_spi_draw_pl" id="JdH#,Rh~zPXB#uw/W~_i">
+                                        <field name="TEXT">06</field>
+                                        <value name="print_x">
+                                          <shadow type="math_number" id="8+KzDoffvy;Nj.%a_+q4">
+                                            <field name="NUM">18</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="print_y">
+                                          <shadow type="math_number" id="QH].HWxVO`z%~}hemvHW">
+                                            <field name="NUM">10</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="base_delay" id="{AGvgD=YI]/a*`2h?]Te">
+                                    <field name="unite">m</field>
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="y50G+,5mlc/VE4^-JBGP">
+                                        <field name="NUM">1000</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id="RG)=MRGQc1(dtogn)NWi" x="481" y="155">
+    <field name="TEXT">01</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">FALSE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">FALSE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">FALSE</field>
+    <field name="Pix3e7">FALSE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">FALSE</field>
+    <field name="Pix4e6">FALSE</field>
+    <field name="Pix4e7">FALSE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix5e5">FALSE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">FALSE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">FALSE</field>
+    <field name="Pix6e4">FALSE</field>
+    <field name="Pix6e5">FALSE</field>
+    <field name="Pix6e6">FALSE</field>
+    <field name="Pix6e7">FALSE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id="dRx;`$|$|##WOpIB;iUU" x="701" y="154">
+    <field name="TEXT">02</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">FALSE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">TRUE</field>
+    <field name="Pix2e0">FALSE</field>
+    <field name="Pix2e1">FALSE</field>
+    <field name="Pix2e2">FALSE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">TRUE</field>
+    <field name="Pix3e0">FALSE</field>
+    <field name="Pix3e1">FALSE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">FALSE</field>
+    <field name="Pix3e7">TRUE</field>
+    <field name="Pix4e0">FALSE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">FALSE</field>
+    <field name="Pix4e6">FALSE</field>
+    <field name="Pix4e7">TRUE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">FALSE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix5e5">FALSE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">TRUE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">FALSE</field>
+    <field name="Pix6e3">FALSE</field>
+    <field name="Pix6e4">FALSE</field>
+    <field name="Pix6e5">FALSE</field>
+    <field name="Pix6e6">FALSE</field>
+    <field name="Pix6e7">TRUE</field>
+    <field name="Pix7e0">TRUE</field>
+    <field name="Pix7e1">TRUE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id="}iT^;*3+~p1O{T^kiC?o" x="483" y="398">
+    <field name="TEXT">03</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">FALSE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">FALSE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">FALSE</field>
+    <field name="Pix3e7">FALSE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">FALSE</field>
+    <field name="Pix4e6">FALSE</field>
+    <field name="Pix4e7">FALSE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">FALSE</field>
+    <field name="Pix5e5">FALSE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">FALSE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">FALSE</field>
+    <field name="Pix6e4">FALSE</field>
+    <field name="Pix6e5">FALSE</field>
+    <field name="Pix6e6">FALSE</field>
+    <field name="Pix6e7">FALSE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id="J{kjjJz*Sk3sD#2OzgkP" x="704" y="396">
+    <field name="TEXT">04</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">FALSE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">TRUE</field>
+    <field name="Pix1e7">TRUE</field>
+    <field name="Pix2e0">FALSE</field>
+    <field name="Pix2e1">FALSE</field>
+    <field name="Pix2e2">FALSE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">TRUE</field>
+    <field name="Pix2e6">TRUE</field>
+    <field name="Pix2e7">TRUE</field>
+    <field name="Pix3e0">FALSE</field>
+    <field name="Pix3e1">FALSE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">TRUE</field>
+    <field name="Pix3e5">TRUE</field>
+    <field name="Pix3e6">TRUE</field>
+    <field name="Pix3e7">TRUE</field>
+    <field name="Pix4e0">FALSE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">TRUE</field>
+    <field name="Pix4e4">TRUE</field>
+    <field name="Pix4e5">TRUE</field>
+    <field name="Pix4e6">TRUE</field>
+    <field name="Pix4e7">TRUE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">TRUE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix5e5">TRUE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">TRUE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">TRUE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix6e5">FALSE</field>
+    <field name="Pix6e6">FALSE</field>
+    <field name="Pix6e7">TRUE</field>
+    <field name="Pix7e0">TRUE</field>
+    <field name="Pix7e1">TRUE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id="jq$d?P8NPj~D2N=S5MX_" x="485" y="635">
+    <field name="TEXT">05</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">FALSE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">FALSE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">TRUE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">TRUE</field>
+    <field name="Pix3e7">TRUE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">TRUE</field>
+    <field name="Pix4e6">TRUE</field>
+    <field name="Pix4e7">TRUE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix5e5">TRUE</field>
+    <field name="Pix5e6">TRUE</field>
+    <field name="Pix5e7">TRUE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix6e5">TRUE</field>
+    <field name="Pix6e6">TRUE</field>
+    <field name="Pix6e7">FALSE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id=":mQVMpRB/ps@t3rJ:g+h" x="708" y="635">
+    <field name="TEXT">06</field>
+    <field name="Pix0e0">TRUE</field>
+    <field name="Pix0e1">TRUE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">TRUE</field>
+    <field name="Pix1e1">TRUE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">FALSE</field>
+    <field name="Pix1e5">FALSE</field>
+    <field name="Pix1e6">TRUE</field>
+    <field name="Pix1e7">TRUE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">FALSE</field>
+    <field name="Pix2e4">FALSE</field>
+    <field name="Pix2e5">TRUE</field>
+    <field name="Pix2e6">TRUE</field>
+    <field name="Pix2e7">TRUE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">FALSE</field>
+    <field name="Pix3e3">FALSE</field>
+    <field name="Pix3e4">TRUE</field>
+    <field name="Pix3e5">TRUE</field>
+    <field name="Pix3e6">TRUE</field>
+    <field name="Pix3e7">TRUE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">FALSE</field>
+    <field name="Pix4e2">FALSE</field>
+    <field name="Pix4e3">TRUE</field>
+    <field name="Pix4e4">TRUE</field>
+    <field name="Pix4e5">TRUE</field>
+    <field name="Pix4e6">TRUE</field>
+    <field name="Pix4e7">TRUE</field>
+    <field name="Pix5e0">FALSE</field>
+    <field name="Pix5e1">FALSE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">TRUE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix5e5">TRUE</field>
+    <field name="Pix5e6">FALSE</field>
+    <field name="Pix5e7">TRUE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">TRUE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix6e5">FALSE</field>
+    <field name="Pix6e6">FALSE</field>
+    <field name="Pix6e7">TRUE</field>
+    <field name="Pix7e0">TRUE</field>
+    <field name="Pix7e1">TRUE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+  <block type="lcd_128x64px_spi_draw" id="!JX;7}bQR(a}U?ksy1Ic" x="488" y="880">
+    <field name="TEXT">07</field>
+    <field name="Pix0e0">FALSE</field>
+    <field name="Pix0e1">FALSE</field>
+    <field name="Pix0e2">TRUE</field>
+    <field name="Pix0e3">TRUE</field>
+    <field name="Pix0e4">TRUE</field>
+    <field name="Pix0e5">TRUE</field>
+    <field name="Pix0e6">TRUE</field>
+    <field name="Pix0e7">TRUE</field>
+    <field name="Pix1e0">FALSE</field>
+    <field name="Pix1e1">FALSE</field>
+    <field name="Pix1e2">TRUE</field>
+    <field name="Pix1e3">TRUE</field>
+    <field name="Pix1e4">TRUE</field>
+    <field name="Pix1e5">TRUE</field>
+    <field name="Pix1e6">FALSE</field>
+    <field name="Pix1e7">FALSE</field>
+    <field name="Pix2e0">TRUE</field>
+    <field name="Pix2e1">TRUE</field>
+    <field name="Pix2e2">TRUE</field>
+    <field name="Pix2e3">TRUE</field>
+    <field name="Pix2e4">TRUE</field>
+    <field name="Pix2e5">FALSE</field>
+    <field name="Pix2e6">FALSE</field>
+    <field name="Pix2e7">TRUE</field>
+    <field name="Pix3e0">TRUE</field>
+    <field name="Pix3e1">TRUE</field>
+    <field name="Pix3e2">TRUE</field>
+    <field name="Pix3e3">TRUE</field>
+    <field name="Pix3e4">FALSE</field>
+    <field name="Pix3e5">FALSE</field>
+    <field name="Pix3e6">TRUE</field>
+    <field name="Pix3e7">TRUE</field>
+    <field name="Pix4e0">TRUE</field>
+    <field name="Pix4e1">TRUE</field>
+    <field name="Pix4e2">TRUE</field>
+    <field name="Pix4e3">FALSE</field>
+    <field name="Pix4e4">FALSE</field>
+    <field name="Pix4e5">TRUE</field>
+    <field name="Pix4e6">TRUE</field>
+    <field name="Pix4e7">TRUE</field>
+    <field name="Pix5e0">TRUE</field>
+    <field name="Pix5e1">TRUE</field>
+    <field name="Pix5e2">TRUE</field>
+    <field name="Pix5e3">FALSE</field>
+    <field name="Pix5e4">TRUE</field>
+    <field name="Pix5e5">TRUE</field>
+    <field name="Pix5e6">TRUE</field>
+    <field name="Pix5e7">TRUE</field>
+    <field name="Pix6e0">FALSE</field>
+    <field name="Pix6e1">FALSE</field>
+    <field name="Pix6e2">TRUE</field>
+    <field name="Pix6e3">TRUE</field>
+    <field name="Pix6e4">TRUE</field>
+    <field name="Pix6e5">TRUE</field>
+    <field name="Pix6e6">TRUE</field>
+    <field name="Pix6e7">FALSE</field>
+    <field name="Pix7e0">FALSE</field>
+    <field name="Pix7e1">FALSE</field>
+    <field name="Pix7e2">TRUE</field>
+    <field name="Pix7e3">TRUE</field>
+    <field name="Pix7e4">TRUE</field>
+    <field name="Pix7e5">TRUE</field>
+    <field name="Pix7e6">TRUE</field>
+    <field name="Pix7e7">TRUE</field>
+  </block>
+</xml>

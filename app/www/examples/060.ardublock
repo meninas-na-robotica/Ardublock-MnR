@@ -1,0 +1,93 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="br)oPbqdXHulC]EJIch8" x="62" y="10">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="_HL`Ys67lue~hEOA`$mF">
+        <field name="VAR">x</field>
+        <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id=":[gF#L4*UH,1+i9C+)K5">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set_init" id="`b55qxjk@;LvK-4zJ/`e">
+            <field name="VAR">y</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="yRnNo4y:C_$/IzHAY^I9">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_init" id="b=uK(p#_fl;LQZDKipY?">
+                <field name="pin">0</field>
+                <field name="SPEED">9600</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="Init_MPU6050_GY" id="d-B:1u)ctRB/d,k_0b5[">
+        <field name="NAME">0x68</field>
+        <field name="OUTPUT_VALUE">ax</field>
+        <value name="PIN">
+          <shadow type="math_number" id="Ezx+Ly|)fE/t3fgpEDn5">
+            <field name="NUM">R</field>
+          </shadow>
+          <block type="variables_get" id="jv{q~0jI)62)+Fh%[yiK">
+            <field name="VAR">x</field>
+          </block>
+        </value>
+        <next>
+          <block type="Init_MPU6050_GY" id="gU=eE8,uR9N4AR%`WRA1">
+            <field name="NAME">0x68</field>
+            <field name="OUTPUT_VALUE">ay</field>
+            <value name="PIN">
+              <shadow type="math_number" id="Ezx+Ly|)fE/t3fgpEDn5">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="variables_get" id="k-:L_9FRBsRcuHPn=J:7">
+                <field name="VAR">y</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="hsblcRcWwpzai!8Cctxq">
+                <value name="CONTENT">
+                  <shadow type="text" id="-V,#ZU;@Y,qlu)bN;krU">
+                    <field name="TEXT">ArduBlock</field>
+                  </shadow>
+                  <block type="text_join" id="_/~fYbh%X1ymwd9eEY)O">
+                    <mutation items="4"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="{r.{~E$+(OH*-:eQ=kl?">
+                        <field name="TEXT">X - </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get" id="BAqK,D,T0qPbGw,%Me!Q">
+                        <field name="VAR">x</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text" id="q?1@MXh3;=aD7ASD.vGP">
+                        <field name="TEXT"> Y - </field>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="variables_get" id="RxjJY4o_O~q}fbyop`D{">
+                        <field name="VAR">y</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

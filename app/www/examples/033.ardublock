@@ -1,0 +1,85 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="_qHxwpjhy)j:VdhNX:,O" x="88" y="40">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="#Ps]_ZP1xyw-R_/UQwmA">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="q}$FnNb=B/3`c`~*LGZ3">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="Initread_fingerprinting" id="J}51qdTHS39|:O!*]s!@" disabled="true"></block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="Initread_fingerprintingD" id="#;G@0g,nZ[cf`{b[,./,">
+        <value name="PIN_RKOD">
+          <shadow type="math_number" id="3eg^yUcqWR!JKu~.:=dz">
+            <field name="NUM">R</field>
+          </shadow>
+          <block type="variables_get" id="vO$TqGRbU0;8VL_]k`f.">
+            <field name="VAR">R</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id=";|OrAgMs]u+{4DcgRhej">
+            <value name="IF0">
+              <block type="logic_compare_log" id="=oJac(|}fM%fzl5bafON">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <shadow type="math_number" id="r?(d@oYn#`0F$WH]AO9]">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="kJ[*0nq#K.T/=RzoL:a@">
+                    <field name="VAR">R</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="|g`?GzqH2:sKx6A^t~^C">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="inout_digital_writeD" id="h-xcSeQjf_|7j*:=C*Y-">
+                <field name="OUTPUT_VALUE">1</field>
+                <field name="STAT">1</field>
+                <value name="PIN">
+                  <shadow type="math_number" id="^[#Bpu,a0mHMB~!;%az]">
+                    <field name="NUM">13</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="}|P#`|Tw*w2zVlQ`9zx{">
+                    <field name="unite">m</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="=k!!xv?+1qVqr%Z0Aj~Y">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_writeD" id="T|r/)-wOymxseA;YS.`|">
+                        <field name="OUTPUT_VALUE">1</field>
+                        <field name="STAT">0</field>
+                        <value name="PIN">
+                          <shadow type="math_number" id="EzC@0TfuA:Sn~owz4}p%">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

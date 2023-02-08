@@ -1,0 +1,144 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="h^T-3GI.bR!XG%d)K0h/" x="181" y="124">
+    <statement name="MySetup">
+      <block type="Init_MAX7219_7digit" id="U-.4w#24CYVf2e15gI+$">
+        <value name="PIN_DAT">
+          <shadow type="math_number" id="Q20GQh)P-ABZam;5Tsk4">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="PIN_CS">
+          <shadow type="math_number" id="l.g_j#O1hQWaf[#R#3|0">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="PIN_CLK">
+          <shadow type="math_number" id="^WYG#A/)5$8?s$Sodzoe">
+            <field name="NUM">6</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="MAX7219_7digit_char" id="?I+%fSKl55h$fbV/uGi+">
+        <field name="dp">false</field>
+        <value name="NNN">
+          <shadow type="math_number" id="Bl~u(*]~~[TNXX_1{dL/">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="SSS">
+          <shadow type="math_number" id="Dv(rcuC|_,2GoJVU+I(y">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="MAX7219_7digit_char" id="|!wD|F0{hM;Nw{`B(wR3">
+            <field name="dp">true</field>
+            <value name="NNN">
+              <shadow type="math_number" id="rKV$|U[Nrs-!b1XZ;=O_">
+                <field name="NUM">2</field>
+              </shadow>
+            </value>
+            <value name="SSS">
+              <shadow type="math_number" id="Ao~~scD?,sytX{EqBOq8">
+                <field name="NUM">3</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="MAX7219_7digit_char" id="cd,-?{7o3T=N;FUvf.I?">
+                <field name="dp">false</field>
+                <value name="NNN">
+                  <shadow type="math_number" id="N1uGjnFq+(,;[~PLC1qs">
+                    <field name="NUM">3</field>
+                  </shadow>
+                </value>
+                <value name="SSS">
+                  <shadow type="math_number" id="k68rRa1470fBCy^2E.yi">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="MAX7219_7digit_char" id="6+]$dpgC^P7R3a[V+qaa">
+                    <field name="dp">false</field>
+                    <value name="NNN">
+                      <shadow type="math_number" id="i~uz,y$C~[U27|MnYbrK">
+                        <field name="NUM">4</field>
+                      </shadow>
+                    </value>
+                    <value name="SSS">
+                      <shadow type="math_number" id="X6QjwkOe)A-6,fv9a-.g">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="MAX7219_7digit_char" id="xTkU%uh;dOkzyuA6@_Xv">
+                        <field name="dp">false</field>
+                        <value name="NNN">
+                          <shadow type="math_number" id="2X5iw?=rF`CU;P@=lVo#">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <value name="SSS">
+                          <shadow type="math_number" id="Z:m{R%AfGWwz5f;g`_di">
+                            <field name="NUM">8</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="MAX7219_7digit_char" id=":w|]lf@QDd=4Rqwk2[Fo">
+                            <field name="dp">false</field>
+                            <value name="NNN">
+                              <shadow type="math_number" id="p@Y;Z#n94WA%|5dCmq/#">
+                                <field name="NUM">2</field>
+                              </shadow>
+                            </value>
+                            <value name="SSS">
+                              <shadow type="math_number" id="/4|kt?+43[Bx4JE9se4%">
+                                <field name="NUM">7</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="MAX7219_7digit_char" id="kfx.YZ[maFKV#*:}p`Qy">
+                                <field name="dp">true</field>
+                                <value name="NNN">
+                                  <shadow type="math_number" id="WZ;,!2^{6iPz-(k{uz(U">
+                                    <field name="NUM">3</field>
+                                  </shadow>
+                                </value>
+                                <value name="SSS">
+                                  <shadow type="math_number" id="Eh8s+jxPVc@4.0XATPJ*">
+                                    <field name="NUM">6</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="MAX7219_7digit_char" id="sduOXUf.HXfVCey*kwei">
+                                    <field name="dp">false</field>
+                                    <value name="NNN">
+                                      <shadow type="math_number" id="QxUU4NCY[!=sAX{aFgKu">
+                                        <field name="NUM">4</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="SSS">
+                                      <shadow type="math_number" id="q}kIzO,c,V:?k?MnCLvB">
+                                        <field name="NUM">5</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

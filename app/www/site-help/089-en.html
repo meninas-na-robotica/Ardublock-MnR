@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hardware interrupt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.3.3.6.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/blocklino.css"/>
+</head>
+<body>
+	 <div style="background-image: url(fone.png);border:1px solid #777;height:600px;width:800px;margin:0 auto;background-size: cover;">
+        
+        <div id="title-bar-btns">
+			<button type="button" class="close" style="padding:2px 10px;" id="btn_quit" type="button" class="btn btn-quitBlue" onclick="cancel()"><span aria-hidden="true">&#215;</span></button>
+        </div>
+	
+		
+	<h1 style="padding:0 0 10px 30px;"><a href="000-en.html" >Wiki</a> - Hardware interrupt</h1>
+	<div style="padding:0 0 5px 30px; ">Pin on boards supporting hardware interrupt:</div>
+		
+		<div style="padding:0 0 5px 30px; ">
+<table border="0" cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<td style="width: 300px">
+				Arduino UNO NANO MINI</td>
+			<td style="width: 30px">
+				2</td>
+			<td style="width: 30px">
+				3</td>
+			<td style="width: 30px">
+				&nbsp;</td>
+			<td style="width: 30px">
+				&nbsp;</td>
+			<td style="width: 30px">
+				&nbsp;</td>
+			<td style="width: 30px">
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Arduino Mega2560</td>
+			<td>
+				2</td>
+			<td>
+				3</td>
+			<td>
+				21</td>
+			<td>
+				20</td>
+			<td>
+				19</td>
+			<td>
+				18</td>
+		</tr>
+		<tr>
+			<td>
+				Arduino Leonardo</td>
+			<td>
+				2</td>
+			<td>
+				3</td>
+			<td>
+				0</td>
+			<td>
+				1</td>
+			<td>
+				7</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<img src="089-1-en.png" style="padding:0 0 5px 30px;  ">
+<div style="padding:0 0 5px 30px; ">
+- LOW causes an interrupt when the port is LOW. <br>
+- CHANGE interrupt is called when the value on the port changes, from LOW to HIGH and vice versa. <br>
+- RISING interrupt is called only when the value on the port changes from LOW to HIGH. <br>
+- HIGH raises an interrupt when the port is HIGH. <br>
+- FALLING interrupt is called only when the value on the port changes from HIGH to LOW. <br>
+</div>	
+<div style="padding:0 0 5px 30px;color:red; ">
+It is forbidden to use blocks inside a hardware interrupt function: </div>
+<div style="padding:0 0 5px 30px; ">
+1.Do not try to use the Time / Delay function. <br>
+2.You can get the time by calling Milliseconds, however it will not increase. <br>
+3.Do not use the output to Serial-port. <br>
+4.Do not try to read data from the Serial-port. <br>
+</div>
+</div>
+	
+<script>
+	var { ipcRenderer } = require("electron") ;
+	var input = document.getElementById("var_name") ;
+	input.addEventListener("keyup", function(event) {
+		if (event.keyCode === 13) document.getElementById("btn_variable").click()
+	})
+	function cancel() {
+		ipcRenderer.send("closeDialog", "") ;
+		this.close()
+	}
+	function response() {
+		ipcRenderer.send("closeDialog", document.getElementById("var_name").value) ;
+		this.close()
+	}
+	window.onload=function() {
+		document.getElementById("var_name").focus() ;
+		var options = ipcRenderer.sendSync("openDialog", "") ;
+		var params = JSON.parse(options) ;
+		document.getElementById("title").innerHTML = params.label ;
+		document.getElementById("var_name").value = params.value ;
+		document.getElementById("btn_variable").innerText = params.ok 
+	}
+</script>
+</body>
+</html>

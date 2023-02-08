@@ -1,0 +1,99 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="=lJO-IV?G-5PcZLZoybY" x="134" y="109">
+    <statement name="MySetup">
+      <block type="DisplayTM1637_init" id="J80^_sN2k~]-oK7u?DAM">
+        <value name="PIN_CLK">
+          <shadow type="math_number" id="!p{HnL@2AY(n84Vc5Rp$">
+            <field name="NUM">9</field>
+          </shadow>
+        </value>
+        <value name="PIN_DIO">
+          <shadow type="math_number" id="@hO+.VrC}}9Xbd7YNO|A">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="variables_set_init" id="si9)}rCfQ$(RG8z9kuKk">
+            <field name="VAR">T</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="1AUVe.7Ly,eN/(gk:k/:">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="^0Fy=[TOQ8,_?lT4N+,.">
+        <field name="VAR">T</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="y_~3hnIm5*:c@?OF,Q3U">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <shadow type="math_number" id="b,v`a$-uG%z355hEPV?^">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="variables_get" id="tN(e{d6=2RLFnI}NM9rZ">
+                <field name="VAR">T</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="Bx2s_-$$NdUkx2mMm-#-">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="DisplayTM1637_set_completenumber" id="9{q.aln8Lb7y1L,rOHqN">
+            <field name="TM1637_POINT">POINT_OFF</field>
+            <value name="NNN">
+              <shadow type="math_number" id="M`3#,y=!WR3OROmTbkh^">
+                <field name="NUM">4321</field>
+              </shadow>
+              <block type="variables_get" id=",dSpbg|4r;3}rk:F`7mx">
+                <field name="VAR">T</field>
+              </block>
+            </value>
+            <next>
+              <block type="base_delay" id="OP}u-F[Z)g=jR*V/%-O+">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="OR^d#bhH:xYr:ax~4GhM">
+                    <field name="NUM">500</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="DisplayTM1637_set_completenumber" id="XcBs;]f}}OOons]3Y.7d">
+                    <field name="TM1637_POINT">POINT_ON</field>
+                    <value name="NNN">
+                      <shadow type="math_number" id="M`3#,y=!WR3OROmTbkh^">
+                        <field name="NUM">4321</field>
+                      </shadow>
+                      <block type="variables_get" id="[B6=h^^Om~{1:;end29[">
+                        <field name="VAR">T</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="@d49_LyPe#3S#(..*$Le">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="9Qq8FrTEl}79y!=^PfSR">
+                            <field name="NUM">500</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

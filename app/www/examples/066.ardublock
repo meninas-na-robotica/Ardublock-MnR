@@ -1,0 +1,142 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="4l71lA6$R)T?/bkbB5Sl" x="-41" y="61">
+    <statement name="MySetup">
+      <block type="lcd_tah_spi" id="`yr)sxnPfgOa$fv{UPUL">
+        <next>
+          <block type="variables_set_init" id="vgy07+~P:dLmb{WuKEIX">
+            <field name="VAR">X</field>
+            <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="_}8vQsb[o[te8JkhFL!}">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="lcd_tah_spi_tah" id="l`EGDC4Lco9uiv^bD7I-">
+        <value name="X_Nokia">
+          <shadow type="math_number" id="{Ngltr,!vZVgKJ8NIrrX">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="Y_Nokia">
+          <shadow type="math_number" id="8p{XgQ;D~aO{W]q`$cHQ">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+        <value name="X_Nokia2">
+          <shadow type="math_number" id="CswZr_oM=c=w#E~^7baI">
+            <field name="NUM">120</field>
+          </shadow>
+        </value>
+        <value name="Y_Nokia2">
+          <shadow type="math_number" id="t_*hoz-5~~=GL}eUV3?(">
+            <field name="NUM">60</field>
+          </shadow>
+        </value>
+        <statement name="CONTENT">
+          <block type="variables_set" id="[E~=+-RVc;Ijv)RI0^{D">
+            <field name="VAR">X</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="%ncvw[g{:9A/mps4X2bj">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <shadow type="math_number" id="!0IB@5jsjT@k^1(!*JjQ">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="b#C4Y+MpkCrjP;?)_m)1">
+                    <field name="VAR">X</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="Z2KM3gF|K%9b)9ZV=9@7">
+                    <field name="NUM">-1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="4AkuCP.go7I%*nL/6NjB">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare_log" id="/pXTYJ[*9?r@@0hr,V(m">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <shadow type="math_number" id="Yboguu*fVe[1M~3XER)+">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="??ew{(5uWBHP_EpK{Tsl">
+                    <field name="VAR">X</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="G0,2^zu}ln$U}f!}~Q!H">
+                    <field name="NUM">-1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lcd_tah_spi_box" id="sb;Mcz{6~(2aTN3?R;_G">
+                <field name="LOGIC">TRUE</field>
+                <field name="color">GRED</field>
+                <value name="X_Nokia">
+                  <shadow type="math_number" id="#oh++;,L:f,60PBD3=N.">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+                <value name="Y_Nokia">
+                  <shadow type="math_number" id="!PXGVe+uZX)2G}}wvEDh">
+                    <field name="NUM">60</field>
+                  </shadow>
+                </value>
+                <value name="X_Nokia2">
+                  <shadow type="math_number" id="Sg]NRV`*ZCfxg+INL)G}">
+                    <field name="NUM">50</field>
+                  </shadow>
+                </value>
+                <value name="Y_Nokia2">
+                  <shadow type="math_number" id=".}Ph^$WH|+!0nYj;]ZZ^">
+                    <field name="NUM">110</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="lcd_tah_spi_box" id="O-Q;6ILUXIJ.BWo8Rp@h">
+                <field name="LOGIC">TRUE</field>
+                <field name="color">RED</field>
+                <value name="X_Nokia">
+                  <shadow type="math_number" id="k#M|Vqh#c/ds5-@9$G@%">
+                    <field name="NUM">10</field>
+                  </shadow>
+                </value>
+                <value name="Y_Nokia">
+                  <shadow type="math_number" id="e@Ad4R!jKTUQr^z{$/9z">
+                    <field name="NUM">60</field>
+                  </shadow>
+                </value>
+                <value name="X_Nokia2">
+                  <shadow type="math_number" id="+`l[PIzUh`=b]99y+/#P">
+                    <field name="NUM">50</field>
+                  </shadow>
+                </value>
+                <value name="Y_Nokia2">
+                  <shadow type="math_number" id="e*yERT.sHia+c5Dt0-)t">
+                    <field name="NUM">110</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

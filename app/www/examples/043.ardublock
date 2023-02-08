@@ -1,0 +1,120 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="-aF.;Mol4EQzZ1sH0WNF" x="115" y="99">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="@D@9]$gDfTs`CQ+@B}*b">
+        <field name="VAR">R</field>
+        <field name="VARIABLE_SETTYPE_TYPE">LARGE_NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="1KHaI0IiVmGR%`q7Astb">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="lcd_con_nokia" id="b$Wp50%5t4xu5uJqRfvK">
+            <value name="SCK_N">
+              <shadow type="math_number" id=",Z+sI]|$#,SHkkXF{8v6">
+                <field name="NUM">8</field>
+              </shadow>
+            </value>
+            <value name="MOSI_N">
+              <shadow type="math_number" id=".jT;|AcY)j-8BaNT@@HP">
+                <field name="NUM">9</field>
+              </shadow>
+            </value>
+            <value name="DC_N">
+              <shadow type="math_number" id="z5d+o#yOp2}mSdB2c!}[">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <value name="RST_N">
+              <shadow type="math_number" id="n7,ctaQ^Ne`XC=$V^m`Y">
+                <field name="NUM">11</field>
+              </shadow>
+            </value>
+            <value name="CS_N">
+              <shadow type="math_number" id="^M(Z|x*p(//:-2bQr5h$">
+                <field name="NUM">12</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="lcd_con_nokia_text" id="nBiQ1nGAB5BIcc4a:-q*">
+                <value name="X_Nokia">
+                  <shadow type="math_number" id="[!;]#93C.Mbjo`y-u`jZ">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="Y_Nokia">
+                  <shadow type="math_number" id="72#n3/eb.%RN,;iBuUW~">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="texttoprint">
+                  <shadow type="text" id="Nu]Ei^GbgoG0zN|Z)u8U">
+                    <field name="TEXT">ArduBlock</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="H@n+$_U7zEx+)U:u?Hn`">
+        <field name="VAR">R</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="DECMiKWen~O.^}j9^00S">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <shadow type="math_number" id="$cKo.{tQ0,[MI7OuCdfl">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="variables_get" id=".)ZI1mhBn#QU#K*)K!MN">
+                <field name="VAR">R</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="c@^*7|e.:bE*+(|5~!b.">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="lcd_con_nokia_number" id="kjCrB3S$FAZ/M{dW4aTB">
+            <field name="dp">BigNumbers</field>
+            <value name="X_Nokia">
+              <shadow type="math_number" id="6;MQ44SrP*.}Sc|(,2An">
+                <field name="NUM">20</field>
+              </shadow>
+            </value>
+            <value name="Y_Nokia">
+              <shadow type="math_number" id="ejQgP:,~=6ip1DA.Rc[q">
+                <field name="NUM">20</field>
+              </shadow>
+            </value>
+            <value name="Nokia_number">
+              <shadow type="math_number" id="zfw3Txc/Y:_iTh3|Dha^">
+                <field name="NUM">123</field>
+              </shadow>
+              <block type="variables_get" id="[lQ)|A|)0x.-cUOFjV*-">
+                <field name="VAR">R</field>
+              </block>
+            </value>
+            <next>
+              <block type="base_delay" id="As3S+`Z+JE5=(.nk;2,/">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="M51L3al7)_IBBaD~_W8?">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

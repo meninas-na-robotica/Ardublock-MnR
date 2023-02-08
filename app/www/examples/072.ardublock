@@ -1,0 +1,107 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="S34y6{@iD#*zLSk|,d*T" x="-117" y="74">
+    <statement name="MySetup">
+      <block type="lcd_128x128px_spi_tv_vga" id="@A%+CjEuAoxW_!_?q:.Y"></block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="lcd_128x128px_spi_text_tv_vga1" id="b%8lS_0T$:^Qjo6(qNWQ">
+        <next>
+          <block type="lcd_128x128px_spi_text_tv_vga" id="96~XSc3R@kg).mV[R*b2">
+            <field name="font">1</field>
+            <value name="texttoprint">
+              <shadow type="text" id=":DtxSRHp1~m?c=f6mrPj">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+            </value>
+            <value name="X_Nokia">
+              <shadow type="math_number" id="@UNY19dd4FbN`%gy;J6w">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <value name="Y_Nokia">
+              <shadow type="math_number" id="A4+S2r}QuZ@8c*8OHe(i">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="lcd_128x128px_spi_text_tv_vga2" id="3fX%;URE_OUlquro2Y/=">
+                <value name="X_Nokia">
+                  <shadow type="math_number" id="k-fM(Jyzjl5,=O?~,q^e">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="lcd_128x128px_spi_text_tv_vga1" id="3Y:H0{f}XOMH`]0#lw,n">
+                    <next>
+                      <block type="lcd_128x128px_spi_text_tv_vga" id="..%1x*Jw_9_cusMsNxQ=">
+                        <field name="font">2</field>
+                        <value name="texttoprint">
+                          <shadow type="text" id="D0-UIgvx.s%7*/td5HSt">
+                            <field name="TEXT">ArduBlock</field>
+                          </shadow>
+                        </value>
+                        <value name="X_Nokia">
+                          <shadow type="math_number" id="Qz(D]va,WVt[+Kgz/PMs">
+                            <field name="NUM">10</field>
+                          </shadow>
+                        </value>
+                        <value name="Y_Nokia">
+                          <shadow type="math_number" id="d*3i`#|hh$pnk~L~S1QD">
+                            <field name="NUM">10</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="lcd_128x128px_spi_text_tv_vga2" id="Na?Kb?N+Nu*^TXNPa@F(">
+                            <value name="X_Nokia">
+                              <shadow type="math_number" id="XM7DS=Cl`pQ%-Gn?Psu=">
+                                <field name="NUM">1000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="lcd_128x128px_spi_text_tv_vga1" id="o-:Ti_QgT0z+95|z-o:M">
+                                <next>
+                                  <block type="lcd_128x128px_spi_text_tv_vga" id="1ZzrVNA5XpM+Fvw)lx,!">
+                                    <field name="font">3</field>
+                                    <value name="texttoprint">
+                                      <shadow type="text" id="+jHizI3+;5pxM_rTI1H/">
+                                        <field name="TEXT">ArduBlock</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="X_Nokia">
+                                      <shadow type="math_number" id="DJq=/M@BF][#C:B^W[0U">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="Y_Nokia">
+                                      <shadow type="math_number" id="$4AEEv8j#0Gq;}MAtP)V">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="lcd_128x128px_spi_text_tv_vga2" id="I$HpJ)wj5|kW.,RW;95~">
+                                        <value name="X_Nokia">
+                                          <shadow type="math_number" id="0,AQK1|yM-(r3R_jC1CE">
+                                            <field name="NUM">1000</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

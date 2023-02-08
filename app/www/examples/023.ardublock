@@ -1,0 +1,52 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id=".hLq5]p+nSCmhA0/XtzH" x="58" y="97">
+    <statement name="MySetup">
+      <block type="serial_init" id="uI%@A6g2rrH3AoweQo~j">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="serial_write_ln" id="y:X^x:Yie$;fD2!2Fmc+">
+        <value name="CONTENT">
+          <shadow type="text" id="atNY!A=U).8([qu0rcT*">
+            <field name="TEXT">ArduBlock</field>
+          </shadow>
+          <block type="text_join" id="2N(hbakSB%k+8N2v~kcs">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="RotaryEncoder_Read" id="i^wS!`pd_|KF5x22DoB4">
+                <value name="PINDT">
+                  <shadow type="math_number" id="-X4G)=eM^ix?Sw:[#R=}">
+                    <field name="NUM">4</field>
+                  </shadow>
+                </value>
+                <value name="PINCLK">
+                  <shadow type="math_number" id="wixawVj@8vI$~R+}eM5Y">
+                    <field name="NUM">5</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="bklHhR~KnB^Hs`LD9O)i">
+                <field name="TEXT"> - </field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="digital_readbi" id="l}frknC]cJh!JwJj(Z}:">
+                <field name="pullup">TRUE</field>
+                <value name="PIN">
+                  <shadow type="math_number" id="ily@AxfVwe]^j0a!nPs-">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

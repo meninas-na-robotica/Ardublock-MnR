@@ -1,0 +1,136 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="%iL7V^9Bq(Y,0$_s^p:;" x="-55" y="73">
+    <statement name="MySetup">
+      <block type="base_conect_esp8266_s" id="N-i%[opAgd@bi|73nz;Y">
+        <field name="PIN1">9</field>
+        <field name="PIN2">10</field>
+        <field name="SPEED1">9600</field>
+        <field name="SPEED2">115200</field>
+        <next>
+          <block type="variables_set_init" id="2C2eFMM]0]WDg/]BqXoa">
+            <field name="VAR">W</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="YGG_E?l=es3T}0l8$lSh">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="3qH(CH7WsS*78b8{g==Y">
+        <field name="VAR">W</field>
+        <value name="VALUE">
+          <block type="inout_analog_readR" id="-|`p$~0e=pftd(fvi;!w">
+            <field name="NUMBER">1</field>
+            <field name="broche">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="base_define_for_esp8266" id="8!5/5zm2xK4z8S,`(@$(">
+            <field name="TEXT">ArduBlock</field>
+            <statement name="DO">
+              <block type="base_conect_esp8266_text_kode" id="G^=5{lcLsoCZMLVDppye">
+                <field name="TEXT">&lt;h1&gt;ArduBlock&lt;/h1&gt;</field>
+                <next>
+                  <block type="esp8266_setcursor" id="MA-8V7v{T,31#[u_v@xI">
+                    <value name="texttoprint">
+                      <shadow type="math_number" id="9h|nq29!`Yw1e_/[(fUh">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="variables_get" id="(nZhzj@7wDZCQAbl|ip:">
+                        <field name="VAR">W</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_conect_esp8266_text" id="IzxWo(-v^r]PnCvS_7Pi">
+                        <field name="TEXT">Lamp:</field>
+                        <next>
+                          <block type="base_conect_esp8266_button_r" id="aSbgn_UjWaAnWg=4fF,]">
+                            <field name="SPEED">1</field>
+                            <field name="TEXT">ON</field>
+                            <next>
+                              <block type="base_conect_esp8266_button_r" id="goI}Uj){]0iI-bW`%U9h">
+                                <field name="SPEED">2</field>
+                                <field name="TEXT">OFF</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="s2EFQay8VL~bFnZDQ}ED">
+                <value name="IF0">
+                  <block type="logic_compare_log" id="QSq@$Zc=6cqU{oeLJY9_">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <shadow type="math_number" id="Gyp1E|g^W[M1`^lGLIY_">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="base_code_entree_esp8266_button" id="2w83m/$:dfO2vq9_zsM?"></block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="*q^!wS|q!)-Y4x+=Mi+y">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="inout_digital_writeD" id="@SuiU!mPFVZ%Oul$M9Qn">
+                    <field name="OUTPUT_VALUE">1</field>
+                    <field name="STAT">1</field>
+                    <value name="PIN">
+                      <shadow type="math_number" id="i:D|fh4/EMThW^6T{I9$">
+                        <field name="NUM">13</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="jSK76#|p@H+forXk0]$n">
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="mPn^x9{q,yG|#~g1CVU6">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="*8XKJJg0+ET7%t7b7g#3">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="base_code_entree_esp8266_button" id="SjwX=0yA_Nv9,7(~[dM|"></block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="D=kb}[b2}nPL$Mu9t$%U">
+                            <field name="NUM">2</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="inout_digital_writeD" id="jBMG5oHyts4![O^KYO)_">
+                        <field name="OUTPUT_VALUE">1</field>
+                        <field name="STAT">0</field>
+                        <value name="PIN">
+                          <shadow type="math_number" id="~y?lhyt#EL%kibQL_tf8">
+                            <field name="NUM">13</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

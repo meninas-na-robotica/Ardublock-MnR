@@ -1,0 +1,103 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="msUx_+]j%sA=0@zJZ+Rc" x="125" y="182">
+    <statement name="MySetup">
+      <block type="serial_init" id="whkfCCKK{^+3/-o!$.m*">
+        <field name="pin">0</field>
+        <field name="SPEED">9600</field>
+        <next>
+          <block type="variables_set_init" id="kyNVus@-WE(Z8l_VYyv3">
+            <field name="VAR">m</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="%YKZ/EUGiy,iQ8S,^2$d">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="minilcdi2c_setup" id="`XYBm}/Fd+^vD$@NotY/"></block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="tensorsensor1" id="~3doC.8aL|LJ:D[x?/5*">
+        <value name="PIN_RKOD">
+          <shadow type="math_number" id="rR+{f3SO3S1otS$EjpvW">
+            <field name="NUM">R</field>
+          </shadow>
+          <block type="variables_get" id="jujcAmpeQFGkQQWDja#%">
+            <field name="VAR">m</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_write_ln" id="-u1;YMM5Z/GUbO^+.H+~">
+            <value name="CONTENT">
+              <shadow type="text" id="C:b?EGI,d#K.E#j=kLc5">
+                <field name="TEXT">ArduBlock</field>
+              </shadow>
+              <block type="variables_get" id="XNvVlM22Nrah@X7lgz,d">
+                <field name="VAR">m</field>
+              </block>
+            </value>
+            <next>
+              <block type="minilcdi2c_setcursor" id="#eAP!ynBYt1c#]DJeUFR">
+                <field name="dp">12x16</field>
+                <value name="print_x">
+                  <shadow type="math_number" id="{)F,;bW)*)/-;SbxU`z;">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="print_y">
+                  <shadow type="math_number" id="OEfXWN4;Nc;,mx?BmscT">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="texttoprint">
+                  <shadow type="text" id="O*oY|y!Zl)DyOQ$cASy:">
+                    <field name="TEXT">     </field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="minilcdi2c_setcursorR" id="g1]aT8`~LRD7!{]ez/ZU">
+                    <field name="dp">12x16</field>
+                    <field name="tipe">long</field>
+                    <value name="print_x">
+                      <shadow type="math_number" id="LLPci5Y)PZ@zAYK(.o5g">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="print_y">
+                      <shadow type="math_number" id="8K5+_aW+Ki.K:F~HBw*M">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="print_R">
+                      <shadow type="math_number" id="_|d-=UCY@RHyGF+|_3ny">
+                        <field name="NUM">123</field>
+                      </shadow>
+                      <block type="variables_get" id="|XR}ah`dsE.IfXNRqgz]">
+                        <field name="VAR">m</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="base_delay" id="j_zgMSo_f}VDARE%QZWk">
+                        <field name="unite">m</field>
+                        <value name="DELAY_TIME">
+                          <shadow type="math_number" id="TpNYf|Lb.0`RJco,RJJH">
+                            <field name="NUM">1000</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

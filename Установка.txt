@@ -1,0 +1,31 @@
+
+
+Загрузка программ на плату Arduino из приложения ArduBlock 2.0
+
+0. Распакуйте архив ArduBlock 2.0.zip в корень диска С!
+     Путь к файлу: C:\ArduBlock 2.0
+
+1. Установка драйвера для китайских плат с чипом CH341
+     Путь к файлу: \install\drive-arduino\SETUP.EXE
+
+2. Установка скрипта Elevate для соединения ArduBlock с Arduino ide при прошивке платы
+     Путь к файлу: \install\elevate\elevate.exe   (Запуск от имени администратора!)
+
+3. Запуск приложения ArduBlock 2.0
+     Путь к файлу: C:\ArduBlock 2.0\app\ArduBlock.exe
+
+
+Если не сохраняется проект в формате .ardublock 
+1. Добавьте программу в избранные антивируса или защитника!
+2. Очистите кеш. Удалите папку O++ ArduBlock
+      Путь к папке: C:\Users\ASUS\AppData\Roaming\O++ ArduBlock
+
+
+
+Загрузка программ на плату Arduino через компилятор Arduino IDE
+
+1. Установка компилятора Arduino ide  
+     Путь к файлу: \install\arduino-ide\arduino-1.8.5-windows.exe
+
+2. Распаковать библиотеки ArduBlock в папку: C:\Users\ИмяПК\Documents\arduino\libraries 
+     Путь к файлу: \install\libraries.zip 
