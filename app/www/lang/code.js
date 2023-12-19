@@ -4,14 +4,14 @@ var Code = {};
 Code.LANGUAGE_NAME = {
   'en': 'English',
   //'es': 'Español',
-  //'pt': 'Português',
+  'pt': 'Português',
   //'fr': 'Français',
   //'de': 'Deutsch',
   //'cz': 'Čeština',
   //'pl': 'Polski',
   //'hu': 'Magyar',
   //'tr': 'Türk',
-  'ru': 'Português'
+  //'ru': 'Português'
   //'ru': 'Pусский'
   //'heb': 'עִברִית',
  // 'cn': '中文'
@@ -20,7 +20,7 @@ Code.LANGUAGE_RTL = ['ar', 'fa', 'he'];
 Code.getLang = function() {
   var lang = window.localStorage.lang;
   if (lang === undefined) {
-    lang = 'ru'
+    lang = 'pt'
 	window.localStorage.lang = lang;
   }
   return lang

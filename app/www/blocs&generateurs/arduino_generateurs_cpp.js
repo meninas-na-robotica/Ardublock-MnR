@@ -1,3 +1,4 @@
+//define o bloco de inicialização da comunicação serial no Ardublock, especificamente para a placa Arduino.
 /*  communication  */
 Blockly.Arduino["serial_init"]=function(block){
     var dropdown_speed=block.getFieldValue("SPEED");

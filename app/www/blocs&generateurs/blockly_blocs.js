@@ -1,5 +1,5 @@
 "use strict";
-
+//carregam e fornecem o namespace para as categorias de blocos: controles do Ardublock, procedimentos, matemática, variáveis, textos e tabulação
 goog.require("Blockly.Blocks");
 goog.provide("Blockly.Blocks.controls");
 goog.provide("Blockly.Blocks.procedures");
@@ -8,18 +8,20 @@ goog.provide("Blockly.Blocks.variables");
 goog.provide("Blockly.Blocks.texts");
 goog.provide("Blockly.Blocks.tab");
 
-Blockly.Blocks.controls.HUE = "#5B80A5";
-Blockly.Blocks.math.HUE = "#5B67A5";
-Blockly.Blocks.procedures.HUE = "#995BA5";
-Blockly.Blocks.texts.HUE = "#5BA58C";
-Blockly.Blocks.variables.HUE = "#A55B80";
-Blockly.Blocks.tab.HUE = "#A55B80";
+//define a cor dos blocos das 6 categorias acima
+Blockly.Blocks.controls.HUE = "#5B80A5";    //seção lógica
+Blockly.Blocks.math.HUE = "#5B67A5";        //seção matematica
+Blockly.Blocks.procedures.HUE = "#995BA5";  //seção funções
+Blockly.Blocks.texts.HUE = "#5BA58C";       //seção texto
+Blockly.Blocks.variables.HUE = "#A55B80";   //seção variáveis
+Blockly.Blocks.tab.HUE = "#A55B80";         //seção matrizes
 
+//define o bloco de controle "if" no Ardublock, configurando sua aparência, comportamento e interações com outros blocos.
 // controle
-Blockly.Blocks["controls_if"] = {
-    init: function() {
-        this.setHelpUrl(Blockly.Msg.HELPURL_001);
-        this.setColour(Blockly.Blocks.controls.HUE);
+Blockly.Blocks["controls_if"] = {   //cria um novo bloco chamado "controls_if" e define suas características e comportamentos.
+    init: function() {    //define o visual e o comportamento inicial do bloco.
+        this.setHelpUrl(Blockly.Msg.HELPURL_001);      //URL da ajuda desse bloco
+        this.setColour(Blockly.Blocks.controls.HUE);  //Define a cor do bloco com base na constante de cor da categoria "controls".
         this.appendValueInput("IF0").setCheck("Boolean").appendField(Blockly.Msg.CONTROLS_IF_MSG_IF);
         this.appendStatementInput("DO0").appendField(Blockly.Msg.CONTROLS_IF_MSG_THEN);
         this.setPreviousStatement(true);
