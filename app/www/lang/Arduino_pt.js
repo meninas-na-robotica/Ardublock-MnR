@@ -19,8 +19,8 @@ Blockly.Msg.no = "não";
 //Blockly.Msg.download = "Загрузка завершена, приложение будет обновлено и перезапущено ...";
 // common to all blocks
 //Blockly.Msg.HELPURL = "site-help/001.html"; // информация о блоках системы ядра
-Blockly.Msg.pin = "pin";
-Blockly.Msg._AT = "at";
+Blockly.Msg.pin = "pino";
+Blockly.Msg._AT = "em"; //era "at" no pino
 Blockly.Msg.AV = "avançar";
 Blockly.Msg.AR = "voltar";
 Blockly.Msg.high = "HIGH"; // do not translate
@@ -30,8 +30,16 @@ Blockly.Msg.left = "esquerda";
 Blockly.Msg.LetR = "direita e esquerda";
 Blockly.Msg.direction = "direção";
 Blockly.Msg.vitesse = "velocidade";
+
 // categories (menu)
-Blockly.Msg.Horta = "Horta"; //teste
+Blockly.Msg.CAT_FLORES= "Copo de Flores"; //CATEGORIA DO MINI PROJETO COPO DE FLORES
+Blockly.Msg.CAT_NIVEL_AGUA= "Nível de Água"; //CATEGORIA DO MINI PROJETO NIVEL DE AGUA
+Blockly.Msg.CAT_UMIDADE= "Umidade"; //CATEGORIA DO MINI PROJETO UMIDADE DA TERRA
+Blockly.Msg.CAT_VENTILADOR= "Ventilador"; //CATEGORIA DO MINI PROJETO VENTILADOR
+Blockly.Msg.CAT_CAR_BLUETOOTH= "Carro Bluetooth"; //CATEGORIA DO MINI PROJETO CARRINHO BLUETOOTH
+Blockly.Msg.CAT_LIXEIRA= "Lixeira"; //CATEGORIA DO MINI PROJETO LIXEIRA ULTRASSONICA
+Blockly.Msg.CAT_CAR_ULTRASSOM= "Carro Ultrassônico"; //CATEGORIA DO MINI PROJETO CARRINHO ULTRASSONICO
+Blockly.Msg.CAT_HORTA= "Horta Automatizada"; //CATEGORIA DO MINI PROJETO DE HORTA AUTOMATIZADA
 Blockly.Msg.CAT_STOCKAGE = "Armazenar";
 Blockly.Msg.CAT_numerique = "Digital";
 Blockly.Msg.CAT_analogique = "Analógico";
@@ -80,7 +88,7 @@ Blockly.Msg.CAT_DISPLAYU = "Tela de LCD";
 Blockly.Msg.CAT_TFTDISPLAYU = "Display TFT";
 Blockly.Msg.CAT_LEONARDO = "Leonardo";
 Blockly.Msg.CAT_DISPLAYU_TVVGA = "TV VGA";
-Blockly.Msg.CYCLESAR = "Ciclos";
+Blockly.Msg.CYCLESAR = "Repetições";
 Blockly.Msg.ESPWEB = "ESP 8266 12F";
 //Wireless
 Blockly.Msg.esp8266_init_tooltip = "initialization of the wifi module and connection with the indicated parameters";

@@ -1,3 +1,12 @@
-# ArduBlock-2.0
-ArduBlock com layout personalizado + opção de idioma em português para o projeto Meninas na Robótica da equipe de robótica Bodetronic do CEFET/RJ UnEd Nova Iguaçu. 
-Aplicativo disponível na pasta "app".
+Costumização do Ardublock e adição do idioma português
+
+O Ardublock é uma ferramenta de programação em blocos muito utilizada no ensino de programação para iniciantes, principalmente crianças e pré adolescentes. Como uma forma de inclusão, o projeto Meninas na Robótica do Cefet/RJ Uned Nova Iguaçu, teve a iniciativa de incluir o idioma português ao app que só possuía, até então, versões em inglês e em russo, para utilizar em suas atividades com pré adolescentes de escolas públicas. Além disso, também personalizamos o app com as cores da nossa logo e acrescentamos um menu com os nossos mini projetos.
+
+Começando
+
+Após realizar o download do projeto, você encontrará o arquivo executável do app em:
+Ardublock_pt_en_ru/app/ArduBlock.exe
+
+Para conhecer o nosso projeto, nos acompanhe nas redes sociais:
+Instagram: @meninasnarobotica_cefetrj
+Site: https://eic.cefet-rj.br/meninasnarobotica/
