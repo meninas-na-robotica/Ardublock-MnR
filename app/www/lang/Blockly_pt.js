@@ -7,7 +7,7 @@ Blockly.Msg.pin_botton_Mode="Modo";
 Blockly.Msg.pin_botton_Latched="Fixado";
 Blockly.Msg.pin_botton_NLatched="Sem fixação";
 
- 
+
 Blockly.Msg.dwinledonof="Tela UART - Brilho da luz de fundo";
 Blockly.Msg.dwinreset="Tela UART - Reiniciar";
 
@@ -57,21 +57,21 @@ Blockly.Msg.ARD_TYPE_NUMBER = "int";
 Blockly.Msg.ARD_TYPE_LONG = "long";
 Blockly.Msg.ARD_TYPE_DECIMAL = "float";
 Blockly.Msg.ARD_TYPE_ARRAY = "array";
-Blockly.Msg.ARD_TYPE_NULL = "empty";
-Blockly.Msg.ARD_TYPE_UNDEF = "not defined";
-Blockly.Msg.ARD_TYPE_VOLATILE = "volatile integer";
-Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "typing missing on a block";
-Blockly.Msg.ARDUINO_BETWEEN = "random number between";
+Blockly.Msg.ARD_TYPE_NULL = "vazio";
+Blockly.Msg.ARD_TYPE_UNDEF = "não definido";
+Blockly.Msg.ARD_TYPE_VOLATILE = "inteiro volátil";//"volatile integer";
+Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "falta de tipagem em um bloco";//"typing missing on a block";
+Blockly.Msg.ARDUINO_BETWEEN = "sortear número entre";
 Blockly.Msg.ARDUINO_BETWEEN_AND = "и";
-Blockly.Msg.ARDUINO_VAR_DECLARE="states";
-Blockly.Msg.ARDUINO_VAR_AS = "as";
+Blockly.Msg.ARDUINO_VAR_DECLARE="estados";
+Blockly.Msg.ARDUINO_VAR_AS = "como";
 Blockly.Msg.ARDUINO_VAR_VAL = "of value";
 Blockly.Msg.base_def_const = "set";
-Blockly.Msg.base_define_const = "which is equivalent to";
+Blockly.Msg.base_define_const = "que é equivalente a";
 //Blockly.Msg.base_define_const_tooltip = "allows the programmer to give a name to any value";
-Blockly.Msg.type = "set a value as the selected type";
+Blockly.Msg.type = "Definir um valor como o tipo selecionado";//"set a value as the selected type";
 Blockly.Msg.ADD_COMMENT = "Comentário";
-Blockly.Msg.CHANGE_VALUE_TITLE = "Change value:";
+Blockly.Msg.CHANGE_VALUE_TITLE = "Mudar valor:";
 Blockly.Msg.CLEAN_UP = "Limpar blocos";
 Blockly.Msg.COLLAPSE_ALL = "Reduzir blocos";
 Blockly.Msg.COLLAPSE_BLOCK = "Reduzir bloco";

@@ -32,14 +32,15 @@ Blockly.Msg.direction = "direção";
 Blockly.Msg.vitesse = "velocidade";
 
 // categories (menu)
-Blockly.Msg.CAT_FLORES= "Copo de Flores"; //CATEGORIA DO MINI PROJETO COPO DE FLORES
-Blockly.Msg.CAT_NIVEL_AGUA= "Nível de Água"; //CATEGORIA DO MINI PROJETO NIVEL DE AGUA
-Blockly.Msg.CAT_UMIDADE= "Umidade"; //CATEGORIA DO MINI PROJETO UMIDADE DA TERRA
-Blockly.Msg.CAT_VENTILADOR= "Ventilador"; //CATEGORIA DO MINI PROJETO VENTILADOR
-Blockly.Msg.CAT_CAR_BLUETOOTH= "Carro Bluetooth"; //CATEGORIA DO MINI PROJETO CARRINHO BLUETOOTH
-Blockly.Msg.CAT_LIXEIRA= "Lixeira"; //CATEGORIA DO MINI PROJETO LIXEIRA ULTRASSONICA
-Blockly.Msg.CAT_CAR_ULTRASSOM= "Carro Ultrassônico"; //CATEGORIA DO MINI PROJETO CARRINHO ULTRASSONICO
-Blockly.Msg.CAT_HORTA= "Horta Automatizada"; //CATEGORIA DO MINI PROJETO DE HORTA AUTOMATIZADA
+Blockly.Msg.CAT_MNR= "Miniprojetos"
+Blockly.Msg.CAT_FLORES= "1) Copo de Flores"; //CATEGORIA DO MINI PROJETO COPO DE FLORES
+Blockly.Msg.CAT_NIVEL_AGUA= "2) Nível de Água"; //CATEGORIA DO MINI PROJETO NIVEL DE AGUA
+Blockly.Msg.CAT_UMIDADE= "3) Umidade"; //CATEGORIA DO MINI PROJETO UMIDADE DA TERRA
+Blockly.Msg.CAT_VENTILADOR= "4) Ventilador"; //CATEGORIA DO MINI PROJETO VENTILADOR
+Blockly.Msg.CAT_CAR_BLUETOOTH= "5) Carro Bluetooth"; //CATEGORIA DO MINI PROJETO CARRINHO BLUETOOTH
+Blockly.Msg.CAT_LIXEIRA= "6) Lixeira"; //CATEGORIA DO MINI PROJETO LIXEIRA ULTRASSONICA
+Blockly.Msg.CAT_CAR_ULTRASSOM= "7) Carro Ultrassônico"; //CATEGORIA DO MINI PROJETO CARRINHO ULTRASSONICO
+Blockly.Msg.CAT_HORTA= "8) Horta Automatizada"; //CATEGORIA DO MINI PROJETO DE HORTA AUTOMATIZADA
 Blockly.Msg.CAT_STOCKAGE = "Armazenar";
 Blockly.Msg.CAT_numerique = "Digital";
 Blockly.Msg.CAT_analogique = "Analógico";
@@ -262,7 +263,7 @@ Blockly.Msg.millis2 = "do começo";
 Blockly.Msg.ARDUINO_PULSEIN = "Duração do sinal";
 //Blockly.Msg.tempo_helpurl = " ";
 //Blockly.Msg.tempo_tooltip = "This block checks if the indicated time has arrived, if it is the case then it executes the blocks placed inside .. Unlike the block 'to wait' this one is not blocking." ;
-Blockly.Msg.tempo1 = "Quando";
+Blockly.Msg.tempo1 = "While";
 //OLED
 Blockly.Msg.lp2i_u8g_draw_string = "OLED I2C display";
 Blockly.Msg.lp2i_u8g_draw_string_Text = "text to display =";
