@@ -27,4 +27,3 @@ Ardublock_MnR/app/ArduBlock.exe
 Para conhecer o nosso projeto, nos acompanhe nas redes sociais:
 <br>Instagram: @meninasnarobotica_cefetrj
 <br>Site: https://eic.cefet-rj.br/meninasnarobotica/
->>>>>>> 447d46624ad4c8e2535b159d01751add55452164
