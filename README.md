@@ -7,11 +7,6 @@ O Ardublock é uma ferramenta de programação em blocos muito utilizada no ensi
 Após realizar o download do projeto, você encontrará o arquivo executável do app em:
 Ardublock_MnR/app/ArduBlock.exe
 
-## Conecte-se Conosco
-
-Para conhecer o nosso projeto, nos acompanhe nas redes sociais:
-<br>Instagram: @meninasnarobotica_cefetrj
-<br>Site: https://eic.cefet-rj.br/meninasnarobotica/
 
 # Costumização do Ardublock e Adição do Idioma Português
 
