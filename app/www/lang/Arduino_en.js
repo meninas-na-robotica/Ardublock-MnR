@@ -31,6 +31,15 @@ Blockly.Msg.LetR = "right & left";
 Blockly.Msg.direction = "direction";
 Blockly.Msg.vitesse = "speed ";
 // categories (menu)
+Blockly.Msg.CAT_MNR= "Miniprojetos"
+Blockly.Msg.CAT_FLORES= "1) Copo de Flores"; //CATEGORIA DO MINI PROJETO COPO DE FLORES
+Blockly.Msg.CAT_NIVEL_AGUA= "2) Nível de Água"; //CATEGORIA DO MINI PROJETO NIVEL DE AGUA
+Blockly.Msg.CAT_UMIDADE= "3) Umidade"; //CATEGORIA DO MINI PROJETO UMIDADE DA TERRA
+Blockly.Msg.CAT_VENTILADOR= "4) Ventilador"; //CATEGORIA DO MINI PROJETO VENTILADOR
+Blockly.Msg.CAT_CAR_BLUETOOTH= "5) Carro Bluetooth"; //CATEGORIA DO MINI PROJETO CARRINHO BLUETOOTH
+Blockly.Msg.CAT_LIXEIRA= "6) Lixeira"; //CATEGORIA DO MINI PROJETO LIXEIRA ULTRASSONICA
+Blockly.Msg.CAT_CAR_ULTRASSOM= "7) Carro Ultrassônico"; //CATEGORIA DO MINI PROJETO CARRINHO ULTRASSONICO
+Blockly.Msg.CAT_HORTA= "8) Horta Automatizada"; //CATEGORIA DO MINI PROJETO DE HORTA AUTOMATIZADA
 Blockly.Msg.CAT_STOCKAGE = "Storage";
 Blockly.Msg.CAT_numerique = "- Digital";
 Blockly.Msg.CAT_analogique = "~ Analog";

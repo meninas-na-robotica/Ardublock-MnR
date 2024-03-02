@@ -2,7 +2,7 @@ var MSG = {
   btn_variable: "OK",
   btn_close: "Close",
   btn_valid: "Ok",
-  btn_config: "Settings",
+  btn_config: "Language",
   btn_about: "About",
   btn_new: "New",
   btn_fakeload: "Open",

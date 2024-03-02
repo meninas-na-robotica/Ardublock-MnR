@@ -183,7 +183,7 @@
         <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
       </block>
     <!--FALTAM OS BLOCOS DE FUNÇÕES QUE NÃO ESTÁ BEM DEFINIDO E FALTA 1 BLOCO, "clear"-->
-    
+    <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#995BA5"> </category>
     </category>
 
   <!--CATEGORIA VENTILADOR-->
