@@ -52,12 +52,12 @@
         <block type="inout_pulsein"></block>
 	</category>
 	<category name="CAT_LOGIC" colour="#ffb400">
-				<block type="controls_if">
+		<block type="controls_if">
 			<mutation else="1"></mutation>
 		</block>
         <block type="controls_repeat_ext">
-		<value name="TIMES">	<shadow type="math_number"><field name="NUM">2</field></shadow></value>
-			</block>
+			<value name="TIMES">	<shadow type="math_number"><field name="NUM">2</field></shadow></value>
+		</block>
         <block type="controls_whileUntil"></block>
         <block type="controls_flow_statements"></block>
 		<block type="inout_onoff"></block>
@@ -83,25 +83,25 @@
         <block type="math_modulo"></block>
 		<block type="math_random_int"></block>
     </category>
-		<category name="CAT_TEXT" colour="#FD6C9E">
+	<category name="CAT_TEXT" colour="#FD6C9E">
 		<block type="text"></block>
 		<block type="text_char"></block>
 		<block type="text_join"></block>
         <block type="text_length"></block>
         <block type="text_isEmpty"></block>
     </category>
-	    <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#FF0000"></category>
-		<category name="CAT_VARIABLES" custom="VARIABLE" colour="#ff5700"></category>
+	<category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#FF0000"></category>
+	<category name="CAT_VARIABLES" custom="VARIABLE" colour="#ff5700"></category>
 	
 	<category name="CAT_ultrason" colour="#2a93e8">
-			<block type="otto9_obstacle"></block>
-			<block type="otto9_getdistance"></block>
-			<block type="ultrason"></block>
-			<block type="ultrason_distance"></block>
-			<block type="otto9_touchbutton"></block>
-			<block type="block_sensitif"></block>
-			<block type="otto9_getnoise"></block>
-			<block type="otto9_getg"></block>
+		<block type="otto9_obstacle"></block>
+		<block type="otto9_getdistance"></block>
+		<block type="ultrason"></block>
+		<block type="ultrason_distance"></block>
+		<block type="otto9_touchbutton"></block>
+		<block type="block_sensitif"></block>
+		<block type="otto9_getnoise"></block>
+		<block type="otto9_getg"></block>
 	</category>
 		<category name="CAT_servo" colour="#2d2dd1">
 			<block type="servo_move">

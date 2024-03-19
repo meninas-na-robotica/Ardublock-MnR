@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
 <!-- As categorias são referenciadas utilizando o 'id'-->
-	<parametre id="defaultCategories">CAT_OTTO,CAT_LOGIC,CAT_MATH,CAT_ARDUINO,CAT_ARDUINO_TIME,CAT_servo,CAT_ultrason,Horta</parametre>
+	<parametre id="defaultCategories">CAT_OTTO,CAT_LOGIC,CAT_MATH,CAT_ARDUINO,CAT_ARDUINO_TIME,CAT_servo,CAT_ultrason</parametre>
     <category name="CAT_ARDUINO" colour="#2d2d64">
 		<block type="base_begin"></block>
 		<block type="base_end"></block>
@@ -131,65 +131,5 @@
 
 
 
-
-    <category name="Horta" colour="#73fc03">
-      <block type="arduino_setup">
-        <statement name="MyLoop">
-          <block type="controls_if">
-            <mutation else="1"></mutation>
-            <value name="IF0">
-              <block type="logic_compare_log">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <shadow type="math_number">
-                    <field name="NUM">R</field>
-                  </shadow>
-                  <block type="digital_read">
-                    <value name="PIN">
-                      <shadow type="math_number">
-                        <field name="NUM">6</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </value>
-                <value name="B">
-                  <shadow type="math_number" >
-                    <field name="NUM">1</field>
-                  </shadow>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="inout_digital_write" >
-                <value name="PIN">
-                  <shadow type="math_number" >
-                    <field name="NUM">3</field>
-                  </shadow>
-                </value>
-                <value name="STAT">
-                  <shadow type="math_number" >
-                    <field name="NUM">1</field>
-                  </shadow>
-                </value>
-              </block>
-            </statement>
-            <statement name="ELSE">
-              <block type="inout_digital_write" >
-                <value name="PIN">
-                  <shadow type="math_number" >
-                    <field name="NUM">3</field>
-                  </shadow>
-                </value>
-                <value name="STAT">
-                  <shadow type="math_number" >
-                    <field name="NUM">0</field>
-                  </shadow>
-                </value>
-              </block>
-            </statement>
-          </block>
-        </statement>
-      </block>
-    </category>
 
 </toolbox>

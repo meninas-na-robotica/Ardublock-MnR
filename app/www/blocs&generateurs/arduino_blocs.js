@@ -7,7 +7,7 @@ goog.require("Blockly.Blocks");
 Blockly.Blocks["soft_init"]={init:function(){
     var card=window.localStorage.card;
         this.setColour("#0060aa");
-         this.setHelpUrl(Blockly.Msg.HELPURL_036);
+        this.setHelpUrl(Blockly.Msg.HELPURL_036);
         this.appendDummyInput()
       .appendField(Blockly.Msg.SSERIAL_Init)
       .appendField(new Blockly.FieldDropdown(Blockly.Msg.rxtx), "PIN1")
@@ -25,7 +25,7 @@ Blockly.Blocks["soft_init"]={init:function(){
 Blockly.Blocks["soft_init_ttl"]={init:function(){
     var card=window.localStorage.card;
         this.setColour("#10760e");
-         this.setHelpUrl(Blockly.Msg.HELPURL_101);
+        this.setHelpUrl(Blockly.Msg.HELPURL_101);
         this.appendDummyInput()
       .appendField(Blockly.Msg.SSERIAL_Init_ttl)
       .appendField(new Blockly.FieldDropdown(Blockly.Msg.rxtx), "PIN1")
@@ -43,7 +43,7 @@ Blockly.Blocks["soft_init_ttl"]={init:function(){
 Blockly.Blocks["bluetooth_soft_init"]={init:function(){
     var card=window.localStorage.card;
         this.setColour("#9491DB");
-       this.setHelpUrl(Blockly.Msg.HELPURL_038);
+        this.setHelpUrl(Blockly.Msg.HELPURL_038);
         this.appendDummyInput()
       .appendField(Blockly.Msg.SSERIAL_Init_bluetooth)
       .appendField(new Blockly.FieldDropdown(Blockly.Msg.rxtx), "PIN1")
@@ -60,7 +60,7 @@ Blockly.Blocks["bluetooth_soft_init"]={init:function(){
 };
 Blockly.Blocks["soft_read"]={init:function(){
         this.setColour("#0060aa");
-       this.setHelpUrl(Blockly.Msg.HELPURL_037);
+        this.setHelpUrl(Blockly.Msg.HELPURL_037);
         this.appendDummyInput().appendField(Blockly.Msg.SSERIAL_Read);
         this.setInputsInline(true);
         this.setOutput(true, "String");
@@ -69,7 +69,7 @@ Blockly.Blocks["soft_read"]={init:function(){
 };
 Blockly.Blocks["soft_read_ttl_dis"]={init:function(){
         this.setColour("#10760E");
-       this.setHelpUrl(Blockly.Msg.HELPURL_101);
+        this.setHelpUrl(Blockly.Msg.HELPURL_101);
         this.appendDummyInput().appendField(Blockly.Msg.soft_read_ttl_dis);
         this.setInputsInline(true);
         this.setOutput(true, "String");
@@ -90,9 +90,9 @@ Blockly.Blocks["bluetooth_soft_read"]={init:function(){
 Blockly.Blocks["bluetooth_soft_serial_read"]={init:function(){
         this.setColour("#777777");
        // this.setHelpUrl(Blockly.Msg.HELPURL_039);
-	   this.appendDummyInput().appendField(Blockly.Msg.ARRAY_index);
-	   this.appendDummyInput()
-	   .appendField(new Blockly.FieldDropdown([["Serial", "Serial"],["SoftSerial","mySerial"],["Bluetooth","mySerialBT"]]), "color"); 
+        this.appendDummyInput().appendField(Blockly.Msg.ARRAY_index);
+	      this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown([["Serial", "Serial"],["SoftSerial","mySerial"],["Bluetooth","mySerialBT"]]), "color"); 
         this.appendDummyInput().appendField(Blockly.Msg.CAT_TEXT);
         this.setInputsInline(true);
         this.setOutput(true, "String");
@@ -1101,13 +1101,13 @@ Blockly.Blocks["nrf24l01_recvvar"] = { init: function() {
   this.setHelpUrl(Blockly.Msg.HELPURL_046);
   }
 };
-//блок повторять 10 раз
+//блок повторять 10 раз (REPITA 10 VEZES )- BLOCO QUE APARECE
 Blockly.Blocks["base_define_for"]={
   init:function(){
         this.setColour("#308189");
         this.setHelpUrl(Blockly.Msg.HELPURL_004);
         this.appendDummyInput()
-       .appendField(Blockly.Msg.FOR_004_1); 
+        .appendField(Blockly.Msg.FOR_004_1); 
     this.appendValueInput("variable", "Number");
     this.appendDummyInput()    
       .appendField(Blockly.Msg.FOR_004_2);
@@ -1115,14 +1115,14 @@ Blockly.Blocks["base_define_for"]={
         this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-   }
+  }
 };
 
 Blockly.Blocks["base_define_while"]={
   init:function(){
-        this.setColour("#308189");
+    this.setColour("#308189");
        // this.setHelpUrl(Blockly.Msg.HELPURL_004);
-   this.appendDummyInput()
+    this.appendDummyInput()
     .appendField(Blockly.Msg.base_define_while) 
     this.appendValueInput("variable1", "Number");
 	this.appendDummyInput()
@@ -1135,15 +1135,15 @@ Blockly.Blocks["base_define_while"]={
         this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-   }
+  }
 };
 
 Blockly.Blocks["base_define_while_do"]={
   init:function(){
         this.setColour("#308189");
        // this.setHelpUrl(Blockly.Msg.HELPURL_004);
-	   this.appendStatementInput("DO");
-   this.appendDummyInput()
+	this.appendStatementInput("DO");
+  this.appendDummyInput()
     .appendField(Blockly.Msg.base_define_while) 
     this.appendValueInput("variable1", "Number");
 	this.appendDummyInput()
@@ -1156,14 +1156,14 @@ Blockly.Blocks["base_define_while_do"]={
         this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-   }
+  }
 };
 
 Blockly.Blocks["base_define_for_in"]={
   init:function(){
         this.setColour("#308189");
         //this.setHelpUrl(Blockly.Msg.HELPURL_004);
-   this.appendDummyInput()
+  this.appendDummyInput()
     .appendField(Blockly.Msg.FOR_in_1) 
     this.appendValueInput("variable1", "Number");
 	this.appendDummyInput()
@@ -1180,13 +1180,13 @@ Blockly.Blocks["base_define_for_in"]={
         this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-   }
+  }
 };
 Blockly.Blocks["base_define_for_ino"]={
   init:function(){
         this.setColour("#308189");
         //this.setHelpUrl(Blockly.Msg.HELPURL_004);
-   this.appendDummyInput()
+  this.appendDummyInput()
     .appendField(Blockly.Msg.FOR_in_1) 
     this.appendValueInput("variable1", "Number");
 	this.appendDummyInput()
@@ -1211,11 +1211,11 @@ Blockly.Blocks["math_single"] = {
   init: function() {
     var OPERATORS =
         [[Blockly.Msg.MATH_SINGLE_OP_ROOT, "ROOT"],
-         [Blockly.Msg.MATH_SINGLE_OP_ROOT_N, "NEG"],
-     [Blockly.Msg.MATH_SINGLE_OP_ROOT_SIN, "SIN"],
-     [Blockly.Msg.MATH_SINGLE_OP_ROOT_COS, "COS"],
-         [Blockly.Msg.MATH_SINGLE_OP_ROOT_TAN, "TAN"]];
-   this.setHelpUrl(Blockly.Msg.HELPURL_010);
+        [Blockly.Msg.MATH_SINGLE_OP_ROOT_N, "NEG"],
+        [Blockly.Msg.MATH_SINGLE_OP_ROOT_SIN, "SIN"],
+        [Blockly.Msg.MATH_SINGLE_OP_ROOT_COS, "COS"],
+        [Blockly.Msg.MATH_SINGLE_OP_ROOT_TAN, "TAN"]];
+    this.setHelpUrl(Blockly.Msg.HELPURL_010);
     this.setColour("#5B67A5");
     this.setOutput(true, "Number");
     this.appendValueInput("NUM")

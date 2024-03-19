@@ -11,7 +11,6 @@
     <block type="GPS_location"></block>
     <block type="GPS_speed"></block>
     <block type="GPS_datetime"></block>
-
     <block type="sim800_init_ss"></block> 
     <block type="sim800_send"><value name="text_block"><shadow type="text"> <field name="TEXT">ArduBlock</field> </shadow></value></block>
     <block type="sim800_send_sms"></block> 
@@ -130,31 +129,92 @@
     <block type="logic_van"></block>
   </category>
 
-  <!-- CATEGORIA DE MINIPROJETOS-->
+  
+<!-- CATEGORIA DE MINIPROJETOS-->
   <category name="CAT_MNR" colour= "#e639d4">
 
   <!--CATEGORIA FLORES-->
     <category name= "CAT_FLORES" colour="#e639d4">
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
       <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADAS E SAÍDAS-->
       <block type="inout_digital_write">
         <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
         <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
       </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5"> <!--CATEGORIA DE TEMPO-->
       <block type="base_delay"> 
         <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
       </block>  
-    
+    </category>
     </category>
   
 
     <!--CATEGORIA NIVEL DE AGUA-->
     <category name= "CAT_NIVEL_AGUA" colour="#04cfcb">
+      <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE LÓGICA-->
+        <block type="controls_if"></block>
+        <block type="logic_compare_log">
+          <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+          <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+        </block>
+      </category>
+      <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+        <block type="arduino_setup"></block>
+      </category>
+      <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADAS E SAIDAS-->
+        <block type="digital_read">    
+          <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       
+        </block>
+        <block type="inout_digital_write">
+          <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+          <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+        </block>
+      </category>
+    </category>
+  
+  <!--CATEGORIA UMIDADE-->
+    <category name= "CAT_UMIDADE" colour="#d67327">
+      <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE LÓGICA-->
+        <block type="controls_if"></block>
+        <block type="logic_compare_log">
+          <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+          <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+        </block>
+        <block type="logic_operation">
+          <value name="A"><shadow type="math_number"><field name="NUM">X</field></shadow></value>
+          <value name="B"><shadow type="math_number"><field name="NUM">Y</field></shadow></value>
+        </block>
+      </category>
+      <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+        <block type="arduino_setup"></block>
+      </category>
+      <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADAS E SAIDAS-->
+        <block type="inout_analog_read"></block>
+        <block type="inout_digital_write">
+          <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+          <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+        </block>
+      </category>
+
+      <category name="CAT_FUNCTIONS_MNR" custom="PROCEDURE" colour="#995BA5"> </category> <!--CATEGORIA DE FUNÇÕES-->
+    </category>
+
+  <!--CATEGORIA HORTA-->
+  <category name= "CAT_HORTA" colour="#b7e6aa">
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> 
       <block type="controls_if"></block>
       <block type="logic_compare_log">
         <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
         <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
       </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B">
       <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B">
       <block type="digital_read">    
         <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       
       </block>
@@ -162,140 +222,144 @@
         <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
         <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
       </block>
-    
     </category>
-  
-  <!--CATEGORIA UMIDADE-->
-    <category name= "CAT_UMIDADE" colour="#d67327">
-      <block type="controls_if"></block>
-      <block type="logic_compare_log">
-        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
-        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
-      </block>
-      <block type="logic_operation">
-        <value name="A"><shadow type="math_number"><field name="NUM">X</field></shadow></value>
-        <value name="B"><shadow type="math_number"><field name="NUM">Y</field></shadow></value>
-      </block>
-      <block type="arduino_setup"></block>
-      <block type="inout_analog_read"></block>
-      <block type="inout_digital_write">
-        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
-        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-      </block>
-    <!--FALTAM OS BLOCOS DE FUNÇÕES QUE NÃO ESTÁ BEM DEFINIDO E FALTA 1 BLOCO, "clear"-->
-    <category name="CAT_FUNCTIONS" custom="PROCEDURE" colour="#995BA5"> </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5">
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
     </category>
+  </category>
+
+
 
   <!--CATEGORIA VENTILADOR-->
     <category name= "CAT_VENTILADOR" colour="#9627d6">
-      <block type="controls_if"></block>
-      <block type="logic_compare_log">
-        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
-        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
-      </block>
-      <block type="base_define"></block>
-      <block type="arduino_setup"></block>
-      <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
-      <block type="serial_init"> <field name="SPEED">9600</field> </block>  
-      <block type="inout_digital_write">
-        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
-        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-      </block>
-      <block type="serial_read"></block>
-      <block type="serial_available"></block>
-
-  <!--FALTA ADICIONAR VARIAVEIS-->
+      <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE FUNÇÕES-->
+        <block type="controls_if"></block>
+        <block type="logic_compare_log">
+          <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+          <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+        </block>
+      </category>
+      <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+        <block type="base_define"></block>
+        <block type="arduino_setup"></block>
+      </category>
+      <category name="CAT_TEXT_MNR" colour="#5BA58C"> <!--CATEGORIA DE TEXTO-->
+        <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
+      </category>
+      <category name="CAT_COMM_SERIAL_MNR" colour="#5BA599"> <!--CATEGORIA DE MONITOR DE PORTA-->
+        <block type="serial_init"> <field name="SPEED">9600</field> </block>  
+        <block type="serial_read"></block>
+        <block type="serial_available"></block>
+      </category>
+      <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADA E SAIDA-->
+        <block type="inout_digital_write">
+          <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+          <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+        </block>
+      </category>
+      
     
     </category>
 
   <!--CATEGORIA CARRINHO BLUETOOTH-->
   <category name= "CAT_CAR_BLUETOOTH" colour="#092294">
-    <block type="controls_if"></block>
-    <block type="logic_compare_log">
-      <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
-      <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
-    </block>
-    <block type="base_define"></block>
-    <block type="arduino_setup"></block>
-    <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
-    <block type="serial_init"> <field name="SPEED">9600</field> </block>  
-    <block type="inout_digital_write">
-      <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
-      <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-    </block>
-    <block type="serial_read"></block>
-    <block type="serial_available"></block>
-
-  <!--FALTA ADICIONAR VARIAVEIS-->
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE LÓGICA-->
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+      <block type="base_define"></block>
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_TEXT_MNR" colour="#5BA58C">
+      <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
+    </category>
+    <category name="CAT_COMM_SERIAL_MNR" colour="#5BA599"> <!--CATEGORIA DE MONITOR DE PORTA-->
+      <block type="serial_init"> <field name="SPEED">9600</field> </block> 
+      <block type="serial_read"></block>
+      <block type="serial_available"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> 
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+  <category name="CAT_VARIABLES_MNR" custom="VARIABLE" colour="#A55B80"></category>
+  
     
   </category>
 
   <!--CATEGORIA LIXEIRA ULTRASSONICA-->
   <category name= "CAT_LIXEIRA" colour="#c21b5b">
-    <block type="controls_if"></block>
-    <block type="logic_compare_log">
-      <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
-      <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
-    </block>
-    <block type="arduino_setup"></block>
-    <block type="inout_digital_write">
-      <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
-      <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-    </block>
-    <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
-    <block type="stepservo_continuos_move"> 
-      <value name="PIN"> <shadow type="math_number"><field name="NUM">4</field></shadow> </value>
-      <value name="PIN_GR"> <shadow type="math_number"><field name="NUM">255</field></shadow> </value>
-      <value name="SpeedServo"> <shadow type="math_number"> <field name="NUM">180</field> </shadow> </value> 
-    </block>
-    <block type="base_delay"> 
-      <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
-    </block>  
-    
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5">
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B">  
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> 
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_SENSOR_IN_MNR" colour="#5662A0">
+      <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
+    </category>
+    <category name="CAT_MOTOR_MNR" colour="#8CA55B">
+      <block type="stepservo_continuos_move"> 
+        <value name="PIN"> <shadow type="math_number"><field name="NUM">4</field></shadow> </value>
+        <value name="PIN_GR"> <shadow type="math_number"><field name="NUM">255</field></shadow> </value>
+        <value name="SpeedServo"> <shadow type="math_number"> <field name="NUM">180</field> </shadow> </value> 
+      </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5">
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
+    </category>
   </category>
 
     <!--CATEGORIA CARRINHO ULTRASSONICO-->
   <category name= "CAT_CAR_ULTRASSOM" colour="#faeb46">
-    <block type="controls_if"></block>
-    <block type="logic_compare_log">
-      <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
-      <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
-    </block>
-    <block type="arduino_setup"></block>
-    <block type="inout_digital_write">
-      <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
-      <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-    </block>
-    <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
-    <block type="base_delay"> 
-      <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
-    </block>  
-    
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> 
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B">  
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> 
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_SENSOR_IN_MNR" colour="#5662A0">
+      <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5">
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
+    </category>
   </category>
 
 
-  <!--CATEGORIA HORTA-->
-  <category name= "CAT_HORTA" colour="#b7e6aa">
-    <block type="controls_if"></block>
-    <block type="logic_compare_log">
-      <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
-      <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
-    </block>
-    <block type="arduino_setup"></block>
-    <block type="digital_read">    
-      <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       
-    </block>
-    <block type="inout_digital_write">
-      <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
-      <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-    </block>
-    <block type="base_delay"> 
-      <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
-    </block>  
-    
-  </category>
-
-</category>
+</category> 
 
   <!--CATEGORIA MATH-->
   <category name="CAT_MATH" colour="#5B67A5">
@@ -338,12 +402,12 @@
     <block type="text"> <field name="TEXT">ArduBlock</field>   </block>
     <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
     <block type="text_join"></block>
-	  <block type="math_single_int_text"><value name="PIN"><shadow type="math_number"><field name="NUM">R</field></shadow></value></block>
+    <block type="math_single_int_text"><value name="PIN"><shadow type="math_number"><field name="NUM">R</field></shadow></value></block>
     <block type="text_length"></block>
     <block type="text_isEmpty"><value name="PIN"><shadow type="math_number"><field name="NUM">R</field></shadow></value> </block>
 
   </category>
- 
+
   <!--CATEGORIA VARIÁVEIS-->
   <category name="CAT_VARIABLESN" custom="VARIABLE" colour="#A55B80"></category>
 
@@ -360,11 +424,15 @@
 	  <block type="base_code_entree_var"></block>
 	  <block type="base_code_entree_var1"></block>
   </category> 
- 
+
   <!--CATEGORIA ENTRADAS/SAIDAS-->
   <category name="CAT_ARDUINO_IN" colour="#A5675B">
-    <block type="digital_read">    <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       </block>
-    <block type="digital_readbi">    <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       </block>
+    <block type="digital_read">   
+      <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>      
+    </block>
+    <block type="digital_readbi">    
+      <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       
+    </block>
     <block type="inout_analog_read"></block>
     <!--<block type="inout_attachInterrupt"></block>
     <block type="inout_detachInterrupt"></block>-->
@@ -373,9 +441,9 @@
     <block type="inout_analog_write2">    <value name="PIN"><shadow type="math_number"><field name="NUM">3</field></shadow></value>      <value name="STAT"><shadow type="math_number"><field name="NUM">255</field></shadow></value>   </block>
     <block type="inout_analog_aref"></block>
 	<!--<block type="toggle"></block>-->
-	  <block type="logic_hilov"></block>
-	  <block type="logic_ONOFF"></block>
-	  <block type="logic_N_pin"></block>
+    <block type="logic_hilov"></block>
+    <block type="logic_ONOFF"></block>
+    <block type="logic_N_pin"></block>
 	
   </category>  
   
@@ -508,7 +576,7 @@
 	
   </category>
   
-  <category name="CAT_SENSOROUTP" colour="#5662A0">  <!--Сенсоры входа-->
+  <category name="CAT_SENSOROUTP" colour="#5662A0">  <!--Sensores de entrada-->
     <block type="digital_readbiR">    <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       </block>
     <block type="inout_analog_readR"></block>
     <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
@@ -972,31 +1040,34 @@
     <block type="lcd_128x128px_spi_text_tv_vga1">  </block>
     <block type="lcd_128x128px_spi_text_tv_vga2">  <value name="X_Nokia"><shadow type="math_number"><field name="NUM">1000</field></shadow></value> </block>
 
-  </category> <!--CATEGORIA DE LOOPS --> 
+  </category> 
+
+
+  <!--CATEGORIA DE LOOPS --> 
 
   <category name="CYCLESAR" colour="#308189">  <!--Циклы/loops/ciclos -->    
     <block type="base_define_for"> <value name="variable"><shadow type="math_number"><field name="NUM">10</field></shadow></value> </block>
     <block type="base_define_for_in"> <!--Definição do primeiro for --> 
-	    <value name="variable1"><shadow type="math_number"><field name="NUM">X</field></shadow></value> 
+      <value name="variable1"><shadow type="math_number"><field name="NUM">X</field></shadow></value> 
       <value name="variable2"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
       <value name="variable3"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
       <value name="variable4"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-	  </block>
-	  <block type="base_define_for_ino"> <!--Definição do segundo for --> 
+    </block>
+    <block type="base_define_for_ino"> <!--Definição do segundo for --> 
       <value name="variable1"><shadow type="math_number"><field name="NUM">X</field></shadow></value> 
       <value name="variable2"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
       <value name="variable3"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-	    <value name="variable4"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-	  </block>
+      <value name="variable4"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+    </block>
     <block type="base_form_none"></block>
 		<block type="base_define_while"> 
       <value name="variable1"><shadow type="math_number"><field name="NUM">X</field></shadow></value> 
-	    <value name="variable2"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-	  </block>  
-	  <block type="base_define_while_do"> 
+      <value name="variable2"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+    </block>  
+    <block type="base_define_while_do"> 
       <value name="variable1"><shadow type="math_number"><field name="NUM">X</field></shadow></value> 
-	    <value name="variable2"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
-	  </block>  
+      <value name="variable2"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+    </block>  
     <block type="base_form_none2"></block>
     <block type="base_form_RR" ><value name="texttoprint"><shadow type="math_number"><field name="NUM">R</field></shadow></value></block> 
     <block type="base_form_none3"></block>
